@@ -1,0 +1,23 @@
+{
+  "weeks_analyzed": 210,
+  "stress_weeks": 20,
+  "stress_rate_eligible_weeks": 0.12658227848101267,
+  "worst_week": "2023-01-23",
+  "worst_week_cash_flow_usd": -121571825.6,
+  "forecast_interval_coverage": 0.934010152284264,
+  "average_interval_width_usd": 61890645.21092157,
+  "seasonality_anova_pvalue": 0.7147809951919566,
+  "seasonality_month_kruskal_pvalue": 0.8295897391985708,
+  "lag52_autocorrelation": -0.0686630527784729,
+  "weakest_months": [
+    7,
+    5,
+    6
+  ],
+  "largest_activity_associations": [
+    "operational_cost_usd",
+    "sla_penalty_usd",
+    "revenue_usd",
+    "logistics_cost_usd"
+  ]
+}

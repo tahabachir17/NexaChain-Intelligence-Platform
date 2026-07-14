@@ -1,0 +1,2 @@
+test,f_statistic,p_value,eta_squared,levene_statistic,levene_p_value,significant_at_0_05
+One-Way ANOVA,872.0792302286482,9.886162786088891e-157,0.7923820532643266,31.192854668080233,2.0016476023258328e-13,True
