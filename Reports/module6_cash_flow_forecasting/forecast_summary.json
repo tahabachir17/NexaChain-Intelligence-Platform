@@ -1,0 +1,31 @@
+{
+  "history_weeks": 210,
+  "forecast_horizon_weeks": 13,
+  "rmse_usd": 18297339.841226123,
+  "mae_usd": 14104169.851923076,
+  "mape_pct": 36.05735085035758,
+  "expected_13_week_cash_flow_usd": -618147548.0,
+  "average_weekly_forecast_usd": -47549811.384615384,
+  "lowest_forecast_week": "2025-03-31",
+  "lowest_week_forecast_usd": -53454728.0,
+  "attention_weeks": [
+    "2025-01-13",
+    "2025-02-03",
+    "2025-02-10",
+    "2025-03-31"
+  ],
+  "top_error_associations": [
+    {
+      "event": "procurement_cost_usd",
+      "spearman_abs_error_correlation": -0.21071064442811738
+    },
+    {
+      "event": "operational_cost_usd",
+      "spearman_abs_error_correlation": 0.06352459039548708
+    },
+    {
+      "event": "transactions",
+      "spearman_abs_error_correlation": -0.05555440148156709
+    }
+  ]
+}
