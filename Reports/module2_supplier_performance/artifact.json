@@ -1,0 +1,1292 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Supplier Performance and Sourcing Recommendations",
+    "description": "Dynamic supplier ranking, trend diagnosis, risk classification, and procurement actions as of December 2024.",
+    "generatedAt": "2026-07-23T09:54:53Z",
+    "cards": [
+      {
+        "id": "supplier_count_card",
+        "description": "Suppliers ranked in the latest six-month scoring window.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Suppliers ranked",
+            "field": "supplier_count",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "portfolio_score_card",
+        "description": "Latest monthly score weighted by procurement spend.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Portfolio score",
+            "field": "latest_portfolio_score",
+            "format": "number",
+            "unit": "/100"
+          },
+          {
+            "label": "6-month change",
+            "field": "portfolio_score_change_6m",
+            "format": "number",
+            "unit": " points"
+          }
+        ]
+      },
+      {
+        "id": "replacement_card",
+        "description": "Suppliers requiring replacement due diligence under the model rules.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Replacement candidates",
+            "field": "replacement_candidate_count",
+            "format": "number"
+          },
+          {
+            "label": "Spend exposed",
+            "field": "replacement_spend_share",
+            "format": "percent"
+          }
+        ]
+      },
+      {
+        "id": "strategic_card",
+        "description": "High-performing, controlled-risk suppliers with meaningful spend exposure.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Strategic candidates",
+            "field": "strategic_partner_count",
+            "format": "number"
+          },
+          {
+            "label": "Spend represented",
+            "field": "strategic_partner_spend_share",
+            "format": "percent"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "portfolio_trend_chart",
+        "title": "Monthly supplier performance score",
+        "subtitle": "Spend-weighted and unweighted portfolio scores, January 2021 to December 2024.",
+        "type": "line",
+        "dataset": "portfolio_trends",
+        "sourceId": "portfolio_trends_sql",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "snapshot_month",
+            "type": "temporal",
+            "label": "Month"
+          },
+          "y": {
+            "field": "score",
+            "type": "quantitative",
+            "label": "Score (0-100)"
+          },
+          "color": {
+            "field": "series",
+            "type": "nominal",
+            "label": "Series"
+          },
+          "tooltip": [
+            {
+              "field": "snapshot_month",
+              "type": "temporal",
+              "label": "Month"
+            },
+            {
+              "field": "series",
+              "type": "nominal",
+              "label": "Series"
+            },
+            {
+              "field": "score",
+              "type": "quantitative",
+              "label": "Score",
+              "format": "number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trend_status_chart",
+        "title": "Supplier momentum classification",
+        "subtitle": "Latest three-month average compared with the prior three months; +/-2 points defines movement.",
+        "type": "bar",
+        "dataset": "trend_counts",
+        "sourceId": "supplier_momentum_sql",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "trend_class",
+            "type": "nominal",
+            "label": "Momentum"
+          },
+          "y": {
+            "field": "supplier_count",
+            "type": "quantitative",
+            "label": "Suppliers"
+          },
+          "tooltip": [
+            {
+              "field": "trend_class",
+              "type": "nominal",
+              "label": "Momentum"
+            },
+            {
+              "field": "supplier_count",
+              "type": "quantitative",
+              "label": "Suppliers",
+              "format": "number"
+            }
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "risk_exposure_table",
+        "title": "Risk classification and spend exposure",
+        "subtitle": "Trailing-12-month procurement spend represented by each model risk class.",
+        "dataset": "risk_exposure",
+        "sourceId": "risk_exposure_sql",
+        "defaultSort": {
+          "field": "spend_usd",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "supplier_risk_class",
+            "label": "Risk class",
+            "type": "text"
+          },
+          {
+            "field": "supplier_count",
+            "label": "Suppliers",
+            "format": "number"
+          },
+          {
+            "field": "spend_usd",
+            "label": "12m spend",
+            "format": "currency",
+            "currency": "USD"
+          },
+          {
+            "field": "spend_share_pct",
+            "label": "Spend share",
+            "format": "number",
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "id": "replacement_table",
+        "title": "Suppliers requiring replacement due diligence",
+        "subtitle": "Candidates meet the model rule; operational feasibility must be confirmed before an exit decision.",
+        "dataset": "replacement",
+        "sourceId": "replacement_sql",
+        "defaultSort": {
+          "field": "procurement_spend_12m_usd",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "supplier_rank",
+            "label": "Rank",
+            "format": "number"
+          },
+          {
+            "field": "vendor_name",
+            "label": "Supplier",
+            "type": "text"
+          },
+          {
+            "field": "vendor_category",
+            "label": "Category",
+            "type": "text"
+          },
+          {
+            "field": "dynamic_supplier_score",
+            "label": "Score",
+            "format": "number",
+            "unit": "/100"
+          },
+          {
+            "field": "score_change_3m",
+            "label": "3m change",
+            "format": "number",
+            "unit": " pts",
+            "movement": true
+          },
+          {
+            "field": "supplier_risk_class",
+            "label": "Risk",
+            "type": "text"
+          },
+          {
+            "field": "procurement_spend_12m_usd",
+            "label": "12m spend",
+            "format": "currency",
+            "currency": "USD"
+          }
+        ]
+      },
+      {
+        "id": "strategic_table",
+        "title": "Strategic partnership candidates",
+        "subtitle": "High performance, controlled risk, non-deteriorating momentum, and spend at or above the 60th percentile.",
+        "dataset": "strategic",
+        "sourceId": "strategic_sql",
+        "defaultSort": {
+          "field": "dynamic_supplier_score",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "supplier_rank",
+            "label": "Rank",
+            "format": "number"
+          },
+          {
+            "field": "vendor_name",
+            "label": "Supplier",
+            "type": "text"
+          },
+          {
+            "field": "vendor_category",
+            "label": "Category",
+            "type": "text"
+          },
+          {
+            "field": "dynamic_supplier_score",
+            "label": "Score",
+            "format": "number",
+            "unit": "/100"
+          },
+          {
+            "field": "score_change_3m",
+            "label": "3m change",
+            "format": "number",
+            "unit": " pts",
+            "movement": true
+          },
+          {
+            "field": "supplier_risk_class",
+            "label": "Risk",
+            "type": "text"
+          },
+          {
+            "field": "procurement_spend_12m_usd",
+            "label": "12m spend",
+            "format": "currency",
+            "currency": "USD"
+          }
+        ]
+      },
+      {
+        "id": "deteriorating_table",
+        "title": "Highest-spend deteriorating suppliers",
+        "subtitle": "The ten largest spend exposures among suppliers declining by at least two score points.",
+        "dataset": "deteriorating",
+        "sourceId": "deteriorating_sql",
+        "defaultSort": {
+          "field": "procurement_spend_12m_usd",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "supplier_rank",
+            "label": "Rank",
+            "format": "number"
+          },
+          {
+            "field": "vendor_name",
+            "label": "Supplier",
+            "type": "text"
+          },
+          {
+            "field": "vendor_category",
+            "label": "Category",
+            "type": "text"
+          },
+          {
+            "field": "dynamic_supplier_score",
+            "label": "Score",
+            "format": "number",
+            "unit": "/100"
+          },
+          {
+            "field": "score_change_3m",
+            "label": "3m change",
+            "format": "number",
+            "unit": " pts",
+            "movement": true
+          },
+          {
+            "field": "supplier_risk_class",
+            "label": "Risk",
+            "type": "text"
+          },
+          {
+            "field": "procurement_spend_12m_usd",
+            "label": "12m spend",
+            "format": "currency",
+            "currency": "USD"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "vendor_source",
+        "label": "Cleaned monthly vendor snapshots",
+        "path": "data/cleaned/vendors_clean.csv"
+      },
+      {
+        "id": "orders_source",
+        "label": "Cleaned order-level product costs",
+        "path": "data/cleaned/orders_clean.csv"
+      },
+      {
+        "id": "supplier_ranking",
+        "label": "Dynamic supplier ranking output",
+        "path": "Reports/module2_supplier_performance/supplier_ranking.csv"
+      },
+      {
+        "id": "portfolio_trends",
+        "label": "Monthly supplier score trends",
+        "path": "Reports/module2_supplier_performance/portfolio_monthly_trends.csv"
+      },
+      {
+        "id": "analysis_summary",
+        "label": "Supplier scoring analysis summary",
+        "path": "Reports/module2_supplier_performance/analysis_summary.json"
+      },
+      {
+        "id": "headline_sql",
+        "label": "Headline Metrics",
+        "path": "Reports/module2_supplier_performance/queries/headline_metrics.sql"
+      },
+      {
+        "id": "portfolio_trends_sql",
+        "label": "Portfolio Trends",
+        "path": "Reports/module2_supplier_performance/queries/portfolio_trends.sql"
+      },
+      {
+        "id": "supplier_momentum_sql",
+        "label": "Supplier Momentum",
+        "path": "Reports/module2_supplier_performance/queries/supplier_momentum.sql"
+      },
+      {
+        "id": "risk_exposure_sql",
+        "label": "Risk Exposure",
+        "path": "Reports/module2_supplier_performance/queries/risk_exposure.sql"
+      },
+      {
+        "id": "replacement_sql",
+        "label": "Replacement Candidates",
+        "path": "Reports/module2_supplier_performance/queries/replacement_candidates.sql"
+      },
+      {
+        "id": "strategic_sql",
+        "label": "Strategic Candidates",
+        "path": "Reports/module2_supplier_performance/queries/strategic_candidates.sql"
+      },
+      {
+        "id": "deteriorating_sql",
+        "label": "Deteriorating Exposure",
+        "path": "Reports/module2_supplier_performance/queries/deteriorating_exposure.sql"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Supplier Performance and Sourcing Recommendations"
+      },
+      {
+        "id": "executive_summary",
+        "type": "markdown",
+        "sourceId": "analysis_summary",
+        "body": "## Executive summary\n\n**The portfolio is stable overall, but supplier-level action is still required.** The spend-weighted score is 67.52/100 and changed -0.40 points over six months. The engine identifies 121 improving and 104 deteriorating suppliers.\n\n**Start replacement due diligence on 5 suppliers** representing 1.1% of spend, while opening partnership discussions with 3 candidates representing 0.9%."
+      },
+      {
+        "id": "metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "supplier_count_card",
+          "portfolio_score_card",
+          "replacement_card",
+          "strategic_card"
+        ]
+      },
+      {
+        "id": "portfolio_context",
+        "type": "markdown",
+        "sourceId": "portfolio_trends",
+        "body": "## Portfolio stability masks supplier-level movement\n\nThe portfolio score is almost unchanged over six months, yet 225 suppliers crossed the two-point movement threshold. Aggregate stability should not be interpreted as an absence of supplier risk."
+      },
+      {
+        "id": "portfolio_chart",
+        "type": "chart",
+        "chartId": "portfolio_trend_chart"
+      },
+      {
+        "id": "momentum_chart",
+        "type": "chart",
+        "chartId": "trend_status_chart"
+      },
+      {
+        "id": "risk_context",
+        "type": "markdown",
+        "sourceId": "supplier_ranking",
+        "body": "## Risk exposure needs stronger commercial controls\n\nHigh or Critical suppliers account for 77.7% of trailing-12-month procurement spend. This classification is deliberately conservative: high VRIS, active disputes, repeated disruption, or weak combined performance can trigger escalation."
+      },
+      {
+        "id": "risk_table",
+        "type": "table",
+        "tableId": "risk_exposure_table"
+      },
+      {
+        "id": "replace_context",
+        "type": "markdown",
+        "sourceId": "supplier_ranking",
+        "body": "## Replace selectively after feasibility checks\n\nThe replacement set is small and represents $4.3M in annual spend. Treat the flag as a due-diligence trigger: validate alternate capacity, switching cost, category criticality, and contract exit terms before a sourcing decision."
+      },
+      {
+        "id": "replace_table",
+        "type": "table",
+        "tableId": "replacement_table"
+      },
+      {
+        "id": "partner_context",
+        "type": "markdown",
+        "sourceId": "supplier_ranking",
+        "body": "## Concentrate strategic partnerships on proven performers\n\nMoore-Sanders leads the partnership set at 80.98/100. Partnership offers should exchange greater volume visibility or term length for measurable delivery, quality, resilience, and continuous-improvement commitments."
+      },
+      {
+        "id": "partner_table",
+        "type": "table",
+        "tableId": "strategic_table"
+      },
+      {
+        "id": "deteriorating_context",
+        "type": "markdown",
+        "sourceId": "supplier_ranking",
+        "body": "## Put the largest deteriorating exposures on corrective-action plans\n\nDeleon-Butler is the largest deteriorating exposure at $7.8M of annual spend. Require a 30/60/90-day recovery plan with OTD, quality, VRIS, cost efficiency, and lead-time milestones, then rescore monthly."
+      },
+      {
+        "id": "deteriorating_table_block",
+        "type": "table",
+        "tableId": "deteriorating_table"
+      },
+      {
+        "id": "recommendations",
+        "type": "markdown",
+        "body": "## Executive recommendations\n\n1. Approve replacement due diligence for every flagged supplier; do not terminate until continuity and contract checks are complete.\n2. Launch partnership negotiations with the strategic candidates, using performance-linked commercial terms.\n3. Assign executive owners and 30/60/90-day recovery plans to the highest-spend deteriorating suppliers.\n4. Review High/Critical spend exposure monthly and diversify categories where concentration and operational risk overlap.\n5. Recalibrate the score quarterly and reconcile the product-cost benchmark with negotiated-price or should-cost data."
+      },
+      {
+        "id": "methodology",
+        "type": "markdown",
+        "body": "## Methodology and caveats\n\nThe score uses the requested weights: 30% on-time delivery, 20% quality acceptance, 20% inverted VRIS, 15% cost efficiency, and 15% lead-time performance. Cost efficiency is 70% product-year unit-COGS competitiveness and 30% invoice accuracy. The dynamic result is a six-month exponentially weighted average with a three-month half-life. Spend is used for exposure and partnership prioritization, not as a score reward.\n\nProduct cost is benchmarked against the median COGS per unit for the same product and year. It improves like-for-like comparability but is not a substitute for negotiated-price or should-cost data. Risk rules are screening rules, not legal or contractual determinations. All blocking source-data checks passed."
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-23T09:54:53Z",
+    "status": "ready",
+    "datasets": {
+      "headline_metrics": [
+        {
+          "as_of_month": "2024-12-01",
+          "supplier_count": 460,
+          "dynamic_score_mean": 67.66,
+          "dynamic_score_median": 67.15,
+          "improving_count": 121,
+          "deteriorating_count": 104,
+          "replacement_candidate_count": 5,
+          "replacement_spend_usd": 4336567.75,
+          "replacement_spend_share": 0.0115,
+          "strategic_partner_count": 3,
+          "strategic_partner_spend_usd": 3492947.18,
+          "strategic_partner_spend_share": 0.0093,
+          "high_or_critical_risk_count": 350,
+          "high_or_critical_spend_share": 0.7773,
+          "latest_portfolio_score": 67.52,
+          "portfolio_score_change_6m": -0.4,
+          "validation_checks_passed": 7,
+          "validation_checks_total": 7,
+          "trend_definition": "Improving >= +2 points; Deteriorating <= -2 points; recent 3 months versus prior 3 months.",
+          "dynamic_definition": "Six-month exponentially weighted average with a three-month half-life."
+        }
+      ],
+      "portfolio_trends": [
+        {
+          "snapshot_month": "2021-01-01",
+          "series": "Spend-weighted",
+          "score": 67.01
+        },
+        {
+          "snapshot_month": "2021-01-01",
+          "series": "Unweighted",
+          "score": 67.78
+        },
+        {
+          "snapshot_month": "2021-02-01",
+          "series": "Spend-weighted",
+          "score": 68.27
+        },
+        {
+          "snapshot_month": "2021-02-01",
+          "series": "Unweighted",
+          "score": 68.16
+        },
+        {
+          "snapshot_month": "2021-03-01",
+          "series": "Spend-weighted",
+          "score": 67.15
+        },
+        {
+          "snapshot_month": "2021-03-01",
+          "series": "Unweighted",
+          "score": 67.92
+        },
+        {
+          "snapshot_month": "2021-04-01",
+          "series": "Spend-weighted",
+          "score": 67.31
+        },
+        {
+          "snapshot_month": "2021-04-01",
+          "series": "Unweighted",
+          "score": 68.22
+        },
+        {
+          "snapshot_month": "2021-05-01",
+          "series": "Spend-weighted",
+          "score": 68.66
+        },
+        {
+          "snapshot_month": "2021-05-01",
+          "series": "Unweighted",
+          "score": 67.84
+        },
+        {
+          "snapshot_month": "2021-06-01",
+          "series": "Spend-weighted",
+          "score": 70.58
+        },
+        {
+          "snapshot_month": "2021-06-01",
+          "series": "Unweighted",
+          "score": 67.83
+        },
+        {
+          "snapshot_month": "2021-07-01",
+          "series": "Spend-weighted",
+          "score": 67.74
+        },
+        {
+          "snapshot_month": "2021-07-01",
+          "series": "Unweighted",
+          "score": 67.61
+        },
+        {
+          "snapshot_month": "2021-08-01",
+          "series": "Spend-weighted",
+          "score": 68.28
+        },
+        {
+          "snapshot_month": "2021-08-01",
+          "series": "Unweighted",
+          "score": 68.0
+        },
+        {
+          "snapshot_month": "2021-09-01",
+          "series": "Spend-weighted",
+          "score": 68.27
+        },
+        {
+          "snapshot_month": "2021-09-01",
+          "series": "Unweighted",
+          "score": 67.96
+        },
+        {
+          "snapshot_month": "2021-10-01",
+          "series": "Spend-weighted",
+          "score": 68.89
+        },
+        {
+          "snapshot_month": "2021-10-01",
+          "series": "Unweighted",
+          "score": 67.88
+        },
+        {
+          "snapshot_month": "2021-11-01",
+          "series": "Spend-weighted",
+          "score": 67.5
+        },
+        {
+          "snapshot_month": "2021-11-01",
+          "series": "Unweighted",
+          "score": 67.71
+        },
+        {
+          "snapshot_month": "2021-12-01",
+          "series": "Spend-weighted",
+          "score": 67.71
+        },
+        {
+          "snapshot_month": "2021-12-01",
+          "series": "Unweighted",
+          "score": 67.93
+        },
+        {
+          "snapshot_month": "2022-01-01",
+          "series": "Spend-weighted",
+          "score": 67.35
+        },
+        {
+          "snapshot_month": "2022-01-01",
+          "series": "Unweighted",
+          "score": 67.4
+        },
+        {
+          "snapshot_month": "2022-02-01",
+          "series": "Spend-weighted",
+          "score": 67.85
+        },
+        {
+          "snapshot_month": "2022-02-01",
+          "series": "Unweighted",
+          "score": 67.64
+        },
+        {
+          "snapshot_month": "2022-03-01",
+          "series": "Spend-weighted",
+          "score": 68.21
+        },
+        {
+          "snapshot_month": "2022-03-01",
+          "series": "Unweighted",
+          "score": 67.67
+        },
+        {
+          "snapshot_month": "2022-04-01",
+          "series": "Spend-weighted",
+          "score": 67.63
+        },
+        {
+          "snapshot_month": "2022-04-01",
+          "series": "Unweighted",
+          "score": 67.64
+        },
+        {
+          "snapshot_month": "2022-05-01",
+          "series": "Spend-weighted",
+          "score": 68.17
+        },
+        {
+          "snapshot_month": "2022-05-01",
+          "series": "Unweighted",
+          "score": 67.81
+        },
+        {
+          "snapshot_month": "2022-06-01",
+          "series": "Spend-weighted",
+          "score": 67.55
+        },
+        {
+          "snapshot_month": "2022-06-01",
+          "series": "Unweighted",
+          "score": 67.75
+        },
+        {
+          "snapshot_month": "2022-07-01",
+          "series": "Spend-weighted",
+          "score": 67.77
+        },
+        {
+          "snapshot_month": "2022-07-01",
+          "series": "Unweighted",
+          "score": 67.67
+        },
+        {
+          "snapshot_month": "2022-08-01",
+          "series": "Spend-weighted",
+          "score": 69.89
+        },
+        {
+          "snapshot_month": "2022-08-01",
+          "series": "Unweighted",
+          "score": 67.48
+        },
+        {
+          "snapshot_month": "2022-09-01",
+          "series": "Spend-weighted",
+          "score": 67.12
+        },
+        {
+          "snapshot_month": "2022-09-01",
+          "series": "Unweighted",
+          "score": 68.02
+        },
+        {
+          "snapshot_month": "2022-10-01",
+          "series": "Spend-weighted",
+          "score": 67.92
+        },
+        {
+          "snapshot_month": "2022-10-01",
+          "series": "Unweighted",
+          "score": 67.43
+        },
+        {
+          "snapshot_month": "2022-11-01",
+          "series": "Spend-weighted",
+          "score": 68.91
+        },
+        {
+          "snapshot_month": "2022-11-01",
+          "series": "Unweighted",
+          "score": 67.47
+        },
+        {
+          "snapshot_month": "2022-12-01",
+          "series": "Spend-weighted",
+          "score": 68.31
+        },
+        {
+          "snapshot_month": "2022-12-01",
+          "series": "Unweighted",
+          "score": 67.74
+        },
+        {
+          "snapshot_month": "2023-01-01",
+          "series": "Spend-weighted",
+          "score": 67.65
+        },
+        {
+          "snapshot_month": "2023-01-01",
+          "series": "Unweighted",
+          "score": 67.45
+        },
+        {
+          "snapshot_month": "2023-02-01",
+          "series": "Spend-weighted",
+          "score": 66.8
+        },
+        {
+          "snapshot_month": "2023-02-01",
+          "series": "Unweighted",
+          "score": 67.39
+        },
+        {
+          "snapshot_month": "2023-03-01",
+          "series": "Spend-weighted",
+          "score": 66.93
+        },
+        {
+          "snapshot_month": "2023-03-01",
+          "series": "Unweighted",
+          "score": 67.92
+        },
+        {
+          "snapshot_month": "2023-04-01",
+          "series": "Spend-weighted",
+          "score": 67.9
+        },
+        {
+          "snapshot_month": "2023-04-01",
+          "series": "Unweighted",
+          "score": 67.64
+        },
+        {
+          "snapshot_month": "2023-05-01",
+          "series": "Spend-weighted",
+          "score": 67.88
+        },
+        {
+          "snapshot_month": "2023-05-01",
+          "series": "Unweighted",
+          "score": 67.86
+        },
+        {
+          "snapshot_month": "2023-06-01",
+          "series": "Spend-weighted",
+          "score": 67.49
+        },
+        {
+          "snapshot_month": "2023-06-01",
+          "series": "Unweighted",
+          "score": 67.55
+        },
+        {
+          "snapshot_month": "2023-07-01",
+          "series": "Spend-weighted",
+          "score": 67.35
+        },
+        {
+          "snapshot_month": "2023-07-01",
+          "series": "Unweighted",
+          "score": 67.41
+        },
+        {
+          "snapshot_month": "2023-08-01",
+          "series": "Spend-weighted",
+          "score": 68.76
+        },
+        {
+          "snapshot_month": "2023-08-01",
+          "series": "Unweighted",
+          "score": 67.65
+        },
+        {
+          "snapshot_month": "2023-09-01",
+          "series": "Spend-weighted",
+          "score": 67.36
+        },
+        {
+          "snapshot_month": "2023-09-01",
+          "series": "Unweighted",
+          "score": 67.69
+        },
+        {
+          "snapshot_month": "2023-10-01",
+          "series": "Spend-weighted",
+          "score": 67.26
+        },
+        {
+          "snapshot_month": "2023-10-01",
+          "series": "Unweighted",
+          "score": 67.61
+        },
+        {
+          "snapshot_month": "2023-11-01",
+          "series": "Spend-weighted",
+          "score": 66.31
+        },
+        {
+          "snapshot_month": "2023-11-01",
+          "series": "Unweighted",
+          "score": 67.54
+        },
+        {
+          "snapshot_month": "2023-12-01",
+          "series": "Spend-weighted",
+          "score": 67.24
+        },
+        {
+          "snapshot_month": "2023-12-01",
+          "series": "Unweighted",
+          "score": 67.11
+        },
+        {
+          "snapshot_month": "2024-01-01",
+          "series": "Spend-weighted",
+          "score": 67.34
+        },
+        {
+          "snapshot_month": "2024-01-01",
+          "series": "Unweighted",
+          "score": 67.79
+        },
+        {
+          "snapshot_month": "2024-02-01",
+          "series": "Spend-weighted",
+          "score": 67.73
+        },
+        {
+          "snapshot_month": "2024-02-01",
+          "series": "Unweighted",
+          "score": 67.63
+        },
+        {
+          "snapshot_month": "2024-03-01",
+          "series": "Spend-weighted",
+          "score": 67.53
+        },
+        {
+          "snapshot_month": "2024-03-01",
+          "series": "Unweighted",
+          "score": 67.47
+        },
+        {
+          "snapshot_month": "2024-04-01",
+          "series": "Spend-weighted",
+          "score": 66.79
+        },
+        {
+          "snapshot_month": "2024-04-01",
+          "series": "Unweighted",
+          "score": 67.19
+        },
+        {
+          "snapshot_month": "2024-05-01",
+          "series": "Spend-weighted",
+          "score": 67.12
+        },
+        {
+          "snapshot_month": "2024-05-01",
+          "series": "Unweighted",
+          "score": 67.67
+        },
+        {
+          "snapshot_month": "2024-06-01",
+          "series": "Spend-weighted",
+          "score": 67.92
+        },
+        {
+          "snapshot_month": "2024-06-01",
+          "series": "Unweighted",
+          "score": 67.41
+        },
+        {
+          "snapshot_month": "2024-07-01",
+          "series": "Spend-weighted",
+          "score": 69.06
+        },
+        {
+          "snapshot_month": "2024-07-01",
+          "series": "Unweighted",
+          "score": 67.55
+        },
+        {
+          "snapshot_month": "2024-08-01",
+          "series": "Spend-weighted",
+          "score": 67.39
+        },
+        {
+          "snapshot_month": "2024-08-01",
+          "series": "Unweighted",
+          "score": 67.57
+        },
+        {
+          "snapshot_month": "2024-09-01",
+          "series": "Spend-weighted",
+          "score": 67.42
+        },
+        {
+          "snapshot_month": "2024-09-01",
+          "series": "Unweighted",
+          "score": 67.52
+        },
+        {
+          "snapshot_month": "2024-10-01",
+          "series": "Spend-weighted",
+          "score": 67.89
+        },
+        {
+          "snapshot_month": "2024-10-01",
+          "series": "Unweighted",
+          "score": 67.58
+        },
+        {
+          "snapshot_month": "2024-11-01",
+          "series": "Spend-weighted",
+          "score": 67.51
+        },
+        {
+          "snapshot_month": "2024-11-01",
+          "series": "Unweighted",
+          "score": 67.81
+        },
+        {
+          "snapshot_month": "2024-12-01",
+          "series": "Spend-weighted",
+          "score": 67.52
+        },
+        {
+          "snapshot_month": "2024-12-01",
+          "series": "Unweighted",
+          "score": 67.71
+        }
+      ],
+      "trend_counts": [
+        {
+          "trend_class": "Improving",
+          "supplier_count": 121
+        },
+        {
+          "trend_class": "Stable",
+          "supplier_count": 235
+        },
+        {
+          "trend_class": "Deteriorating",
+          "supplier_count": 104
+        }
+      ],
+      "risk_exposure": [
+        {
+          "supplier_risk_class": "Critical",
+          "supplier_count": 12,
+          "spend_usd": 8285408.77,
+          "spend_share_pct": 2.2
+        },
+        {
+          "supplier_risk_class": "High",
+          "supplier_count": 338,
+          "spend_usd": 284064534.59,
+          "spend_share_pct": 75.5
+        },
+        {
+          "supplier_risk_class": "Medium",
+          "supplier_count": 106,
+          "spend_usd": 80619168.17,
+          "spend_share_pct": 21.4
+        },
+        {
+          "supplier_risk_class": "Low",
+          "supplier_count": 4,
+          "spend_usd": 3119769.52,
+          "spend_share_pct": 0.8
+        }
+      ],
+      "replacement": [
+        {
+          "supplier_rank": 37,
+          "vendor_name": "Warren, Gallegos and Berry",
+          "vendor_category": "Industrial Parts",
+          "dynamic_supplier_score": 73.21,
+          "score_change_3m": -2.13,
+          "supplier_risk_class": "Critical",
+          "procurement_spend_12m_usd": 1522885.67
+        },
+        {
+          "supplier_rank": 38,
+          "vendor_name": "Williams-Roberts",
+          "vendor_category": "Industrial Parts",
+          "dynamic_supplier_score": 73.19,
+          "score_change_3m": -5.5,
+          "supplier_risk_class": "Critical",
+          "procurement_spend_12m_usd": 654352.73
+        },
+        {
+          "supplier_rank": 114,
+          "vendor_name": "Anderson LLC",
+          "vendor_category": "Packaging",
+          "dynamic_supplier_score": 69.98,
+          "score_change_3m": -6.11,
+          "supplier_risk_class": "Critical",
+          "procurement_spend_12m_usd": 262881.61
+        },
+        {
+          "supplier_rank": 269,
+          "vendor_name": "Hayes-Mcguire",
+          "vendor_category": "Electronics",
+          "dynamic_supplier_score": 66.51,
+          "score_change_3m": -3.18,
+          "supplier_risk_class": "Critical",
+          "procurement_spend_12m_usd": 1404080.15
+        },
+        {
+          "supplier_rank": 438,
+          "vendor_name": "Jones and Sons",
+          "vendor_category": "Industrial Parts",
+          "dynamic_supplier_score": 62.21,
+          "score_change_3m": -6.07,
+          "supplier_risk_class": "Critical",
+          "procurement_spend_12m_usd": 492367.59
+        }
+      ],
+      "strategic": [
+        {
+          "supplier_rank": 2,
+          "vendor_name": "Moore-Sanders",
+          "vendor_category": "Raw Materials",
+          "dynamic_supplier_score": 80.98,
+          "score_change_3m": 6.74,
+          "supplier_risk_class": "Low",
+          "procurement_spend_12m_usd": 1034035.17
+        },
+        {
+          "supplier_rank": 9,
+          "vendor_name": "Perry Group",
+          "vendor_category": "Electronics",
+          "dynamic_supplier_score": 76.4,
+          "score_change_3m": 3.89,
+          "supplier_risk_class": "Low",
+          "procurement_spend_12m_usd": 743690.89
+        },
+        {
+          "supplier_rank": 11,
+          "vendor_name": "James-Fox",
+          "vendor_category": "Services",
+          "dynamic_supplier_score": 75.84,
+          "score_change_3m": 5.98,
+          "supplier_risk_class": "Medium",
+          "procurement_spend_12m_usd": 1715221.12
+        }
+      ],
+      "deteriorating": [
+        {
+          "supplier_rank": 142,
+          "vendor_name": "Deleon-Butler",
+          "vendor_category": "Packaging",
+          "dynamic_supplier_score": 69.37,
+          "score_change_3m": -6.58,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 7805375.03
+        },
+        {
+          "supplier_rank": 33,
+          "vendor_name": "Burnett-Stevens",
+          "vendor_category": "Raw Materials",
+          "dynamic_supplier_score": 73.78,
+          "score_change_3m": -12.23,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 2373807.88
+        },
+        {
+          "supplier_rank": 155,
+          "vendor_name": "Knight, Jackson and Barrett",
+          "vendor_category": "Electronics",
+          "dynamic_supplier_score": 69.06,
+          "score_change_3m": -5.11,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 2147736.08
+        },
+        {
+          "supplier_rank": 200,
+          "vendor_name": "Patterson, Morris and White",
+          "vendor_category": "Services",
+          "dynamic_supplier_score": 67.68,
+          "score_change_3m": -3.12,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 1929809.54
+        },
+        {
+          "supplier_rank": 360,
+          "vendor_name": "Price-Rodriguez",
+          "vendor_category": "Packaging",
+          "dynamic_supplier_score": 64.68,
+          "score_change_3m": -5.05,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 1631370.93
+        },
+        {
+          "supplier_rank": 229,
+          "vendor_name": "Morgan Group",
+          "vendor_category": "Electronics",
+          "dynamic_supplier_score": 67.2,
+          "score_change_3m": -2.86,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 1535557.87
+        },
+        {
+          "supplier_rank": 37,
+          "vendor_name": "Warren, Gallegos and Berry",
+          "vendor_category": "Industrial Parts",
+          "dynamic_supplier_score": 73.21,
+          "score_change_3m": -2.13,
+          "supplier_risk_class": "Critical",
+          "procurement_spend_12m_usd": 1522885.67
+        },
+        {
+          "supplier_rank": 349,
+          "vendor_name": "Ortega and Sons",
+          "vendor_category": "Electronics",
+          "dynamic_supplier_score": 64.91,
+          "score_change_3m": -5.6,
+          "supplier_risk_class": "High",
+          "procurement_spend_12m_usd": 1521894.65
+        },
+        {
+          "supplier_rank": 313,
+          "vendor_name": "Willis Ltd",
+          "vendor_category": "Electronics",
+          "dynamic_supplier_score": 65.5,
+          "score_change_3m": -4.21,
+          "supplier_risk_class": "Medium",
+          "procurement_spend_12m_usd": 1513440.28
+        },
+        {
+          "supplier_rank": 202,
+          "vendor_name": "Sharp, Sullivan and Patrick",
+          "vendor_category": "Services",
+          "dynamic_supplier_score": 67.67,
+          "score_change_3m": -3.03,
+          "supplier_risk_class": "Medium",
+          "procurement_spend_12m_usd": 1481636.21
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "vendor_source",
+      "label": "Cleaned monthly vendor snapshots",
+      "path": "data/cleaned/vendors_clean.csv"
+    },
+    {
+      "id": "orders_source",
+      "label": "Cleaned order-level product costs",
+      "path": "data/cleaned/orders_clean.csv"
+    },
+    {
+      "id": "supplier_ranking",
+      "label": "Dynamic supplier ranking output",
+      "path": "Reports/module2_supplier_performance/supplier_ranking.csv"
+    },
+    {
+      "id": "portfolio_trends",
+      "label": "Monthly supplier score trends",
+      "path": "Reports/module2_supplier_performance/portfolio_monthly_trends.csv"
+    },
+    {
+      "id": "analysis_summary",
+      "label": "Supplier scoring analysis summary",
+      "path": "Reports/module2_supplier_performance/analysis_summary.json"
+    },
+    {
+      "id": "headline_sql",
+      "label": "Headline Metrics",
+      "path": "Reports/module2_supplier_performance/queries/headline_metrics.sql"
+    },
+    {
+      "id": "portfolio_trends_sql",
+      "label": "Portfolio Trends",
+      "path": "Reports/module2_supplier_performance/queries/portfolio_trends.sql"
+    },
+    {
+      "id": "supplier_momentum_sql",
+      "label": "Supplier Momentum",
+      "path": "Reports/module2_supplier_performance/queries/supplier_momentum.sql"
+    },
+    {
+      "id": "risk_exposure_sql",
+      "label": "Risk Exposure",
+      "path": "Reports/module2_supplier_performance/queries/risk_exposure.sql"
+    },
+    {
+      "id": "replacement_sql",
+      "label": "Replacement Candidates",
+      "path": "Reports/module2_supplier_performance/queries/replacement_candidates.sql"
+    },
+    {
+      "id": "strategic_sql",
+      "label": "Strategic Candidates",
+      "path": "Reports/module2_supplier_performance/queries/strategic_candidates.sql"
+    },
+    {
+      "id": "deteriorating_sql",
+      "label": "Deteriorating Exposure",
+      "path": "Reports/module2_supplier_performance/queries/deteriorating_exposure.sql"
+    }
+  ]
+}
