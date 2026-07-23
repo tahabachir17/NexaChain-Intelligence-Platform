@@ -1,0 +1,461 @@
+supplier_rank,vendor_id,vendor_name,vendor_region,vendor_category,as_of_month,months_in_dynamic_window,otd_score,quality_score,risk_performance_score,cost_efficiency_score,lead_time_score,dynamic_supplier_score,vris_score,defect_rate_pct,lead_time_avg_days,contract_lead_time_days,financial_stability_score,past_disruption_count,active_dispute_flag,preferred_vendor_flag,recent_3m_score,prior_3m_score,score_change_3m,trend_class,procurement_spend_12m_usd,spend_percentile,supplier_risk_class,replacement_candidate,recommended_tier,category_rank
+1,VND-000040,Frazier-Flores,EMEA,Logistics,2024-12-01,6,93.93,96.52,46.93,65.77,95.96,81.13,77.19,0.027,44.94,45,36.43,1,0,0,85.22,75.4,9.82,Improving,1138309.3,0.82,High,False,Approved,1
+2,VND-000409,Moore-Sanders,MEA,Raw Materials,2024-12-01,6,94.67,93.67,40.31,83.98,87.87,80.98,9.69,0.035,61.46,52,51.44,1,0,1,82.46,75.72,6.74,Improving,1034035.17,0.79,Low,False,Strategic Partner,1
+3,VND-000105,Hernandez and Sons,MEA,Packaging,2024-12-01,6,92.01,93.64,51.92,56.93,95.1,79.52,81.02,0.002,45.8,48,56.72,0,0,0,77.48,85.24,-7.76,Deteriorating,457890.69,0.27,High,False,Approved,1
+4,VND-000755,"Keller, Reid and Le",APAC,Services,2024-12-01,6,89.82,95.15,44.47,53.19,97.31,77.45,84.15,0.091,47.66,54,69.12,3,0,1,76.1,78.18,-2.08,Deteriorating,863189.52,0.72,High,False,Approved,1
+5,VND-001043,"Weaver, Lee and Brady",MEA,Services,2024-12-01,6,96.49,92.86,30.59,59.91,93.96,76.72,86.59,0.0,22.22,20,56.11,1,0,1,78.86,73.85,5.01,Improving,459509.54,0.28,High,False,Approved,2
+6,VND-000300,King-White,Americas,Raw Materials,2024-12-01,6,93.1,96.86,19.5,77.02,93.05,76.71,82.97,0.0,42.36,35,57.25,0,0,1,76.98,77.1,-0.12,Stable,428977.02,0.23,High,False,Approved,2
+7,VND-000924,Shah Group,MEA,Electronics,2024-12-01,6,82.93,89.36,43.81,70.93,95.71,76.51,78.07,0.032,53.12,60,75.88,1,0,0,77.61,75.18,2.43,Improving,778820.0,0.66,High,False,Approved,1
+8,VND-000694,Larson LLC,EMEA,Services,2024-12-01,6,97.32,99.02,19.78,66.22,90.39,76.45,79.99,0.0,8.55,7,50.84,0,0,1,77.34,75.02,2.31,Improving,631845.15,0.53,High,False,Approved,3
+9,VND-000563,Perry Group,MEA,Electronics,2024-12-01,6,92.79,94.04,35.96,53.6,96.82,76.4,13.72,0.212,38.0,39,57.83,0,0,1,77.07,73.18,3.89,Improving,743690.89,0.64,Low,False,Strategic Partner,2
+10,VND-000475,Snyder-Patterson,APAC,Services,2024-12-01,6,84.52,87.95,38.86,72.78,95.38,75.94,13.12,0.068,30.99,29,50.89,2,0,0,77.65,70.66,6.99,Improving,369848.84,0.17,Medium,False,Preferred,4
+11,VND-000885,James-Fox,APAC,Services,2024-12-01,6,85.29,85.35,36.18,74.72,98.25,75.84,69.87,0.17,48.33,59,54.11,2,0,0,78.64,72.66,5.98,Improving,1715221.12,0.95,Medium,False,Strategic Partner,5
+12,VND-000417,"Watkins, Cole and Branch",APAC,Logistics,2024-12-01,6,88.79,87.28,48.26,53.36,93.32,75.75,12.98,0.104,25.17,33,72.64,0,0,0,78.3,70.65,7.65,Improving,670073.8,0.58,Low,False,Preferred,2
+13,VND-000343,"Hanna, Davis and Jackson",EMEA,Packaging,2024-12-01,6,98.59,92.08,27.13,54.73,93.29,75.62,78.13,0.164,33.72,34,61.51,0,0,1,73.3,78.98,-5.68,Deteriorating,905757.94,0.74,High,False,Approved,2
+14,VND-001007,Wilson-Clark,EMEA,Logistics,2024-12-01,6,81.36,72.18,60.59,65.53,98.8,75.61,13.94,0.202,27.24,29,83.44,0,0,0,77.18,70.35,6.83,Improving,671969.66,0.59,Low,False,Preferred,3
+15,VND-000117,Parsons Group,APAC,Logistics,2024-12-01,6,95.95,98.81,14.11,63.43,96.81,75.4,90.69,0.001,12.11,14,65.68,0,0,1,75.31,75.19,0.12,Stable,226274.28,0.03,High,False,Approved,4
+16,VND-000443,Green-Singleton,Americas,Services,2024-12-01,6,96.05,91.39,23.69,61.44,95.03,75.3,78.27,0.055,17.42,16,70.98,2,0,1,73.78,79.46,-5.68,Deteriorating,227812.08,0.03,High,False,Approved,6
+17,VND-001199,Patel-Lewis,MEA,Electronics,2024-12-01,6,87.69,85.73,43.25,56.47,96.41,75.03,67.23,0.142,14.84,17,27.66,0,1,0,75.47,76.95,-1.48,Stable,2580749.47,0.98,High,False,Approved,3
+18,VND-000368,"Brown, Cole and Daniels",MEA,Raw Materials,2024-12-01,6,95.42,95.02,22.26,55.17,97.15,74.93,72.47,0.002,15.13,17,64.035,0,0,0,75.36,73.98,1.38,Stable,870040.01,0.72,High,False,Approved,3
+19,VND-001071,Curtis Group,MEA,Industrial Parts,2024-12-01,6,96.38,96.71,29.57,41.95,95.25,74.75,76.61,0.063,66.58,57,47.4,0,0,0,74.05,76.3,-2.25,Deteriorating,378555.1,0.17,High,False,Approved,1
+20,VND-000224,Avila PLC,MEA,Raw Materials,2024-12-01,6,82.46,91.55,35.26,75.49,88.26,74.66,80.16,0.051,32.64,25,72.59,0,0,0,75.57,75.01,0.57,Stable,908396.92,0.74,High,False,Approved,4
+21,VND-000372,Dominguez-Wells,MEA,Electronics,2024-12-01,6,92.1,97.88,17.68,64.42,94.65,74.6,78.59,0.048,25.24,21,64.89,0,0,0,74.69,74.04,0.65,Stable,756302.69,0.65,High,False,Approved,4
+22,VND-001135,White-Williams,EMEA,Services,2024-12-01,6,96.12,95.71,17.17,63.94,90.51,74.58,90.74,0.03,13.2,13,92.37,0,0,1,74.84,74.86,-0.02,Stable,519168.96,0.38,High,False,Approved,7
+23,VND-000648,Wilson LLC,APAC,Logistics,2024-12-01,6,89.99,89.39,18.8,77.44,94.1,74.37,86.0,0.026,22.55,21,84.03,0,0,0,73.86,75.55,-1.69,Stable,610117.63,0.51,High,False,Approved,5
+24,VND-000608,"Camacho, Miller and Holden",EMEA,Raw Materials,2024-12-01,6,90.33,88.39,35.62,51.75,97.87,74.34,82.85,0.162,61.69,57,47.73,0,0,0,75.56,70.7,4.86,Improving,228862.18,0.04,High,False,Approved,5
+25,VND-000049,"Grant, Casey and Martinez",MEA,Raw Materials,2024-12-01,6,78.58,75.2,58.64,63.32,95.65,74.19,12.35,0.076,31.49,33,68.39,0,0,0,77.64,65.18,12.46,Improving,1158435.73,0.83,Medium,False,Preferred,6
+26,VND-000447,Bolton-Flynn,Americas,Raw Materials,2024-12-01,6,95.83,96.15,23.27,47.41,96.09,74.16,71.42,0.005,48.04,53,20.98,1,0,0,74.54,72.61,1.93,Stable,203275.45,0.02,High,False,Approved,7
+27,VND-001011,"Carter, Acevedo and Dennis",Americas,Industrial Parts,2024-12-01,6,89.12,83.18,38.14,62.81,91.5,74.15,74.98,0.15,49.01,40,52.47,0,0,0,69.86,82.08,-12.22,Deteriorating,574500.35,0.47,High,False,Approved,2
+28,VND-000310,"Richmond, Daniels and Taylor",APAC,Packaging,2024-12-01,6,84.95,82.64,29.56,81.94,92.81,74.14,80.9,1.427,8.29,7,61.85,0,0,0,74.18,74.69,-0.51,Stable,341867.44,0.14,High,False,Approved,3
+29,VND-000065,"Herring, Pratt and Kelley",APAC,Raw Materials,2024-12-01,6,95.75,96.76,21.26,51.07,93.88,74.07,91.59,0.0,20.44,21,71.21,0,0,1,73.4,75.47,-2.08,Deteriorating,578482.57,0.47,High,False,Approved,8
+30,VND-001082,"Brock, Hendricks and Campbell",MEA,Packaging,2024-12-01,6,89.58,97.18,19.47,67.28,91.76,74.06,78.54,0.0,52.98,42,49.75,0,0,1,73.24,75.53,-2.29,Deteriorating,550814.98,0.43,High,False,Approved,4
+31,VND-000961,Burgess-Huffman,MEA,Packaging,2024-12-01,6,92.93,82.87,21.79,72.77,94.39,73.89,81.46,0.148,12.47,13,91.36,0,0,0,73.41,74.9,-1.49,Stable,869098.64,0.72,High,False,Approved,5
+32,VND-000050,Scott-Norman,EMEA,Raw Materials,2024-12-01,6,94.42,93.92,21.4,56.06,93.62,73.84,88.58,0.002,22.26,23,64.93,0,0,1,74.32,72.41,1.91,Stable,417400.26,0.21,High,False,Approved,9
+33,VND-001149,Burnett-Stevens,EMEA,Raw Materials,2024-12-01,6,90.06,93.74,35.12,44.58,95.38,73.78,87.12,0.015,12.06,11,94.87,0,0,1,69.42,81.64,-12.23,Deteriorating,2373807.88,0.97,High,False,Approved,10
+34,VND-001131,Williams-Price,EMEA,Industrial Parts,2024-12-01,6,97.48,88.39,17.23,63.84,91.18,73.62,81.5,0.073,51.78,57,95.18,0,0,0,74.16,73.18,0.98,Stable,655551.69,0.56,High,False,Approved,3
+35,VND-000403,"Smith, Moss and Becker",APAC,Services,2024-12-01,6,92.51,95.36,17.67,56.51,97.57,73.47,85.36,0.0,8.55,11,71.3,0,0,1,73.54,73.5,0.03,Stable,557144.46,0.44,High,False,Approved,8
+36,VND-000591,Herring-Berry,EMEA,Logistics,2024-12-01,6,96.25,91.72,19.08,52.03,96.13,73.26,78.8,0.062,34.63,42,62.9,0,0,1,74.49,70.48,4.01,Improving,642661.85,0.55,High,False,Approved,6
+37,VND-000707,"Warren, Gallegos and Berry",APAC,Industrial Parts,2024-12-01,6,95.24,94.54,19.61,50.01,95.37,73.21,85.33,0.005,25.61,24,83.73,0,1,0,72.27,74.4,-2.13,Deteriorating,1522885.67,0.93,Critical,True,Replace,4
+38,VND-001184,Williams-Roberts,MEA,Industrial Parts,2024-12-01,6,91.63,96.81,26.47,47.02,93.27,73.19,83.22,0.0,13.8,14,67.00999999999999,1,1,1,71.69,77.2,-5.5,Deteriorating,654352.73,0.56,Critical,True,Replace,5
+39,VND-000309,"Jones, Sanchez and Luna",APAC,Services,2024-12-01,6,90.35,84.61,32.62,57.28,93.47,73.17,79.24,0.158,31.55,27,40.12,0,0,0,74.79,70.3,4.49,Improving,876306.93,0.72,High,False,Approved,9
+40,VND-000335,Campbell Group,Americas,Logistics,2024-12-01,6,86.5,83.69,24.87,74.79,94.71,73.08,73.32,0.296,28.49,25,48.08,0,0,0,72.99,72.99,-0.0,Stable,514747.34,0.37,High,False,Approved,7
+41,VND-001167,Kirk Group,APAC,Industrial Parts,2024-12-01,6,82.03,87.93,39.73,54.26,97.59,72.92,7.8,0.123,21.04,25,99.17,1,0,0,72.78,70.68,2.1,Improving,332010.71,0.13,Medium,False,Preferred,6
+42,VND-000683,Garcia-Rios,APAC,Services,2024-12-01,6,95.95,93.51,19.05,51.55,92.05,72.84,85.24,0.048,9.27,8,79.22,0,0,1,72.25,73.57,-1.31,Stable,468890.01,0.3,High,False,Approved,10
+43,VND-000114,Mitchell-Conner,APAC,Industrial Parts,2024-12-01,6,77.57,73.93,39.73,81.44,97.22,72.8,69.11,0.301,34.52,42,59.66,1,0,0,73.8,70.58,3.22,Improving,686654.71,0.6,Medium,False,Preferred,7
+44,VND-001020,Oneill Inc,Americas,Electronics,2024-12-01,6,85.48,88.57,42.03,45.99,94.07,72.77,11.92,0.188,37.79,49,57.46,0,0,0,74.02,67.37,6.65,Improving,559510.3,0.44,Medium,False,Preferred,5
+45,VND-000477,Cummings-Hamilton,EMEA,Logistics,2024-12-01,6,88.39,87.72,21.6,66.34,95.85,72.71,80.92,0.031,19.28,18,59.07,0,0,0,73.04,71.68,1.36,Stable,1516575.03,0.92,High,False,Approved,8
+46,VND-000625,Johnson-Deleon,MEA,Electronics,2024-12-01,6,91.38,82.93,34.58,51.65,93.41,72.67,80.19,0.131,10.61,11,61.66,0,0,0,76.1,67.8,8.3,Improving,449683.42,0.26,High,False,Approved,6
+47,VND-000151,Lucas Group,MEA,Packaging,2024-12-01,6,90.47,86.25,36.63,50.12,89.11,72.6,20.1,0.026,43.68,35,74.74,0,1,0,72.97,69.9,3.07,Improving,599088.41,0.5,High,False,Approved,6
+48,VND-000025,Torres Ltd,EMEA,Industrial Parts,2024-12-01,6,87.39,83.88,22.99,76.99,89.38,72.55,77.66,0.125,12.11,10,40.93,0,0,0,71.32,73.81,-2.49,Deteriorating,193807.89,0.01,High,False,Approved,8
+49,VND-000645,Perez-Jones,Americas,Packaging,2024-12-01,6,87.27,78.42,54.33,35.02,96.92,72.52,74.71,0.202,12.23,12,72.61,0,0,0,74.71,72.04,2.67,Improving,409109.79,0.2,High,False,Approved,7
+50,VND-000320,Kelley Inc,MEA,Packaging,2024-12-01,6,89.78,87.67,23.34,61.48,93.97,72.45,78.73,0.064,27.29,27,63.44,0,0,0,72.78,71.3,1.47,Stable,757425.11,0.66,High,False,Approved,8
+51,VND-000356,Sanchez PLC,EMEA,Logistics,2024-12-01,6,82.32,83.42,42.39,61.04,89.55,72.45,79.55,0.035,46.18,34,62.92,0,0,0,71.43,74.72,-3.29,Deteriorating,1014729.09,0.78,High,False,Approved,9
+52,VND-001132,Hunter-Ray,EMEA,Logistics,2024-12-01,6,90.85,95.99,17.66,53.9,95.5,72.39,82.07,0.0,22.1,30,64.13,0,0,1,72.43,72.27,0.16,Stable,742276.31,0.64,High,False,Approved,10
+53,VND-001172,Bell-Galvan,Americas,Packaging,2024-12-01,6,97.17,93.05,21.85,45.23,89.44,72.33,84.78,0.03,56.38,50,100.0,1,0,1,70.74,76.62,-5.88,Deteriorating,223436.91,0.03,High,False,Approved,9
+54,VND-000125,Armstrong PLC,Americas,Raw Materials,2024-12-01,6,85.12,87.56,22.37,69.4,95.95,72.32,75.5,0.268,23.22,24,44.94,1,0,0,73.04,70.8,2.24,Improving,341232.24,0.14,High,False,Approved,11
+55,VND-001115,Russell-Wilson,Americas,Industrial Parts,2024-12-01,6,88.45,84.92,40.89,49.12,88.32,72.31,81.8,0.249,33.41,27,82.66,0,0,0,67.24,82.52,-15.28,Deteriorating,1237382.34,0.85,High,False,Approved,9
+56,VND-000492,Bradford Group,EMEA,Logistics,2024-12-01,6,93.0,96.15,16.62,47.89,97.74,72.3,84.1,0.013,35.57,38,57.58,0,0,1,73.24,70.64,2.6,Improving,747871.31,0.64,High,False,Approved,11
+57,VND-000900,"Scott, Day and Phillips",MEA,Electronics,2024-12-01,6,86.5,83.94,43.78,45.8,92.86,72.29,81.31,0.0,19.88,17,64.74,0,0,0,72.99,71.24,1.75,Stable,196639.28,0.01,High,False,Approved,7
+58,VND-000169,"Brown, Graham and Green",Americas,Industrial Parts,2024-12-01,6,85.43,87.78,29.43,57.31,96.13,72.09,76.56,0.07,17.3,20,66.96,0,0,0,71.69,73.37,-1.68,Stable,1374246.59,0.89,High,False,Approved,10
+59,VND-000059,Glenn PLC,Americas,Industrial Parts,2024-12-01,6,84.93,90.58,21.52,66.13,94.55,72.0,79.85,0.116,24.06,26,69.15,0,0,0,72.75,70.1,2.65,Improving,320285.33,0.12,High,False,Approved,11
+60,VND-000902,Huang-Flores,EMEA,Electronics,2024-12-01,6,88.03,82.92,22.38,65.48,97.99,71.99,78.68,0.025,25.21,28,57.69,0,0,0,73.11,70.05,3.07,Improving,1988859.42,0.96,High,False,Approved,8
+61,VND-000740,"Palmer, Lopez and Lloyd",APAC,Logistics,2024-12-01,6,85.69,86.33,32.37,53.8,95.66,71.87,75.5,0.029,39.19,42,33.18,0,0,0,72.27,70.29,1.98,Stable,950383.15,0.75,High,False,Approved,12
+62,VND-000185,Rodriguez-Daniel,Americas,Industrial Parts,2024-12-01,6,98.02,94.55,14.25,39.52,97.94,71.79,87.1,0.0,30.76,34,95.99,0,0,0,72.42,70.65,1.77,Stable,1116893.17,0.81,High,False,Approved,12
+63,VND-001152,Barnett-Bird,Americas,Industrial Parts,2024-12-01,6,89.08,87.57,22.44,59.35,94.38,71.78,78.05,0.224,8.17,8,50.88,1,0,0,71.88,71.55,0.34,Stable,1072002.53,0.8,High,False,Approved,13
+64,VND-000299,"Young, Anderson and Robinson",MEA,Industrial Parts,2024-12-01,6,90.45,86.5,36.3,40.86,92.72,71.73,79.57,0.05,52.5,54,69.6,0,0,0,73.28,68.36,4.93,Improving,636602.47,0.54,High,False,Approved,14
+65,VND-000554,Baker PLC,MEA,Electronics,2024-12-01,6,80.89,89.03,28.71,63.41,95.99,71.73,72.19,0.229,20.9,26,53.52,0,0,0,69.82,75.49,-5.66,Deteriorating,1179572.58,0.83,High,False,Approved,9
+66,VND-000896,Ray-Hernandez,Americas,Electronics,2024-12-01,6,89.39,85.47,28.57,51.09,96.24,71.72,85.23,0.015,11.61,12,90.51,0,0,0,71.38,73.5,-2.12,Deteriorating,215207.63,0.02,High,False,Approved,10
+67,VND-000821,"Pearson, Hall and Hammond",EMEA,Electronics,2024-12-01,6,75.78,81.16,36.25,78.24,90.45,71.52,78.18,0.043,39.21,41,94.68,0,0,0,71.9,71.37,0.53,Stable,602361.49,0.5,High,False,Approved,11
+68,VND-001111,Ramos-Cunningham,APAC,Logistics,2024-12-01,6,96.23,97.14,15.72,41.57,92.29,71.52,93.13,0.015,53.22,52,64.66,0,0,1,71.74,70.81,0.93,Stable,788621.61,0.67,High,False,Approved,13
+69,VND-000097,"Carter, Larson and May",EMEA,Raw Materials,2024-12-01,6,96.23,96.96,17.5,35.8,95.54,71.46,87.88,0.0,18.99,17,64.79,1,0,1,71.26,71.82,-0.56,Stable,789457.74,0.67,High,False,Approved,12
+70,VND-000376,Fowler PLC,MEA,Raw Materials,2024-12-01,6,90.48,93.36,21.43,50.2,92.09,71.45,80.86,0.079,22.65,19,76.46,1,0,1,71.52,71.77,-0.25,Stable,264932.62,0.06,High,False,Approved,13
+71,VND-000042,Mitchell-Green,APAC,Industrial Parts,2024-12-01,6,93.43,96.48,19.16,39.15,95.9,71.41,85.47,0.0,38.3,47,83.54,0,0,1,71.17,71.69,-0.53,Stable,1148639.4,0.83,High,False,Approved,15
+72,VND-000647,Schmidt PLC,EMEA,Industrial Parts,2024-12-01,6,75.94,73.37,39.39,76.0,97.56,71.37,75.53,0.292,7.56,8,84.75,1,0,0,71.91,71.32,0.58,Stable,786765.43,0.67,High,False,Approved,16
+73,VND-000644,"Mendoza, Conrad and Marshall",Americas,Services,2024-12-01,6,84.66,81.82,24.35,66.69,98.07,71.34,73.34,0.89,49.3,50,59.42,0,0,0,71.74,70.51,1.24,Stable,474346.23,0.31,High,False,Approved,11
+74,VND-000297,Martin-Clay,Americas,Industrial Parts,2024-12-01,6,91.27,94.18,18.13,51.23,91.58,71.26,86.77,0.035,17.72,18,74.85,0,0,1,71.35,70.74,0.61,Stable,281315.49,0.08,High,False,Approved,17
+75,VND-000883,"Evans, Jones and Clark",MEA,Services,2024-12-01,6,85.6,84.76,38.83,47.01,92.02,71.25,76.36,0.082,19.62,17,61.98,0,0,0,72.92,67.94,4.97,Improving,501903.32,0.36,High,False,Approved,12
+76,VND-000189,"Rivera, Graves and Huang",APAC,Services,2024-12-01,6,78.94,86.01,54.93,39.43,89.73,71.24,15.18,0.006,70.38,54,68.66,1,0,0,68.86,75.29,-6.43,Deteriorating,228736.07,0.04,Medium,False,Approved,13
+77,VND-000932,Jones-Wall,MEA,Raw Materials,2024-12-01,6,76.56,74.78,54.64,55.01,93.92,71.19,17.82,0.279,32.64,40,61.23,0,0,0,69.07,73.28,-4.21,Deteriorating,1312538.95,0.88,Medium,False,Approved,14
+78,VND-000957,Velez-Bush,APAC,Industrial Parts,2024-12-01,6,87.22,86.69,20.93,59.39,97.25,71.19,75.01,0.061,44.84,45,51.22,1,0,0,70.25,72.44,-2.19,Deteriorating,581359.35,0.47,High,False,Approved,18
+79,VND-000199,Brennan-Carter,EMEA,Industrial Parts,2024-12-01,6,86.6,84.36,23.16,61.39,96.17,71.12,73.6,0.232,42.44,44,46.32,0,0,0,71.51,70.05,1.46,Stable,585159.7,0.48,High,False,Approved,19
+80,VND-000978,Neal LLC,Americas,Logistics,2024-12-01,6,81.68,82.62,34.44,61.08,93.34,71.08,75.28,0.031,23.42,39,66.8,0,0,0,70.41,71.94,-1.53,Stable,1623618.41,0.94,High,False,Approved,14
+81,VND-000182,Hensley-Harvey,EMEA,Logistics,2024-12-01,6,87.62,84.57,24.95,55.95,96.53,71.06,82.85,0.064,30.06,32,89.48,0,0,0,69.95,74.54,-4.59,Deteriorating,478338.95,0.32,High,False,Approved,15
+82,VND-000783,Barron Ltd,Americas,Electronics,2024-12-01,6,91.36,86.39,21.7,51.88,94.98,71.06,72.83,0.01,17.48,23,28.01,0,0,1,70.36,72.39,-2.03,Deteriorating,581729.16,0.48,High,False,Approved,12
+83,VND-001164,Roy-Mcintyre,EMEA,Raw Materials,2024-12-01,6,91.75,82.09,33.97,43.07,92.35,71.05,85.16,0.036,50.53,42,94.63,0,0,0,74.11,67.61,6.5,Improving,1062095.7,0.8,High,False,Approved,15
+84,VND-000633,"Erickson, Shepherd and Richardson",MEA,Electronics,2024-12-01,6,93.45,91.01,16.1,49.52,94.04,70.99,80.52,0.015,57.15,60,75.13,1,0,1,70.76,71.06,-0.3,Stable,8523836.37,1.0,High,False,Approved,13
+85,VND-001026,Rodriguez-Holloway,Americas,Packaging,2024-12-01,6,92.12,91.04,19.87,46.49,94.52,70.97,80.29,0.098,34.75,37,63.58,1,0,1,72.13,68.81,3.31,Improving,1174105.5,0.83,High,False,Approved,10
+86,VND-001054,Perez Group,Americas,Services,2024-12-01,6,81.58,77.1,43.33,52.74,94.93,70.71,16.13,0.029,27.68,30,65.825,0,0,0,72.12,66.7,5.42,Improving,1448369.3,0.91,Medium,False,Preferred,14
+87,VND-000089,Nelson Inc,APAC,Services,2024-12-01,6,90.64,93.83,18.51,53.74,86.04,70.63,83.21,0.003,50.07,43,82.29,0,0,1,70.26,71.8,-1.54,Stable,779630.16,0.67,High,False,Approved,15
+88,VND-000283,Scott LLC,EMEA,Services,2024-12-01,6,82.9,84.73,37.3,47.06,95.18,70.61,70.31,0.011,42.09,36,44.1,0,0,0,72.48,66.86,5.61,Improving,2782177.06,0.98,High,False,Approved,16
+89,VND-000519,"Jones, Pollard and Watkins",EMEA,Logistics,2024-12-01,6,91.03,86.37,18.11,50.98,98.18,70.58,82.69,0.08,31.64,33,67.78,1,1,0,70.37,69.91,0.46,Stable,237590.95,0.04,Critical,False,Conditional,16
+90,VND-000744,"Moreno, Walter and Sexton",MEA,Electronics,2024-12-01,6,84.92,81.22,34.12,53.83,92.7,70.52,77.69,0.161,42.01,34,71.31,0,0,0,71.59,68.73,2.85,Improving,562401.12,0.45,High,False,Approved,14
+91,VND-000449,Elliott Inc,Americas,Industrial Parts,2024-12-01,6,80.5,75.36,41.26,57.41,96.18,70.51,15.25,0.035,21.31,27,72.1,0,0,0,71.23,67.22,4.01,Improving,150855.25,0.0,Medium,False,Preferred,20
+92,VND-001099,Bailey-Davies,MEA,Services,2024-12-01,6,80.71,77.52,38.69,58.55,94.73,70.44,73.39,0.342,29.9,29,66.84,1,0,0,71.35,67.32,4.03,Improving,1702668.4,0.95,High,False,Approved,17
+93,VND-000389,Mathews Ltd,Americas,Packaging,2024-12-01,6,80.5,83.02,38.5,49.8,96.77,70.44,81.87,0.12,45.56,45,64.36,0,0,0,72.48,66.67,5.81,Improving,369405.5,0.16,High,False,Approved,11
+94,VND-000092,Reeves PLC,EMEA,Packaging,2024-12-01,6,75.86,76.13,32.72,75.41,97.33,70.44,75.71,0.041,20.27,20,60.77,0,0,0,69.18,73.24,-4.06,Deteriorating,1007261.33,0.78,High,False,Approved,12
+95,VND-000850,"Meadows, Alexander and Duarte",Americas,Services,2024-12-01,6,89.71,83.9,21.43,55.67,94.01,70.43,77.81,0.052,18.69,19,53.0,2,0,0,71.11,68.75,2.35,Improving,829930.15,0.69,High,False,Approved,18
+96,VND-000206,Lin and Sons,Americas,Packaging,2024-12-01,6,76.94,71.38,32.67,79.7,97.2,70.43,69.53,0.436,53.77,51,68.9,1,0,0,69.26,74.21,-4.96,Deteriorating,418083.85,0.21,Medium,False,Approved,13
+97,VND-000993,Franco-Ramirez,APAC,Electronics,2024-12-01,6,82.17,84.99,21.94,64.75,97.79,70.42,76.73,0.061,34.39,40,69.06,1,0,0,69.12,72.66,-3.54,Deteriorating,533421.28,0.4,High,False,Approved,15
+98,VND-000698,Allen LLC,Americas,Raw Materials,2024-12-01,6,77.79,74.47,48.56,54.14,95.43,70.38,81.65,0.08,40.15,48,100.0,0,0,0,73.38,66.27,7.11,Improving,529029.24,0.39,High,False,Approved,16
+99,VND-000703,Howard-Williams,MEA,Electronics,2024-12-01,6,75.53,78.37,35.33,68.32,98.04,70.36,79.7,0.053,9.94,12,60.8,1,0,0,73.2,65.12,8.08,Improving,252763.09,0.05,High,False,Approved,16
+100,VND-000361,Scott Group,EMEA,Electronics,2024-12-01,6,88.42,84.46,19.54,56.9,96.61,70.35,76.01,0.264,10.48,10,58.64,0,0,0,70.64,70.17,0.48,Stable,909922.76,0.75,High,False,Approved,17
+101,VND-000923,Crane-Fuller,APAC,Raw Materials,2024-12-01,6,85.37,85.9,36.13,42.58,92.89,70.34,79.2,0.043,27.11,26,49.06,0,0,0,73.08,65.46,7.62,Improving,1347850.5,0.89,High,False,Approved,17
+102,VND-000101,Porter-Booth,MEA,Logistics,2024-12-01,6,97.65,93.48,15.49,33.51,94.82,70.34,91.16,0.0,9.05,9,76.23,1,0,0,69.83,71.11,-1.28,Stable,384309.51,0.18,High,False,Approved,17
+103,VND-000448,Rivers-Mcdonald,EMEA,Industrial Parts,2024-12-01,6,90.53,85.36,20.79,49.88,96.38,70.33,77.13,0.019,44.59,54,51.49,0,0,0,70.26,69.34,0.93,Stable,1031634.56,0.79,High,False,Approved,21
+104,VND-000488,Park LLC,APAC,Electronics,2024-12-01,6,90.79,96.33,16.94,44.3,91.67,70.28,81.14,0.058,51.44,42,55.22,0,0,1,70.91,70.18,0.73,Stable,561454.06,0.45,High,False,Approved,18
+105,VND-000765,"Webb, Wilson and Reed",EMEA,Logistics,2024-12-01,6,80.48,84.32,23.54,72.82,90.6,70.23,77.42,0.013,38.21,34,67.58,0,0,0,70.27,69.64,0.63,Stable,555965.07,0.43,High,False,Approved,18
+106,VND-000217,Ellis LLC,APAC,Raw Materials,2024-12-01,6,84.29,77.4,39.33,50.62,92.89,70.16,82.42,0.075,54.76,44,70.75,0,0,0,68.31,74.22,-5.91,Deteriorating,757226.19,0.66,High,False,Approved,18
+107,VND-000941,Jones Group,EMEA,Raw Materials,2024-12-01,6,88.22,86.06,27.55,48.63,91.01,70.13,81.06,0.103,11.12,10,56.76,0,0,0,68.53,73.84,-5.3,Deteriorating,457968.72,0.27,High,False,Approved,19
+108,VND-001120,Pennington-Hammond,MEA,Industrial Parts,2024-12-01,6,82.4,85.56,32.56,51.56,93.43,70.09,83.08,0.131,35.08,34,99.36,0,0,0,72.73,67.51,5.23,Improving,1304427.32,0.88,High,False,Approved,22
+109,VND-000760,Morton-Gonzales,APAC,Services,2024-12-01,6,85.72,84.2,29.65,49.44,94.54,70.08,74.69,0.31,61.68,55,46.36,0,0,0,67.32,74.3,-6.98,Deteriorating,463041.63,0.29,High,False,Approved,19
+110,VND-000251,Robinson-Bradley,MEA,Industrial Parts,2024-12-01,6,74.54,79.78,28.69,79.34,94.06,70.07,75.41,0.005,42.07,40,70.65,0,0,0,69.91,69.84,0.07,Stable,672223.69,0.59,High,False,Approved,23
+111,VND-001072,Wade Ltd,APAC,Logistics,2024-12-01,6,94.86,95.58,18.12,30.96,94.8,70.06,70.9,0.005,15.83,17,31.72,0,0,1,70.66,68.83,1.83,Stable,751294.08,0.65,High,False,Approved,19
+112,VND-000922,Armstrong Inc,MEA,Services,2024-12-01,6,82.77,86.06,22.16,62.96,93.78,69.99,71.4,0.054,35.92,40,47.99,0,0,0,69.95,70.33,-0.38,Stable,396808.03,0.19,High,False,Approved,20
+113,VND-000485,"Jones, Gallegos and Walker",APAC,Packaging,2024-12-01,6,79.5,86.54,20.61,65.65,99.05,69.98,74.47,0.251,35.69,38,59.48,1,0,0,70.21,69.84,0.37,Stable,2343269.01,0.97,High,False,Approved,14
+114,VND-001129,Anderson LLC,APAC,Packaging,2024-12-01,6,82.5,85.3,29.54,51.28,97.15,69.98,81.21,0.094,17.2,18,93.64,1,1,0,67.75,73.86,-6.11,Deteriorating,262881.61,0.06,Critical,True,Replace,15
+115,VND-001045,Little-Daniel,EMEA,Services,2024-12-01,6,75.72,78.31,26.43,76.03,99.27,69.96,79.39,0.178,42.74,48,100.0,0,0,0,70.7,68.59,2.11,Improving,1306293.04,0.88,High,False,Approved,21
+116,VND-000667,"Campbell, Phillips and Gross",Americas,Raw Materials,2024-12-01,6,83.66,72.7,30.01,64.65,97.26,69.93,76.26,0.092,8.11,11,59.48,0,0,0,70.45,69.89,0.56,Stable,719872.55,0.63,High,False,Approved,20
+117,VND-000093,Keller Ltd,MEA,Raw Materials,2024-12-01,6,88.54,82.19,22.43,58.36,91.1,69.91,81.64,0.19,39.54,32,93.29,1,0,0,69.69,71.14,-1.45,Stable,1350762.3,0.89,High,False,Approved,21
+118,VND-001116,"Henderson, Boyer and Oliver",EMEA,Logistics,2024-12-01,6,79.51,80.28,23.48,74.16,94.37,69.89,82.01,0.172,38.61,39,87.97,0,0,0,70.89,68.69,2.2,Improving,630054.93,0.53,High,False,Approved,20
+119,VND-000207,Hanna PLC,Americas,Industrial Parts,2024-12-01,6,74.92,74.4,42.26,64.84,95.6,69.87,16.04,0.163,6.11,9,77.39,1,0,0,70.24,67.35,2.9,Improving,1433238.72,0.9,Medium,False,Preferred,24
+120,VND-001127,Taylor-Myers,EMEA,Industrial Parts,2024-12-01,6,86.85,85.61,25.8,51.1,92.45,69.87,71.23,0.03,32.82,39,44.61,0,0,0,70.05,69.77,0.28,Stable,865189.67,0.72,High,False,Approved,25
+121,VND-000423,"Vargas, Short and Flores",MEA,Logistics,2024-12-01,6,86.03,89.17,22.09,47.5,97.74,69.85,73.84,0.153,13.12,14,38.36,0,0,0,70.75,69.03,1.72,Stable,393763.03,0.19,High,False,Approved,21
+122,VND-000537,Gonzales Group,EMEA,Industrial Parts,2024-12-01,6,87.43,89.42,20.82,48.78,94.88,69.82,78.72,0.006,50.42,53,78.72,0,0,0,70.9,67.38,3.52,Improving,403292.91,0.19,High,False,Approved,26
+123,VND-001084,"Carpenter, George and Castillo",Americas,Industrial Parts,2024-12-01,6,79.55,72.99,38.39,62.97,94.6,69.78,75.2,0.198,15.27,24,72.68,0,0,0,71.06,68.72,2.34,Improving,1200376.6,0.84,High,False,Approved,27
+124,VND-000833,Morton-Barrett,MEA,Packaging,2024-12-01,6,85.9,79.24,22.82,60.76,96.35,69.75,72.31,0.172,50.44,58,46.38,0,0,0,69.08,71.01,-1.93,Stable,791675.32,0.68,High,False,Approved,16
+125,VND-000684,Powell PLC,Americas,Raw Materials,2024-12-01,6,87.48,82.14,21.56,58.56,93.13,69.74,75.37,0.494,39.65,35,53.75,1,0,0,69.81,68.96,0.85,Stable,803963.23,0.69,High,False,Approved,22
+126,VND-000610,Perkins-Miller,APAC,Raw Materials,2024-12-01,6,68.42,80.44,41.82,69.57,95.34,69.71,18.72,0.122,48.74,56,39.05,0,0,0,70.48,66.33,4.15,Improving,1012371.71,0.78,Medium,False,Preferred,23
+127,VND-000778,"Griffin, Stone and Lozano",APAC,Raw Materials,2024-12-01,6,76.97,73.3,45.05,55.94,97.02,69.71,12.55,0.058,26.47,27,85.14,0,0,0,71.42,63.89,7.53,Improving,1195959.21,0.84,Medium,False,Preferred,24
+128,VND-000800,Roberts Group,MEA,Services,2024-12-01,6,73.55,78.32,35.77,67.67,97.78,69.7,73.75,0.026,23.54,29,45.51,0,0,0,70.11,69.87,0.25,Stable,1301480.86,0.87,High,False,Approved,22
+129,VND-000884,Reyes-Cruz,APAC,Industrial Parts,2024-12-01,6,84.47,88.05,23.2,51.18,96.15,69.69,74.96,0.003,37.57,39,24.54,0,0,0,69.92,68.4,1.52,Stable,296788.78,0.1,High,False,Approved,28
+130,VND-000620,"Hunter, Hartman and Jackson",APAC,Raw Materials,2024-12-01,6,76.55,77.64,48.8,44.4,98.5,69.69,74.77,0.439,39.24,46,65.6,2,0,0,70.8,67.45,3.34,Improving,729223.56,0.63,High,False,Approved,25
+131,VND-000106,"Hubbard, Miranda and Dixon",Americas,Logistics,2024-12-01,6,82.6,85.57,24.64,55.17,97.26,69.69,72.68,0.084,60.46,56,46.15,1,0,0,69.21,70.43,-1.22,Stable,701251.85,0.62,High,False,Approved,22
+132,VND-000971,Copeland PLC,Americas,Logistics,2024-12-01,6,88.34,89.94,19.91,46.65,94.26,69.61,80.28,0.072,5.79,7,67.53999999999999,1,0,0,70.14,67.91,2.23,Improving,515204.73,0.38,High,False,Approved,23
+133,VND-000970,"Montoya, Smith and Washington",MEA,Logistics,2024-12-01,6,86.59,81.39,19.3,61.78,94.75,69.59,81.75,0.065,12.53,13,92.08,0,0,0,69.3,71.43,-2.13,Deteriorating,445637.87,0.25,High,False,Approved,24
+134,VND-000533,Frazier-Andrews,Americas,Packaging,2024-12-01,6,84.37,85.63,19.71,59.72,94.96,69.58,82.87,0.013,47.73,58,61.91,0,0,0,71.47,65.15,6.32,Improving,517788.87,0.38,High,False,Approved,17
+135,VND-001085,"Mcbride, Mcdaniel and Black",EMEA,Industrial Parts,2024-12-01,6,93.29,94.52,16.23,35.45,94.0,69.56,86.75,0.002,26.78,28,72.72,2,0,0,69.6,69.09,0.51,Stable,530448.06,0.4,High,False,Approved,29
+136,VND-000653,Wright Ltd,EMEA,Industrial Parts,2024-12-01,6,72.28,71.09,43.08,72.52,93.77,69.46,77.87,0.16,41.93,38,90.0,0,0,0,68.89,70.0,-1.12,Stable,1242794.58,0.85,High,False,Approved,30
+137,VND-001163,"Perez, Dorsey and Fritz",Americas,Raw Materials,2024-12-01,6,82.76,87.99,20.36,64.2,88.85,69.46,80.6,0.011,47.15,39,56.82,0,0,0,68.84,70.24,-1.4,Stable,464362.27,0.29,High,False,Approved,26
+138,VND-001006,"Farmer, Perry and Carey",MEA,Logistics,2024-12-01,6,83.44,87.39,22.88,53.98,95.14,69.45,78.2,0.034,14.7,14,70.44,0,0,0,70.21,68.5,1.71,Stable,751281.45,0.65,High,False,Approved,25
+139,VND-000679,Adams Group,EMEA,Services,2024-12-01,6,71.05,76.36,48.25,60.45,94.23,69.44,17.1,0.018,12.52,15,87.79,0,0,0,67.35,71.44,-4.09,Deteriorating,184730.53,0.01,Medium,False,Approved,23
+140,VND-000339,"Whitaker, Williamson and Mitchell",MEA,Logistics,2024-12-01,6,84.05,84.83,28.17,52.36,91.58,69.41,80.7,0.099,15.41,14,88.13,1,0,0,67.63,73.0,-5.38,Deteriorating,1117500.06,0.81,High,False,Approved,26
+141,VND-000565,"Strong, Mcgee and Phillips",EMEA,Raw Materials,2024-12-01,6,85.26,87.02,19.89,53.08,96.31,69.37,68.17,0.022,24.2,29,27.15,0,0,0,70.09,67.93,2.17,Improving,460541.12,0.28,Medium,False,Preferred,27
+142,VND-000086,Deleon-Butler,EMEA,Packaging,2024-12-01,6,83.56,80.25,28.23,59.14,91.55,69.37,77.17,0.041,6.44,8,63.68,0,0,0,67.43,74.02,-6.58,Deteriorating,7805375.03,1.0,High,False,Approved,18
+143,VND-000602,"Johnson, Smith and Jones",MEA,Packaging,2024-12-01,6,91.31,86.63,20.46,43.49,93.23,69.32,74.38,0.48,54.36,54,52.11,0,0,0,69.06,70.46,-1.4,Stable,468361.92,0.3,High,False,Approved,19
+144,VND-000113,Benson-Montes,APAC,Electronics,2024-12-01,6,85.41,86.52,23.14,55.61,89.21,69.28,75.07,0.013,25.33,22,39.14,0,0,0,69.38,68.07,1.31,Stable,469320.26,0.3,High,False,Approved,19
+145,VND-000819,"Johnson, Walker and Kirk",MEA,Electronics,2024-12-01,6,84.38,83.19,27.0,51.29,94.81,69.27,67.27,0.027,57.45,51,35.12,0,0,0,70.08,68.5,1.58,Stable,341375.48,0.14,Medium,False,Preferred,20
+146,VND-000741,"Scott, Stewart and Sutton",MEA,Electronics,2024-12-01,6,88.84,81.89,20.46,53.19,94.35,69.25,78.67,0.101,60.45,60,55.28,0,0,0,68.55,70.68,-2.13,Deteriorating,268987.53,0.07,High,False,Approved,21
+147,VND-000748,Fuller-Blair,Americas,Services,2024-12-01,6,76.59,75.32,26.56,74.01,98.24,69.19,74.83,0.046,15.79,19,70.44,0,0,0,69.51,68.6,0.92,Stable,690182.59,0.6,High,False,Approved,24
+148,VND-000811,"Johnson, Diaz and Mendoza",APAC,Electronics,2024-12-01,6,90.36,83.82,20.12,48.57,93.25,69.17,80.11,0.039,50.22,44,64.92500000000001,0,0,0,68.87,69.2,-0.33,Stable,700188.69,0.62,High,False,Approved,22
+149,VND-001188,"Meyer, Ramos and Parrish",EMEA,Services,2024-12-01,6,84.44,83.38,32.04,46.18,92.06,69.15,74.68,0.026,65.01,55,63.565,0,0,0,70.19,69.5,0.69,Stable,954247.46,0.76,High,False,Approved,25
+150,VND-000416,Thomas Ltd,APAC,Services,2024-12-01,6,87.26,88.51,22.49,44.85,93.6,69.15,73.06,0.111,45.52,47,34.84,0,0,0,69.42,68.07,1.36,Stable,386447.07,0.18,High,False,Approved,26
+151,VND-000457,"Garcia, Hart and Savage",APAC,Industrial Parts,2024-12-01,6,77.55,80.95,36.69,51.16,97.76,69.13,68.56,0.081,27.64,39,68.345,0,0,0,72.21,64.48,7.74,Improving,557046.4,0.43,Medium,False,Preferred,31
+152,VND-000003,"Becker, Wright and Frazier",EMEA,Industrial Parts,2024-12-01,6,72.82,74.58,50.72,51.0,97.12,69.13,12.93,0.121,6.74,7,69.27,0,0,0,69.73,65.44,4.29,Improving,491601.06,0.34,Medium,False,Preferred,32
+153,VND-000616,Cole-Dixon,MEA,Services,2024-12-01,6,87.98,82.13,20.67,50.23,97.38,69.1,76.66,0.021,34.11,40,80.85,0,0,0,69.35,68.67,0.67,Stable,453345.79,0.26,High,False,Approved,27
+154,VND-000020,Evans LLC,APAC,Packaging,2024-12-01,6,85.52,89.44,21.8,48.03,93.06,69.07,78.28,0.006,12.14,13,72.22,0,0,0,69.15,68.98,0.17,Stable,505664.22,0.36,High,False,Approved,20
+155,VND-000469,"Knight, Jackson and Barrett",MEA,Electronics,2024-12-01,6,85.02,87.42,24.43,50.19,91.03,69.06,87.03,0.028,50.0,51,67.465,0,0,0,67.8,72.91,-5.11,Deteriorating,2147736.08,0.97,High,False,Approved,23
+156,VND-000729,"Adams, Chung and Gutierrez",MEA,Industrial Parts,2024-12-01,6,76.01,79.34,33.0,62.05,96.54,69.06,76.05,0.021,51.26,57,44.15,0,0,0,68.51,69.45,-0.94,Stable,272705.15,0.07,High,False,Approved,33
+157,VND-000030,Contreras and Sons,EMEA,Industrial Parts,2024-12-01,6,88.25,84.81,22.41,45.25,95.65,69.05,76.41,0.023,9.42,11,48.42,0,0,0,68.97,68.99,-0.01,Stable,1296490.84,0.87,High,False,Approved,34
+158,VND-000873,"Anderson, Pace and Gross",MEA,Electronics,2024-12-01,6,77.82,74.2,24.25,75.53,97.56,69.0,76.22,0.028,10.36,16,66.08,1,0,0,70.21,66.11,4.1,Improving,506935.87,0.36,High,False,Approved,24
+159,VND-000081,Lee Group,MEA,Raw Materials,2024-12-01,6,79.43,79.67,38.58,48.85,94.52,68.99,77.72,0.26,46.15,51,74.17,0,0,0,70.88,66.23,4.65,Improving,307568.1,0.1,High,False,Approved,28
+160,VND-000931,Hanson-Moss,EMEA,Packaging,2024-12-01,6,86.06,82.18,21.91,53.42,95.54,68.98,78.08,0.321,32.71,34,90.13,0,0,0,69.7,68.35,1.35,Stable,493616.28,0.35,High,False,Approved,21
+161,VND-000496,David Ltd,MEA,Industrial Parts,2024-12-01,6,86.68,80.32,22.33,56.1,93.27,68.94,75.11,0.076,29.37,29,64.16,0,0,0,67.99,71.24,-3.26,Deteriorating,989689.66,0.77,High,False,Approved,35
+162,VND-000193,"Hall, Paul and Salazar",APAC,Services,2024-12-01,6,76.7,76.49,35.55,63.74,93.0,68.93,73.62,0.031,39.4,32,69.23,0,0,0,68.12,70.03,-1.91,Stable,642437.46,0.55,High,False,Approved,28
+163,VND-000972,Hunt Inc,MEA,Services,2024-12-01,6,87.33,89.67,18.77,48.39,91.85,68.93,82.52,0.023,16.84,16,100.0,1,0,0,70.15,66.81,3.34,Improving,340398.06,0.14,High,False,Approved,29
+164,VND-000568,"Jones, Brown and Williams",MEA,Packaging,2024-12-01,6,73.63,78.82,44.66,53.99,93.54,68.91,16.09,0.288,7.89,7,45.13,0,0,0,69.66,65.63,4.04,Improving,283076.0,0.09,Medium,False,Preferred,22
+165,VND-000816,"Escobar, Le and Miller",Americas,Services,2024-12-01,6,76.67,75.26,45.13,52.41,93.11,68.9,30.47,0.33,12.76,14,47.0,0,1,0,70.17,65.13,5.04,Improving,1474833.22,0.91,High,False,Approved,30
+166,VND-001022,King Group,APAC,Raw Materials,2024-12-01,6,77.21,73.02,38.26,56.85,98.88,68.78,69.81,1.001,27.97,31,55.65,0,0,0,71.73,63.65,8.08,Improving,337080.03,0.13,Medium,False,Preferred,29
+167,VND-000845,Colon-Davidson,Americas,Raw Materials,2024-12-01,6,70.97,76.3,37.12,68.87,95.89,68.69,82.6,0.026,37.91,48,100.0,0,0,0,68.77,67.49,1.28,Stable,967440.79,0.76,High,False,Approved,30
+168,VND-001123,"Morris, Glass and Howard",MEA,Electronics,2024-12-01,6,83.63,84.72,30.52,42.01,94.81,68.66,76.15,0.056,43.87,41,53.87,0,0,0,67.1,73.45,-6.34,Deteriorating,471504.69,0.31,High,False,Approved,25
+169,VND-000302,White PLC,MEA,Logistics,2024-12-01,6,76.19,75.89,38.49,60.04,92.45,68.61,69.53,0.694,17.17,24,41.79,0,0,0,70.13,66.34,3.79,Improving,1003524.57,0.77,Medium,False,Preferred,27
+170,VND-001046,"Baker, Armstrong and Hendrix",Americas,Logistics,2024-12-01,6,86.88,83.48,23.79,45.18,94.89,68.53,76.27,0.002,46.95,47,69.59,0,0,0,68.66,67.77,0.89,Stable,1135692.75,0.82,High,False,Approved,28
+171,VND-000096,Bradford Ltd,MEA,Raw Materials,2024-12-01,6,75.05,78.75,33.6,62.5,94.3,68.5,74.18,0.063,23.84,34,67.2,0,0,0,67.72,69.7,-1.98,Stable,322779.16,0.12,High,False,Approved,31
+172,VND-000102,Morris-Campbell,EMEA,Raw Materials,2024-12-01,6,85.86,83.24,29.28,44.91,89.75,68.46,79.96,0.131,49.68,41,90.93,0,0,0,65.34,74.29,-8.95,Deteriorating,807034.14,0.69,High,False,Approved,32
+173,VND-000074,Anderson Inc,MEA,Industrial Parts,2024-12-01,6,87.15,85.42,18.92,45.39,97.55,68.45,83.87,0.062,13.27,17,83.47,1,0,0,68.81,68.14,0.67,Stable,1983990.33,0.96,High,False,Approved,36
+174,VND-000871,Williams Group,APAC,Services,2024-12-01,6,76.75,76.07,24.12,72.8,96.33,68.43,79.42,0.031,31.74,30,68.99,0,0,0,68.38,67.89,0.49,Stable,255659.98,0.05,High,False,Approved,31
+175,VND-000699,Allen-Valdez,Americas,Electronics,2024-12-01,6,75.93,75.0,37.47,57.08,97.3,68.43,75.65,0.241,14.55,17,74.6,0,0,0,68.69,67.82,0.86,Stable,650471.72,0.56,High,False,Approved,26
+176,VND-000277,"Rice, Nguyen and Collins",Americas,Industrial Parts,2024-12-01,6,87.06,87.08,17.47,52.8,89.66,68.39,82.57,0.319,69.1,59,91.55,0,0,0,68.24,68.15,0.09,Stable,384187.62,0.17,High,False,Approved,37
+177,VND-000788,"Tran, Hays and Burke",Americas,Logistics,2024-12-01,6,71.05,78.17,30.88,71.65,96.78,68.39,63.35,0.484,25.35,29,40.43,1,0,0,67.6,69.95,-2.35,Deteriorating,1240593.89,0.85,Medium,False,Approved,29
+178,VND-001027,Hawkins-Freeman,APAC,Raw Materials,2024-12-01,6,80.92,73.77,27.03,63.04,96.64,68.39,71.67,0.276,20.26,21,41.36,0,0,0,68.7,67.6,1.1,Stable,1733940.36,0.95,High,False,Approved,33
+179,VND-000612,"Lawson, Martinez and Tucker",MEA,Services,2024-12-01,6,73.35,74.33,43.59,59.43,92.56,68.39,16.29,0.218,49.81,46,97.54,0,0,0,69.42,65.18,4.24,Improving,272393.09,0.07,Medium,False,Preferred,32
+180,VND-000233,Coffey Inc,EMEA,Industrial Parts,2024-12-01,6,83.7,85.71,25.48,44.54,95.62,68.37,69.73,0.043,46.07,53,44.49,0,0,0,68.9,67.91,0.99,Stable,908799.64,0.74,Medium,False,Preferred,38
+181,VND-001144,Hale-Fowler,APAC,Logistics,2024-12-01,6,78.31,77.97,39.97,47.89,93.97,68.36,18.54,0.143,18.68,17,50.59,0,0,0,69.21,64.78,4.43,Improving,456997.06,0.27,Medium,False,Preferred,30
+182,VND-001047,Lucas-Webster,EMEA,Services,2024-12-01,6,88.98,83.76,19.09,44.47,95.09,68.2,80.68,0.324,34.21,34,63.86,0,0,0,68.29,68.8,-0.51,Stable,584745.2,0.48,High,False,Approved,33
+183,VND-000920,"Solomon, Rivera and Mckinney",Americas,Services,2024-12-01,6,83.36,86.5,21.78,47.72,95.68,68.18,78.73,0.041,57.62,56,68.68,1,1,0,67.97,67.95,0.02,Stable,276377.06,0.08,Critical,False,Conditional,34
+184,VND-000865,Neal-Gordon,MEA,Raw Materials,2024-12-01,6,83.8,86.04,24.49,45.55,93.87,68.16,66.49,0.156,57.54,52,23.65,1,1,0,69.15,66.71,2.45,Improving,564220.03,0.45,High,False,Approved,34
+185,VND-000383,Avery Inc,MEA,Services,2024-12-01,6,79.62,73.61,35.07,61.87,88.34,68.15,71.52,0.323,51.22,40,51.93,0,0,0,65.87,72.03,-6.17,Deteriorating,625437.84,0.52,High,False,Approved,35
+186,VND-000033,Green Inc,Americas,Electronics,2024-12-01,6,83.39,85.04,23.13,48.28,94.87,68.12,68.8,0.064,21.35,30,35.15,0,0,0,67.31,69.2,-1.89,Stable,624906.87,0.52,Medium,False,Preferred,27
+187,VND-000031,Frank-Johnson,Americas,Packaging,2024-12-01,6,86.83,87.47,18.44,47.01,91.72,68.04,80.63,0.181,18.87,17,63.6,0,0,0,69.04,65.74,3.3,Improving,460497.08,0.28,High,False,Approved,23
+188,VND-001010,"Perry, Kane and Flores",EMEA,Services,2024-12-01,6,77.6,79.7,24.28,66.27,93.36,68.02,83.03,0.056,56.14,56,93.98,0,0,0,68.08,67.01,1.07,Stable,1131096.86,0.82,High,False,Approved,36
+189,VND-000358,Johnson-Rose,Americas,Packaging,2024-12-01,6,73.76,76.14,28.08,72.56,94.34,68.01,71.09,0.113,34.96,33,50.68,0,0,0,69.63,65.27,4.37,Improving,277866.25,0.08,High,False,Approved,24
+190,VND-000164,"Jordan, Davis and Evans",Americas,Raw Materials,2024-12-01,6,79.17,73.19,24.63,66.52,97.82,67.96,72.62,0.388,36.45,41,54.02,1,0,0,66.56,70.33,-3.77,Deteriorating,521493.96,0.38,High,False,Approved,35
+191,VND-000290,"Flores, Pierce and Brown",EMEA,Industrial Parts,2024-12-01,6,79.53,73.78,39.71,45.09,97.02,67.87,72.24,0.058,44.52,49,64.67,0,0,0,64.26,75.7,-11.44,Deteriorating,1036026.72,0.79,High,False,Approved,39
+192,VND-000770,Johnson-Johnson,APAC,Raw Materials,2024-12-01,6,78.45,72.86,28.27,65.76,94.82,67.85,76.97,0.092,49.91,45,92.72,0,1,0,68.11,67.97,0.14,Stable,268430.45,0.07,Critical,False,Conditional,36
+193,VND-000032,Vasquez-Saunders,EMEA,Raw Materials,2024-12-01,6,85.33,89.33,20.1,41.37,94.35,67.84,87.4,0.064,33.57,53,62.83,0,0,0,69.1,66.62,2.48,Improving,860966.77,0.71,High,False,Approved,37
+194,VND-000350,Morris-Day,MEA,Logistics,2024-12-01,6,81.38,73.84,28.29,56.44,96.87,67.84,76.85,0.069,10.32,10,64.91,0,0,0,69.28,63.99,5.29,Improving,1443938.37,0.91,High,False,Approved,31
+195,VND-001098,Moran Inc,EMEA,Raw Materials,2024-12-01,6,71.9,74.5,42.13,62.4,90.44,67.82,68.85,0.066,16.75,16,63.425,0,0,0,68.11,70.02,-1.91,Stable,5513664.83,0.99,Medium,False,Approved,38
+196,VND-000943,"Gonzalez, Brown and Cox",MEA,Electronics,2024-12-01,6,81.64,74.92,27.63,53.39,98.54,67.79,72.28,0.023,30.44,36,63.13,2,0,0,68.8,66.25,2.55,Improving,659078.42,0.57,High,False,Approved,28
+197,VND-001073,"Davis, Webb and Miller",EMEA,Packaging,2024-12-01,6,78.9,75.02,25.44,62.18,97.57,67.72,73.96,0.264,64.43,60,75.0,0,0,0,66.45,69.76,-3.3,Deteriorating,627638.79,0.52,High,False,Approved,25
+198,VND-000104,Smith-Carter,MEA,Electronics,2024-12-01,6,85.26,85.53,22.22,41.24,96.03,67.72,81.7,0.063,36.24,32,64.405,1,0,0,67.02,69.42,-2.39,Deteriorating,524002.64,0.39,High,False,Approved,29
+199,VND-000474,Suarez-Harrison,Americas,Raw Materials,2024-12-01,6,77.63,80.8,23.64,60.6,96.14,67.69,81.35,0.062,7.21,8,64.785,0,0,0,68.74,66.25,2.48,Improving,352592.08,0.15,High,False,Approved,39
+200,VND-000954,"Patterson, Morris and White",APAC,Services,2024-12-01,6,79.08,71.74,35.74,56.41,93.35,67.68,70.46,0.632,40.01,37,47.49,0,0,0,65.93,69.05,-3.12,Deteriorating,1929809.54,0.96,High,False,Approved,37
+201,VND-000831,Miller-Pace,MEA,Services,2024-12-01,6,77.39,75.0,34.83,56.74,93.24,67.68,68.91,0.412,56.41,58,53.64,0,0,0,66.45,70.52,-4.07,Deteriorating,303073.74,0.1,Medium,False,Approved,38
+202,VND-001180,"Sharp, Sullivan and Patrick",EMEA,Services,2024-12-01,6,73.75,75.3,36.96,58.29,95.65,67.67,64.47,0.107,9.41,9,43.13,0,0,0,66.61,69.64,-3.03,Deteriorating,1481636.21,0.92,Medium,False,Approved,39
+203,VND-000214,Blair Ltd,APAC,Raw Materials,2024-12-01,6,81.22,90.12,22.05,40.58,98.47,67.66,77.6,0.08,24.59,26,63.26,0,0,0,68.01,66.35,1.66,Stable,1360253.84,0.89,High,False,Approved,40
+204,VND-000001,Mccoy Inc,MEA,Services,2024-12-01,6,77.51,81.32,23.92,63.81,91.85,67.65,81.36,0.404,9.05,8,88.72,0,0,0,67.56,68.49,-0.93,Stable,560245.36,0.44,High,False,Approved,40
+205,VND-000294,Shannon-Walters,Americas,Logistics,2024-12-01,6,75.83,79.67,30.39,54.89,97.71,67.65,66.89,0.049,37.51,39,46.61,0,0,0,69.35,64.37,4.98,Improving,1054053.86,0.8,Medium,False,Approved,32
+206,VND-000157,Rodriguez PLC,Americas,Services,2024-12-01,6,79.5,82.38,26.56,53.56,92.82,67.6,71.49,0.018,12.8,10,35.36,0,0,0,67.77,67.95,-0.18,Stable,411776.84,0.2,High,False,Approved,41
+207,VND-000665,Smith-Davis,EMEA,Raw Materials,2024-12-01,6,72.78,80.08,33.17,57.79,96.19,67.58,75.23,0.259,33.71,41,53.49,1,0,0,67.43,68.17,-0.74,Stable,443670.1,0.25,High,False,Approved,41
+208,VND-001114,"Torres, Collins and Nelson",APAC,Packaging,2024-12-01,6,73.71,75.58,25.57,74.79,93.45,67.58,76.94,0.409,11.95,10,67.72,0,0,0,67.1,68.85,-1.75,Stable,284977.75,0.09,High,False,Approved,26
+209,VND-000010,Carter Ltd,MEA,Packaging,2024-12-01,6,78.92,75.4,41.92,45.6,90.55,67.56,19.39,0.149,42.07,39,54.41,0,0,0,68.01,65.32,2.69,Improving,1841008.43,0.96,Medium,False,Approved,27
+210,VND-000047,"Parker, Howard and Garcia",EMEA,Industrial Parts,2024-12-01,6,74.6,77.5,28.01,65.46,94.99,67.55,73.61,0.07,25.43,30,62.51,0,0,0,68.39,66.47,1.92,Stable,488819.27,0.34,High,False,Approved,40
+211,VND-000656,Brown Inc,APAC,Electronics,2024-12-01,6,73.4,80.02,39.92,48.99,94.59,67.54,18.15,0.039,21.6,22,53.45,0,0,0,68.77,63.46,5.31,Improving,365491.2,0.16,Medium,False,Approved,30
+212,VND-000659,Bailey-Snyder,APAC,Raw Materials,2024-12-01,6,74.04,73.67,39.96,54.77,95.88,67.53,65.88,0.127,41.27,47,46.77,0,0,0,70.49,62.02,8.47,Improving,440268.52,0.24,Medium,False,Approved,42
+213,VND-000158,"Brown, Jordan and Sullivan",APAC,Logistics,2024-12-01,6,74.66,71.72,34.15,66.87,92.72,67.51,69.76,0.02,50.29,48,65.35,0,0,0,65.59,70.2,-4.61,Deteriorating,444831.63,0.25,Medium,False,Approved,33
+214,VND-000272,Bell-Levine,Americas,Logistics,2024-12-01,6,81.98,86.85,22.74,43.83,96.1,67.5,74.76,0.102,48.51,47,81.95,0,0,0,67.2,68.77,-1.57,Stable,591726.75,0.49,High,False,Approved,34
+215,VND-000777,Taylor-Brown,APAC,Industrial Parts,2024-12-01,6,74.96,78.8,27.12,68.06,90.77,67.49,69.61,0.155,51.87,44,62.45,0,0,0,67.51,66.72,0.79,Stable,591571.71,0.49,Medium,False,Approved,41
+216,VND-001108,"Brown, Hughes and Meyer",EMEA,Industrial Parts,2024-12-01,6,78.95,80.24,23.93,62.15,90.78,67.46,78.75,0.399,49.37,42,98.69,0,0,0,66.84,69.69,-2.85,Deteriorating,487681.74,0.34,High,False,Approved,42
+217,VND-000579,"Carter, Alexander and Alvarado",EMEA,Logistics,2024-12-01,6,75.62,76.02,39.94,45.81,97.82,67.42,13.81,0.202,14.25,20,82.51,0,0,0,69.01,62.59,6.42,Improving,514740.32,0.37,Medium,False,Approved,35
+218,VND-000230,"Hammond, Baker and Joseph",EMEA,Services,2024-12-01,6,76.82,73.87,26.98,63.31,97.66,67.36,71.86,0.128,25.54,29,39.04,0,1,0,67.57,66.71,0.86,Stable,916705.3,0.75,Critical,False,Conditional,42
+219,VND-000771,Wilson and Sons,Americas,Industrial Parts,2024-12-01,6,82.13,84.04,20.84,55.32,89.61,67.35,81.95,0.01,40.45,35,79.41,0,0,0,66.77,68.75,-1.98,Stable,664557.05,0.57,High,False,Approved,43
+220,VND-000860,Marshall LLC,Americas,Packaging,2024-12-01,6,83.19,86.64,20.7,49.29,90.12,67.34,87.35,0.067,46.93,46,92.84,0,0,0,66.94,67.5,-0.56,Stable,643106.6,0.55,High,False,Approved,28
+221,VND-000705,Cole-Lee,APAC,Packaging,2024-12-01,6,75.35,73.27,25.17,69.58,97.21,67.31,76.47,0.147,31.65,42,64.44,0,0,0,66.82,68.06,-1.24,Stable,546634.58,0.42,High,False,Approved,29
+222,VND-000938,Green PLC,MEA,Services,2024-12-01,6,75.03,72.67,28.61,69.58,94.01,67.31,69.39,0.178,19.9,16,43.23,1,0,0,66.49,68.86,-2.37,Deteriorating,420417.77,0.22,Medium,False,Approved,43
+223,VND-000869,Ward-Sharp,APAC,Logistics,2024-12-01,6,73.71,76.85,27.54,69.11,92.82,67.28,64.54,0.022,12.41,12,44.71,0,0,0,67.41,66.14,1.28,Stable,436676.53,0.24,Medium,False,Approved,36
+224,VND-001187,Brown Group,EMEA,Logistics,2024-12-01,6,83.41,82.66,21.57,48.73,94.0,67.28,82.69,0.071,17.61,17,92.79,0,0,0,65.58,71.07,-5.49,Deteriorating,981667.45,0.77,High,False,Approved,37
+225,VND-000976,"Sexton, Thompson and Barnes",Americas,Electronics,2024-12-01,6,71.99,77.38,43.41,49.69,93.78,67.28,78.05,0.113,17.53,18,80.8,0,0,0,66.9,68.2,-1.3,Stable,484572.74,0.33,High,False,Approved,31
+226,VND-000892,Briggs Inc,MEA,Electronics,2024-12-01,6,77.22,71.9,26.94,64.21,97.89,67.25,70.01,0.129,17.31,28,59.74,0,0,0,66.77,67.71,-0.94,Stable,630684.64,0.53,High,False,Approved,32
+227,VND-000056,"Herrera, Baker and Martinez",Americas,Industrial Parts,2024-12-01,6,83.18,84.11,20.88,48.03,93.91,67.24,79.86,0.012,59.42,51,75.37,0,0,0,67.11,68.1,-0.99,Stable,244765.41,0.05,High,False,Approved,44
+228,VND-000629,Lopez-Mendoza,APAC,Logistics,2024-12-01,6,76.34,76.98,39.54,44.2,95.83,67.21,72.61,0.005,11.94,13,54.66,0,0,0,65.22,69.83,-4.61,Deteriorating,514188.21,0.37,High,False,Approved,38
+229,VND-000134,Morgan Group,Americas,Electronics,2024-12-01,6,80.05,71.89,24.44,66.37,93.08,67.2,79.28,0.561,66.35,56,88.57,0,0,0,66.24,69.1,-2.86,Deteriorating,1535557.87,0.93,High,False,Approved,33
+230,VND-000208,Taylor Inc,MEA,Raw Materials,2024-12-01,6,75.78,73.2,28.95,68.4,91.52,67.15,71.62,0.097,39.23,39,50.2,0,0,0,66.88,67.23,-0.36,Stable,709395.35,0.62,High,False,Approved,43
+231,VND-000229,Lane Ltd,APAC,Packaging,2024-12-01,6,78.87,80.03,25.8,54.32,94.46,67.14,74.42,0.026,53.77,60,68.23,0,0,0,66.81,66.18,0.62,Stable,697696.29,0.61,High,False,Approved,30
+232,VND-000270,Friedman LLC,Americas,Raw Materials,2024-12-01,6,80.66,89.13,20.18,46.59,93.93,67.14,84.33,0.086,28.28,32,86.67,0,0,0,66.77,67.86,-1.09,Stable,2312760.37,0.97,High,False,Approved,44
+233,VND-000855,Smith-Hall,EMEA,Raw Materials,2024-12-01,6,76.59,76.53,33.77,56.67,90.66,67.14,74.94,0.025,19.49,27,69.94,0,0,0,67.35,66.26,1.09,Stable,476541.57,0.32,High,False,Approved,45
+234,VND-000259,Salinas PLC,APAC,Services,2024-12-01,6,77.72,73.15,23.58,65.98,97.19,67.14,70.85,0.941,17.02,17,65.36,0,0,0,67.94,66.28,1.66,Stable,1740612.56,0.95,High,False,Approved,44
+235,VND-000434,Zimmerman LLC,Americas,Raw Materials,2024-12-01,6,75.59,78.38,32.15,54.65,94.4,67.14,70.7,0.001,13.51,14,53.46,0,0,0,67.12,66.94,0.19,Stable,952684.58,0.75,High,False,Approved,46
+236,VND-000687,Escobar-Hernandez,MEA,Packaging,2024-12-01,6,71.78,70.88,42.81,55.09,97.27,67.13,20.59,0.013,29.92,30,42.13,0,0,0,68.7,62.36,6.34,Improving,492875.97,0.35,Medium,False,Approved,31
+237,VND-001090,"Aguilar, Harrington and Bridges",MEA,Electronics,2024-12-01,6,88.23,86.13,20.67,38.9,89.74,67.12,75.48,0.856,64.95,54,64.17,0,0,0,68.38,65.37,3.01,Improving,417553.9,0.21,High,False,Approved,34
+238,VND-000321,Decker Inc,EMEA,Electronics,2024-12-01,6,85.54,81.27,30.65,29.54,97.52,67.11,72.84,0.26,40.26,38,67.21,0,0,0,65.16,71.21,-6.05,Deteriorating,594260.85,0.5,High,False,Approved,35
+239,VND-000866,"Townsend, Guzman and Allen",APAC,Raw Materials,2024-12-01,6,73.17,77.99,27.04,67.11,93.73,67.08,72.75,0.124,43.72,51,56.57,0,0,0,68.33,64.83,3.51,Improving,411361.99,0.2,High,False,Approved,47
+240,VND-000116,Castro-Chandler,APAC,Logistics,2024-12-01,6,79.1,74.73,37.72,40.77,98.3,67.08,77.34,0.064,51.17,59,64.37,0,0,0,67.92,65.96,1.96,Stable,1207495.0,0.84,High,False,Approved,39
+241,VND-000296,Martinez-Willis,EMEA,Raw Materials,2024-12-01,6,75.21,79.09,22.03,64.72,97.13,67.06,76.25,0.18,23.71,23,73.26,0,0,0,67.48,66.36,1.12,Stable,1498849.69,0.92,High,False,Approved,48
+242,VND-001009,Hamilton-Holt,APAC,Services,2024-12-01,6,71.18,76.37,45.04,46.02,96.81,67.06,17.82,0.158,12.25,15,70.01,0,0,0,69.23,61.3,7.93,Improving,680994.61,0.59,Medium,False,Approved,45
+243,VND-000506,Harrison Ltd,EMEA,Electronics,2024-12-01,6,78.96,74.28,37.0,45.81,94.77,67.03,28.06,0.131,10.53,10,51.4,0,1,0,68.01,63.33,4.68,Improving,322417.49,0.12,High,False,Approved,36
+244,VND-000235,"Wall, Garcia and Koch",EMEA,Raw Materials,2024-12-01,6,86.65,85.94,19.76,37.9,94.62,67.01,83.93,0.038,11.28,12,100.0,1,0,0,67.44,67.03,0.42,Stable,569961.68,0.47,High,False,Approved,49
+245,VND-001189,"Bridges, Merritt and Gonzales",APAC,Packaging,2024-12-01,6,73.15,72.6,38.84,55.18,96.37,66.96,20.68,0.085,52.72,59,55.12,0,0,0,67.15,64.89,2.26,Improving,546111.36,0.42,Medium,False,Approved,32
+246,VND-000202,"Francis, Mata and Young",Americas,Services,2024-12-01,6,86.62,81.41,26.21,37.07,92.39,66.93,88.34,0.139,37.2,32,100.0,0,0,0,65.57,70.4,-4.83,Deteriorating,515691.98,0.38,High,False,Approved,46
+247,VND-000596,"Phillips, White and Saunders",MEA,Electronics,2024-12-01,6,72.31,75.86,29.61,65.56,95.26,66.91,67.72,0.26,40.65,56,66.22,0,0,0,67.71,66.39,1.32,Stable,611790.67,0.51,Medium,False,Approved,37
+248,VND-000781,Chandler-Cain,APAC,Electronics,2024-12-01,6,83.77,84.93,25.95,40.86,89.69,66.89,74.14,0.204,33.86,27,54.51,0,0,0,66.69,66.57,0.12,Stable,1236094.65,0.85,High,False,Approved,38
+249,VND-000776,"Hampton, Duran and Webster",APAC,Raw Materials,2024-12-01,6,81.59,78.81,25.36,48.36,95.46,66.88,72.17,0.015,12.89,16,38.98,0,0,0,65.72,68.6,-2.87,Deteriorating,632710.92,0.54,High,False,Approved,50
+250,VND-000017,"Harrison, Oliver and Rivera",Americas,Electronics,2024-12-01,6,76.05,71.03,36.45,55.73,94.77,66.88,63.28,0.229,34.53,39,21.95,0,0,0,65.63,69.5,-3.87,Deteriorating,373993.97,0.17,Medium,False,Approved,39
+251,VND-000746,"Reed, Berry and Baker",MEA,Raw Materials,2024-12-01,6,77.65,77.62,39.13,37.05,97.81,66.87,78.78,0.038,18.52,21,72.05,0,0,0,69.38,62.67,6.71,Improving,564880.52,0.46,High,False,Approved,51
+252,VND-000822,Randall and Sons,Americas,Raw Materials,2024-12-01,6,79.03,75.13,23.74,59.93,95.54,66.8,76.15,0.035,5.48,8,77.4,0,0,0,67.43,66.42,1.01,Stable,666223.19,0.58,High,False,Approved,52
+253,VND-000745,James-Gibson,Americas,Raw Materials,2024-12-01,6,81.69,72.92,30.63,45.92,97.89,66.79,78.82,0.315,15.72,19,55.85,0,0,0,67.52,65.07,2.44,Improving,689605.35,0.6,High,False,Approved,53
+254,VND-000618,Goodman-Lopez,Americas,Electronics,2024-12-01,6,80.91,80.47,26.79,45.39,95.0,66.78,73.75,0.075,41.35,43,47.96,0,0,0,67.26,65.75,1.52,Stable,296719.23,0.1,High,False,Approved,40
+255,VND-000766,"Rodriguez, Pugh and Warner",APAC,Raw Materials,2024-12-01,6,75.76,77.69,24.88,66.37,90.57,66.78,73.49,0.169,20.9,16,64.54,1,0,0,67.72,64.97,2.75,Improving,7305642.84,0.99,High,False,Approved,54
+256,VND-000536,Townsend Inc,Americas,Electronics,2024-12-01,6,81.23,84.07,20.66,47.72,95.37,66.78,74.68,0.157,31.04,31,54.46,1,0,0,66.51,66.99,-0.48,Stable,831947.21,0.7,High,False,Approved,41
+257,VND-000173,Brown Group,MEA,Industrial Parts,2024-12-01,6,72.86,75.5,28.02,65.02,96.37,66.77,67.33,0.118,8.47,10,66.46,1,0,0,67.05,66.42,0.63,Stable,627864.09,0.53,Medium,False,Approved,45
+258,VND-000663,"Lowe, Smith and Chavez",Americas,Packaging,2024-12-01,6,77.99,75.13,27.49,55.17,97.09,66.76,79.57,0.139,42.87,51,69.56,0,0,0,66.82,67.47,-0.66,Stable,407052.18,0.2,High,False,Approved,33
+259,VND-000325,Watson PLC,APAC,Raw Materials,2024-12-01,6,86.67,84.11,21.34,38.82,92.15,66.73,82.71,0.138,44.07,55,73.71,0,0,0,66.94,65.72,1.22,Stable,1338266.25,0.88,High,False,Approved,55
+260,VND-000973,"Clark, Wright and Johnson",APAC,Raw Materials,2024-12-01,6,78.3,75.41,29.45,52.8,95.67,66.73,79.08,0.968,25.63,24,60.01,0,0,0,65.29,70.45,-5.16,Deteriorating,626887.08,0.52,High,False,Approved,56
+261,VND-001029,Jordan and Sons,MEA,Services,2024-12-01,6,78.67,75.54,31.61,52.43,92.22,66.73,75.62,0.726,29.72,33,80.64,0,0,0,64.72,69.5,-4.79,Deteriorating,1283188.86,0.87,High,False,Approved,47
+262,VND-000159,"Ross, Williams and Sanchez",Americas,Packaging,2024-12-01,6,75.39,75.05,39.25,47.26,94.4,66.72,67.75,0.207,54.4,58,42.37,0,0,0,67.21,65.72,1.49,Stable,836523.42,0.7,Medium,False,Approved,34
+263,VND-000886,"Garcia, Gonzalez and Chapman",APAC,Raw Materials,2024-12-01,6,77.51,76.88,27.21,56.3,94.14,66.64,66.04,0.091,67.77,55,38.96,0,0,0,66.68,67.52,-0.84,Stable,1063631.14,0.8,Medium,False,Approved,57
+264,VND-000872,"Leblanc, Marshall and Higgins",MEA,Logistics,2024-12-01,6,70.05,72.09,46.29,49.77,96.5,66.63,18.06,0.022,45.38,52,72.31,0,0,0,67.09,64.28,2.8,Improving,1422239.71,0.9,Medium,False,Approved,40
+265,VND-000115,"Hall, Lowery and Farley",Americas,Logistics,2024-12-01,6,76.66,77.0,39.99,42.33,92.53,66.63,14.79,0.052,45.9,52,51.74,0,0,0,67.65,62.53,5.12,Improving,419589.59,0.22,Medium,False,Approved,41
+266,VND-000071,"Stewart, Solis and Long",APAC,Industrial Parts,2024-12-01,6,77.75,74.17,37.94,43.74,95.36,66.61,23.25,0.074,59.89,60,19.55,0,0,0,67.31,63.7,3.61,Improving,1223452.86,0.85,Medium,False,Approved,46
+267,VND-000298,Foster Ltd,APAC,Packaging,2024-12-01,6,73.13,76.73,37.89,51.08,93.79,66.59,70.14,0.2,18.57,20,59.13,1,0,0,64.92,69.91,-4.99,Deteriorating,476370.96,0.32,High,False,Approved,35
+268,VND-000549,Kelly and Sons,Americas,Raw Materials,2024-12-01,6,78.53,80.12,22.01,53.87,96.59,66.55,79.74,0.457,51.6,58,73.76,0,0,0,66.04,66.9,-0.86,Stable,3520043.7,0.99,High,False,Approved,58
+269,VND-000718,Hayes-Mcguire,APAC,Electronics,2024-12-01,6,75.89,77.14,26.97,57.19,95.59,66.51,79.17,0.505,36.57,35,90.86,0,1,0,65.65,68.83,-3.18,Deteriorating,1404080.15,0.9,Critical,True,Replace,42
+270,VND-000975,James Ltd,APAC,Services,2024-12-01,6,77.62,78.09,22.14,59.95,94.39,66.48,81.46,0.117,22.35,21,93.91,0,0,0,67.52,65.45,2.06,Improving,422466.37,0.22,High,False,Approved,48
+271,VND-000371,"Hughes, Harris and Payne",EMEA,Raw Materials,2024-12-01,6,80.1,80.35,32.71,38.29,93.96,66.48,76.46,0.095,27.77,26,86.99,0,0,0,67.4,65.45,1.96,Stable,1507139.18,0.92,High,False,Approved,59
+272,VND-000084,Young-Bell,MEA,Packaging,2024-12-01,6,73.68,81.08,26.39,59.53,93.0,66.48,81.05,0.212,16.78,17,78.83,0,0,0,67.18,65.01,2.16,Improving,292718.63,0.09,High,False,Approved,36
+273,VND-000903,"Hurley, Alvarez and Gilbert",APAC,Industrial Parts,2024-12-01,6,74.05,76.56,27.64,61.48,94.62,66.47,73.51,0.04,48.39,44,72.61,1,0,0,66.05,67.71,-1.66,Stable,1437793.88,0.9,High,False,Approved,47
+274,VND-000984,"Williams, Lopez and Harris",MEA,Raw Materials,2024-12-01,6,82.3,84.47,18.87,45.21,95.44,66.46,89.97,0.09,15.92,18,69.55,0,0,0,67.23,65.27,1.97,Stable,196024.77,0.01,High,False,Approved,60
+275,VND-000063,Tran Inc,Americas,Logistics,2024-12-01,6,76.0,84.33,22.94,53.78,94.0,66.42,63.49,0.292,50.0,57,20.51,1,0,0,65.96,66.94,-0.99,Stable,1130580.49,0.82,Medium,False,Approved,42
+276,VND-001050,"Ryan, Baker and Garza",MEA,Raw Materials,2024-12-01,6,74.75,76.38,26.46,60.9,95.22,66.41,77.23,0.291,43.56,49,65.88,0,0,0,66.76,65.64,1.11,Stable,1081675.31,0.8,High,False,Approved,61
+277,VND-000473,Orozco Inc,Americas,Services,2024-12-01,6,82.65,77.25,27.33,48.27,89.66,66.4,74.13,0.06,56.05,48,63.26,0,0,0,67.46,63.21,4.25,Improving,668658.04,0.58,High,False,Approved,49
+278,VND-000594,"Roach, Pearson and Stevenson",APAC,Raw Materials,2024-12-01,6,80.67,74.42,25.19,53.63,94.89,66.4,71.36,0.334,31.2,30,51.04,2,0,0,67.62,64.32,3.3,Improving,710308.89,0.63,High,False,Approved,62
+279,VND-000163,Stevens Ltd,Americas,Electronics,2024-12-01,6,87.93,89.07,15.09,37.65,90.25,66.4,87.11,0.054,62.87,53,65.04,0,0,0,67.34,64.5,2.84,Improving,698033.67,0.61,High,False,Approved,43
+280,VND-001091,"Lewis, Phillips and Vasquez",EMEA,Industrial Parts,2024-12-01,6,73.52,76.44,45.13,37.69,95.75,66.39,12.4,0.05,19.6,23,99.41,2,0,0,67.78,60.81,6.96,Improving,1033729.93,0.79,Medium,False,Approved,48
+281,VND-000004,Fields Inc,EMEA,Services,2024-12-01,6,81.27,66.82,24.78,61.78,95.79,66.33,76.03,0.052,24.56,26,70.81,0,0,0,65.59,67.15,-1.56,Stable,795924.24,0.68,High,False,Approved,50
+282,VND-001088,Williams PLC,Americas,Services,2024-12-01,6,67.14,78.75,49.15,41.33,95.72,66.28,17.4,0.021,51.56,53,64.32,1,0,0,64.49,68.1,-3.6,Deteriorating,690424.87,0.6,Medium,False,Approved,51
+283,VND-000914,Nielsen Ltd,EMEA,Services,2024-12-01,6,75.85,80.15,19.85,61.24,95.59,66.28,81.42,0.025,25.14,28,74.18,0,0,0,66.16,66.17,-0.01,Stable,570315.02,0.47,High,False,Approved,52
+284,VND-000012,"Figueroa, Hall and Reed",MEA,Logistics,2024-12-01,6,71.16,77.31,36.61,53.21,94.32,66.26,61.12,0.248,59.89,51,37.24,0,0,0,66.4,67.0,-0.6,Stable,2903313.2,0.99,Medium,False,Approved,43
+285,VND-001078,"Hernandez, Roach and Bruce",Americas,Packaging,2024-12-01,6,74.56,76.66,27.24,61.2,92.4,66.19,77.18,0.097,34.04,32,82.78,0,0,0,66.9,65.18,1.72,Stable,1245650.64,0.86,High,False,Approved,37
+286,VND-000577,"Horne, Robinson and Smith",APAC,Logistics,2024-12-01,6,77.1,75.12,27.07,56.65,94.0,66.16,69.37,0.234,60.48,54,60.26,0,0,0,66.69,66.55,0.14,Stable,879503.67,0.73,Medium,False,Approved,44
+287,VND-000080,"Abbott, Crawford and Wood",EMEA,Electronics,2024-12-01,6,76.11,78.7,24.36,56.86,94.19,66.1,64.54,0.042,22.4,26,37.23,0,0,0,66.65,64.84,1.81,Stable,281167.25,0.08,Medium,False,Approved,44
+288,VND-000336,Clark Group,Americas,Electronics,2024-12-01,6,71.21,76.45,29.84,62.98,93.55,66.1,64.3,0.08,30.3,34,34.56,0,0,0,65.49,66.91,-1.42,Stable,412474.64,0.21,Medium,False,Approved,45
+289,VND-000319,"Frey, Diaz and Cohen",MEA,Electronics,2024-12-01,6,72.92,76.96,41.29,43.61,93.45,66.08,15.21,0.089,69.95,59,63.65,0,0,0,67.28,62.2,5.08,Improving,386088.41,0.18,Medium,False,Approved,46
+290,VND-000561,Griffin-Dyer,Americas,Industrial Parts,2024-12-01,6,72.56,81.35,43.78,31.26,97.23,66.07,73.09,0.055,9.84,14,63.47,0,0,0,66.33,66.46,-0.13,Stable,665520.01,0.57,High,False,Approved,49
+291,VND-000478,Ward-Smith,MEA,Logistics,2024-12-01,6,72.26,76.91,34.91,51.34,94.65,65.94,64.74,0.052,39.71,38,67.46,1,0,0,65.76,67.26,-1.5,Stable,842501.92,0.7,Medium,False,Approved,45
+292,VND-000379,Johnson-Waters,MEA,Logistics,2024-12-01,6,80.66,74.22,26.21,49.43,94.88,65.93,81.08,0.278,41.04,42,76.12,0,0,0,66.47,64.56,1.91,Stable,512053.25,0.37,High,False,Approved,46
+293,VND-000803,Sheppard Ltd,APAC,Raw Materials,2024-12-01,6,73.81,74.91,25.79,60.08,97.51,65.92,73.28,0.32,11.58,11,47.68,0,0,0,65.25,67.42,-2.17,Deteriorating,791529.93,0.67,High,False,Approved,63
+294,VND-000809,Coleman-Wood,APAC,Packaging,2024-12-01,6,69.98,72.53,35.79,62.69,92.1,65.88,66.61,0.359,59.71,57,57.74,0,0,0,66.87,65.44,1.43,Stable,453744.5,0.26,Medium,False,Approved,38
+295,VND-000522,"Watkins, Torres and Scott",MEA,Services,2024-12-01,6,74.89,76.95,29.45,53.46,93.92,65.86,69.26,0.173,30.6,31,44.09,0,0,0,66.41,64.39,2.02,Improving,179239.37,0.0,Medium,False,Approved,53
+296,VND-000897,"Porter, Houston and Morgan",APAC,Packaging,2024-12-01,6,74.76,76.03,23.96,63.77,92.33,65.84,75.78,0.549,58.19,57,67.69,0,0,0,66.7,64.23,2.47,Improving,500329.25,0.36,High,False,Approved,39
+297,VND-000172,Goodwin Ltd,EMEA,Logistics,2024-12-01,6,77.74,80.78,34.24,36.55,93.19,65.79,89.83,0.185,11.06,11,99.72,0,0,0,67.35,62.6,4.75,Improving,1648405.66,0.94,High,False,Approved,47
+298,VND-000636,"Perry, Duncan and Cobb",EMEA,Industrial Parts,2024-12-01,6,74.13,79.4,33.67,43.03,96.46,65.77,63.42,0.06,21.97,22,72.37,0,0,0,64.71,67.91,-3.21,Deteriorating,728193.83,0.63,Medium,False,Approved,50
+299,VND-000964,Ward Group,EMEA,Logistics,2024-12-01,6,72.6,74.35,25.35,64.44,95.86,65.77,75.57,0.358,23.52,26,77.53,0,0,0,66.99,64.13,2.86,Improving,557259.34,0.44,High,False,Approved,48
+300,VND-000621,"Newman, Bird and Potts",EMEA,Electronics,2024-12-01,6,76.08,80.13,39.48,31.4,95.37,65.76,75.6,0.076,31.25,31,53.33,0,0,0,67.71,63.39,4.32,Improving,1590988.89,0.93,High,False,Approved,47
+301,VND-000673,Ferguson-Owens,MEA,Packaging,2024-12-01,6,75.76,76.71,44.6,34.28,90.58,65.72,79.37,0.045,36.86,34,71.99,0,0,0,65.31,66.58,-1.28,Stable,590034.53,0.49,High,False,Approved,40
+302,VND-000802,Perkins Group,EMEA,Industrial Parts,2024-12-01,6,75.79,75.46,34.0,51.74,88.55,65.67,64.36,0.358,43.15,37,54.495,0,0,0,65.63,65.64,-0.01,Stable,350913.77,0.15,Medium,False,Approved,51
+303,VND-000508,Dunn LLC,Americas,Electronics,2024-12-01,6,75.54,74.67,36.76,45.89,92.16,65.66,67.54,0.315,17.36,15,44.74,0,0,0,66.87,62.72,4.15,Improving,534034.46,0.4,Medium,False,Approved,48
+304,VND-000077,Lawrence Inc,MEA,Logistics,2024-12-01,6,71.47,74.82,30.84,59.26,94.27,65.6,71.54,0.171,27.02,25,75.77,0,0,0,64.79,67.61,-2.82,Deteriorating,630926.5,0.53,High,False,Approved,49
+305,VND-000688,Michael-Phillips,Americas,Services,2024-12-01,6,78.05,76.45,25.21,51.53,94.06,65.59,75.34,0.17,40.78,38,87.17,0,0,0,65.69,66.06,-0.37,Stable,569726.95,0.46,High,False,Approved,54
+306,VND-000889,Meyer-Martin,Americas,Industrial Parts,2024-12-01,6,74.61,77.4,28.28,50.71,96.34,65.58,69.44,0.432,36.9,45,71.77,1,0,0,65.34,66.26,-0.92,Stable,484420.13,0.33,Medium,False,Approved,52
+307,VND-000981,Barron-Wilson,EMEA,Raw Materials,2024-12-01,6,72.6,75.33,30.4,55.71,95.23,65.57,69.74,0.098,31.44,34,38.76,0,0,0,65.61,63.99,1.62,Stable,540277.68,0.41,Medium,False,Approved,64
+308,VND-001097,Turner and Sons,MEA,Raw Materials,2024-12-01,6,79.67,73.07,22.91,58.71,90.95,65.55,77.03,0.083,54.25,43,78.65,0,0,0,65.21,66.59,-1.39,Stable,261841.2,0.05,High,False,Approved,65
+309,VND-000511,Curtis-Washington,MEA,Electronics,2024-12-01,6,78.03,77.58,23.58,47.58,98.37,65.53,72.79,0.496,17.66,21,55.24,0,0,0,66.2,63.69,2.52,Improving,412201.18,0.2,High,False,Approved,49
+310,VND-000509,"Patterson, Zamora and Buchanan",APAC,Electronics,2024-12-01,6,76.9,75.87,36.72,39.36,93.49,65.52,71.89,0.06,66.3,60,62.78,1,0,0,67.03,62.36,4.67,Improving,424554.24,0.22,High,False,Approved,50
+311,VND-000140,Rodriguez LLC,Americas,Packaging,2024-12-01,6,73.98,78.17,31.12,53.21,89.86,65.51,72.25,0.211,17.46,13,70.49,0,0,0,64.35,69.08,-4.73,Deteriorating,532410.4,0.4,High,False,Approved,41
+312,VND-000622,Erickson PLC,Americas,Services,2024-12-01,6,78.72,78.49,27.92,43.06,94.31,65.5,88.21,0.513,47.15,59,99.6,0,0,0,63.79,68.01,-4.22,Deteriorating,268093.72,0.06,High,False,Approved,55
+313,VND-000531,Willis Ltd,Americas,Electronics,2024-12-01,6,75.87,72.13,40.39,38.51,96.39,65.5,64.63,0.057,38.28,34,29.81,2,0,0,63.81,68.01,-4.21,Deteriorating,1513440.28,0.92,Medium,False,Approved,51
+314,VND-000749,Ross PLC,APAC,Raw Materials,2024-12-01,6,77.79,77.48,21.78,61.38,87.34,65.5,79.19,0.143,41.26,32,96.75,1,0,0,65.2,66.11,-0.91,Stable,698376.87,0.61,High,False,Approved,66
+315,VND-000906,"Cooper, Lawrence and Bowen",APAC,Industrial Parts,2024-12-01,6,78.21,76.37,23.69,49.11,97.65,65.49,76.46,0.189,9.52,11,46.49,0,0,0,64.33,68.2,-3.87,Deteriorating,652538.62,0.56,High,False,Approved,53
+316,VND-000967,"Mendoza, Butler and Smith",MEA,Industrial Parts,2024-12-01,6,82.92,75.68,23.55,46.72,91.71,65.49,73.26,0.153,46.95,42,60.28,0,0,0,64.86,67.62,-2.76,Deteriorating,334266.2,0.13,High,False,Approved,54
+317,VND-000209,"Jones, Johnson and Rosales",Americas,Services,2024-12-01,6,69.06,72.87,37.78,55.37,95.56,65.49,67.67,0.184,48.0,41,39.19,0,0,0,65.47,66.07,-0.6,Stable,320260.23,0.11,Medium,False,Approved,56
+318,VND-000305,Giles-Huffman,EMEA,Electronics,2024-12-01,6,76.79,72.67,25.68,60.43,91.39,65.48,77.39,0.739,47.45,43,73.06,0,0,0,65.78,64.87,0.91,Stable,1019950.73,0.78,High,False,Approved,52
+319,VND-000045,Farmer-Wilson,APAC,Raw Materials,2024-12-01,6,75.95,78.05,26.27,50.98,94.08,65.41,69.94,0.17,20.6,22,61.33,1,0,0,64.11,66.83,-2.72,Deteriorating,697180.54,0.61,Medium,False,Approved,67
+320,VND-000402,Turner-Pena,EMEA,Industrial Parts,2024-12-01,6,80.23,77.01,26.29,44.74,93.05,65.4,74.72,0.415,52.63,53,75.52,1,0,0,63.99,67.51,-3.52,Deteriorating,445188.13,0.25,High,False,Approved,55
+321,VND-000452,Grimes Group,MEA,Logistics,2024-12-01,6,75.08,77.1,31.39,48.87,92.21,65.38,68.85,0.076,43.4,34,42.29,1,0,0,65.95,65.67,0.28,Stable,222694.24,0.03,Medium,False,Approved,50
+322,VND-000661,Mills Inc,EMEA,Electronics,2024-12-01,6,74.41,78.16,28.07,47.6,97.71,65.37,67.88,0.002,34.51,39,47.08,0,0,0,65.27,65.67,-0.4,Stable,636309.41,0.54,Medium,False,Approved,53
+323,VND-000437,"Hess, Moreno and Doyle",APAC,Electronics,2024-12-01,6,75.84,78.84,27.64,55.52,86.51,65.35,72.51,0.153,28.21,22,64.965,0,0,0,66.88,63.39,3.48,Improving,604695.98,0.5,High,False,Approved,54
+324,VND-000846,Allen LLC,MEA,Industrial Parts,2024-12-01,6,77.25,75.06,30.7,44.51,95.3,65.3,74.94,0.056,54.72,48,64.44,0,0,0,64.09,69.71,-5.61,Deteriorating,369483.31,0.16,High,False,Approved,56
+325,VND-000494,Flores PLC,EMEA,Packaging,2024-12-01,6,74.5,74.37,30.38,51.39,95.05,65.27,68.29,0.031,27.61,36,63.31,0,0,0,64.48,67.56,-3.08,Deteriorating,498245.9,0.35,Medium,False,Approved,42
+326,VND-000347,Wagner-Page,EMEA,Industrial Parts,2024-12-01,6,74.21,76.52,26.23,57.85,91.82,65.27,76.18,0.125,62.65,60,83.07,0,0,0,65.87,64.95,0.93,Stable,852806.45,0.71,High,False,Approved,57
+327,VND-000837,Johnson LLC,APAC,Raw Materials,2024-12-01,6,80.1,75.39,20.39,53.76,93.44,65.26,85.36,0.206,7.11,8,100.0,0,0,0,64.88,64.45,0.43,Stable,885912.67,0.73,High,False,Approved,68
+328,VND-000396,Anderson Group,Americas,Services,2024-12-01,6,83.05,78.35,24.1,37.68,94.65,65.25,73.02,0.017,39.01,38,41.99,1,0,0,66.41,62.98,3.43,Improving,390695.45,0.19,High,False,Approved,57
+329,VND-000962,Carter Inc,MEA,Industrial Parts,2024-12-01,6,73.03,75.92,26.29,56.12,96.39,65.23,74.24,0.157,52.11,50,50.75,0,1,0,64.96,65.07,-0.11,Stable,470598.09,0.3,Critical,False,Conditional,58
+330,VND-000260,Macias-Neal,APAC,Raw Materials,2024-12-01,6,77.32,74.75,23.59,52.31,96.78,65.23,82.92,0.177,42.74,41,88.02,0,0,0,65.21,64.24,0.97,Stable,562379.39,0.45,High,False,Approved,69
+331,VND-000737,Meyer Inc,MEA,Logistics,2024-12-01,6,78.51,74.5,26.63,47.19,95.5,65.18,75.07,0.021,39.08,40,68.6,1,0,0,66.7,61.99,4.7,Improving,542453.96,0.42,High,False,Approved,51
+332,VND-001125,"Brown, Torres and Haynes",MEA,Packaging,2024-12-01,6,74.72,76.73,26.48,52.17,95.19,65.16,76.04,0.266,18.64,17,82.35,0,0,0,64.37,67.21,-2.84,Deteriorating,879028.98,0.73,High,False,Approved,43
+333,VND-000510,Jones-Davis,MEA,Industrial Parts,2024-12-01,6,69.72,73.57,25.65,64.09,98.24,65.11,66.34,0.661,52.8,60,45.38,0,0,0,64.71,66.45,-1.74,Stable,308954.06,0.11,Medium,False,Approved,59
+334,VND-000812,Caldwell-Green,MEA,Raw Materials,2024-12-01,6,71.48,75.67,34.87,53.06,90.55,65.09,66.75,0.116,10.09,9,58.7,0,0,0,66.41,64.28,2.13,Improving,311082.09,0.11,Medium,False,Approved,70
+335,VND-000323,Vasquez-Rice,MEA,Logistics,2024-12-01,6,72.27,77.29,41.36,38.27,92.87,65.08,63.09,0.19,29.86,41,67.38,1,0,0,67.69,60.1,7.58,Improving,755561.76,0.65,Medium,False,Approved,52
+336,VND-001169,Conley-Dillon,MEA,Industrial Parts,2024-12-01,6,74.02,76.09,28.77,51.61,94.31,65.06,70.87,0.271,30.78,33,45.06,0,0,0,64.48,66.06,-1.58,Stable,499902.71,0.35,High,False,Approved,60
+337,VND-000974,Duran-Taylor,EMEA,Logistics,2024-12-01,6,79.66,73.63,26.27,48.38,92.66,65.03,74.03,0.063,56.79,45,66.05,0,0,0,64.34,65.62,-1.28,Stable,547104.2,0.42,High,False,Approved,53
+338,VND-000072,Wright and Sons,MEA,Services,2024-12-01,6,80.32,77.0,22.04,47.37,93.47,65.03,77.81,0.141,29.19,30,66.19,0,0,0,64.62,64.9,-0.28,Stable,964875.26,0.76,High,False,Approved,58
+339,VND-000009,"Blackwell, Walker and Gilbert",Americas,Industrial Parts,2024-12-01,6,75.81,73.04,29.29,48.73,96.63,65.01,76.97,0.018,24.79,29,71.96,0,0,0,64.34,67.34,-3.0,Deteriorating,1268772.45,0.87,High,False,Approved,61
+340,VND-000691,Jefferson-Cobb,EMEA,Services,2024-12-01,6,83.58,84.19,21.18,31.86,93.87,65.01,87.38,0.014,59.19,51,100.0,2,0,0,63.73,66.73,-3.0,Deteriorating,458306.09,0.27,High,False,Approved,59
+341,VND-000969,"Wade, Johnson and Woodward",EMEA,Industrial Parts,2024-12-01,6,72.64,75.55,29.49,49.83,98.1,64.99,72.29,0.575,28.45,33,69.86,0,0,0,65.29,65.22,0.07,Stable,305805.87,0.1,High,False,Approved,62
+342,VND-001044,Sloan PLC,EMEA,Packaging,2024-12-01,6,82.44,74.18,21.25,46.19,94.85,64.98,77.34,0.058,42.18,43,93.56,1,0,0,65.09,64.41,0.68,Stable,284838.33,0.09,High,False,Approved,44
+343,VND-000874,Harrison-Smith,Americas,Industrial Parts,2024-12-01,6,76.66,75.81,26.04,50.0,93.88,64.95,76.38,0.072,32.82,31,87.41,0,1,0,65.71,64.18,1.53,Stable,1346169.8,0.88,Critical,False,Conditional,63
+344,VND-001055,Schwartz-Flowers,EMEA,Electronics,2024-12-01,6,79.57,77.15,26.7,40.65,94.76,64.95,67.59,0.037,13.1,14,69.125,0,0,0,65.53,63.6,1.93,Stable,359148.11,0.15,Medium,False,Approved,55
+345,VND-000418,"Austin, Vega and Gallegos",EMEA,Electronics,2024-12-01,6,79.71,74.79,24.04,47.42,94.37,64.95,80.62,0.145,44.14,42,88.08,0,0,0,64.76,65.52,-0.76,Stable,642738.65,0.55,High,False,Approved,56
+346,VND-000313,Kim-Miller,APAC,Electronics,2024-12-01,6,77.87,69.45,27.72,52.98,94.71,64.95,76.77,0.305,24.13,25,47.42,1,0,0,64.22,65.35,-1.13,Stable,462755.9,0.29,High,False,Approved,57
+347,VND-001107,Alexander-Jenkins,Americas,Packaging,2024-12-01,6,81.69,74.95,25.77,42.43,92.87,64.95,80.49,0.017,41.16,36,100.0,0,0,0,66.8,61.87,4.93,Improving,839038.08,0.7,High,False,Approved,45
+348,VND-000328,"Stanton, Rogers and Oconnell",Americas,Electronics,2024-12-01,6,72.0,72.67,32.67,56.88,91.45,64.92,62.73,0.407,39.09,37,53.95,0,0,0,64.49,65.36,-0.87,Stable,348453.07,0.15,Medium,False,Approved,58
+349,VND-000388,Ortega and Sons,MEA,Electronics,2024-12-01,6,75.25,68.52,33.1,51.66,95.08,64.91,72.46,0.736,46.33,39,63.615,0,0,0,62.93,68.53,-5.6,Deteriorating,1521894.65,0.93,High,False,Approved,59
+350,VND-000504,Hanson-Yu,APAC,Services,2024-12-01,6,76.86,76.14,25.47,52.06,91.31,64.89,70.32,0.417,39.04,33,62.45,0,0,0,65.22,64.38,0.83,Stable,655887.96,0.57,High,False,Approved,60
+351,VND-001156,"Peterson, Brown and Juarez",Americas,Industrial Parts,2024-12-01,6,77.66,78.26,23.94,45.02,95.96,64.89,78.23,0.268,38.64,43,90.2,1,0,0,65.7,62.37,3.33,Improving,7490065.81,1.0,High,False,Approved,64
+352,VND-000198,"Lowery, Bennett and Sims",APAC,Logistics,2024-12-01,6,77.72,78.73,23.38,44.58,96.36,64.88,71.07,0.083,14.85,15,45.09,0,0,0,65.86,63.02,2.83,Improving,441779.32,0.24,High,False,Approved,54
+353,VND-000136,Wise and Sons,Americas,Raw Materials,2024-12-01,6,80.14,72.9,25.65,43.93,96.69,64.84,75.53,0.171,47.12,49,73.49,0,0,0,65.36,63.8,1.56,Stable,803525.46,0.68,High,False,Approved,71
+354,VND-000697,Brown LLC,APAC,Raw Materials,2024-12-01,6,79.53,85.49,21.16,41.36,89.46,64.82,81.47,0.009,54.59,55,80.63,0,0,0,64.02,66.07,-2.05,Deteriorating,1258740.39,0.86,High,False,Approved,72
+355,VND-000945,King-Ibarra,MEA,Electronics,2024-12-01,6,72.37,73.46,37.97,43.13,95.49,64.79,82.73,0.01,10.44,10,63.725,0,0,0,65.0,64.86,0.13,Stable,539263.86,0.41,High,False,Approved,60
+356,VND-000315,Nelson-Perez,MEA,Services,2024-12-01,6,80.58,75.26,27.3,41.09,92.93,64.79,75.57,0.272,53.55,48,58.145,0,0,0,64.98,64.39,0.59,Stable,665981.95,0.58,High,False,Approved,61
+357,VND-000807,Miller-Chapman,EMEA,Packaging,2024-12-01,6,77.81,74.46,28.54,41.97,96.75,64.75,75.35,0.503,47.12,58,73.35,0,0,0,64.32,64.32,0.0,Stable,481964.8,0.33,High,False,Approved,46
+358,VND-001145,Rodriguez Ltd,MEA,Electronics,2024-12-01,6,76.17,76.87,26.22,44.86,96.75,64.71,68.67,0.069,48.84,55,31.15,0,0,0,64.85,63.97,0.88,Stable,1168393.13,0.83,Medium,False,Approved,61
+359,VND-000854,Taylor LLC,Americas,Logistics,2024-12-01,6,75.48,71.84,27.08,54.43,93.95,64.68,71.91,0.019,21.01,21,58.05,1,0,0,65.42,63.27,2.15,Improving,514830.47,0.37,High,False,Approved,55
+360,VND-000384,Price-Rodriguez,EMEA,Packaging,2024-12-01,6,73.12,72.3,27.22,58.21,94.07,64.68,74.15,0.025,15.29,16,90.2,0,0,0,63.23,68.28,-5.05,Deteriorating,1631370.93,0.94,High,False,Approved,47
+361,VND-000952,Miles-Patterson,EMEA,Services,2024-12-01,6,79.36,75.12,25.22,41.22,97.44,64.67,80.5,0.002,9.7,10,100.0,0,0,0,64.44,65.52,-1.09,Stable,533511.64,0.4,High,False,Approved,62
+362,VND-000123,Harris-Heath,Americas,Industrial Parts,2024-12-01,6,66.72,73.35,24.01,73.76,94.01,64.66,72.11,0.301,45.88,40,82.52,0,0,0,64.26,66.08,-1.82,Stable,606412.27,0.51,High,False,Approved,65
+363,VND-000188,"Williams, Reed and Hale",Americas,Raw Materials,2024-12-01,6,76.14,75.86,27.89,49.3,91.1,64.65,68.08,0.162,58.23,51,54.98,0,0,0,65.79,62.17,3.62,Improving,561612.22,0.45,Medium,False,Approved,73
+364,VND-000295,"Jackson, Baker and Miller",APAC,Services,2024-12-01,6,73.86,75.07,25.12,56.84,92.87,64.65,73.3,0.089,44.67,38,76.14,0,0,0,64.86,64.15,0.72,Stable,2836574.07,0.98,High,False,Approved,63
+365,VND-000692,Ramos PLC,EMEA,Packaging,2024-12-01,6,76.68,73.94,25.61,46.11,98.68,64.63,82.1,0.195,50.75,55,86.11,0,0,0,64.07,64.66,-0.59,Stable,1464721.07,0.91,High,False,Approved,48
+366,VND-000465,Lewis-Brown,EMEA,Raw Materials,2024-12-01,6,77.24,72.45,25.27,48.98,97.11,64.63,72.8,0.587,9.35,9,71.59,0,0,0,64.29,65.49,-1.21,Stable,582399.56,0.48,High,False,Approved,74
+367,VND-000556,Cunningham Group,Americas,Industrial Parts,2024-12-01,6,70.93,76.15,29.99,54.64,92.83,64.63,73.19,0.071,46.19,39,73.26,0,0,0,64.73,65.09,-0.36,Stable,427683.5,0.23,High,False,Approved,66
+368,VND-000262,"Arellano, Brown and Finley",Americas,Services,2024-12-01,6,75.99,76.17,25.02,51.44,92.27,64.59,71.28,0.32,31.08,33,63.07,0,0,0,65.06,64.68,0.38,Stable,227589.0,0.03,High,False,Approved,64
+369,VND-000165,Holloway-Moss,Americas,Industrial Parts,2024-12-01,6,71.56,73.95,29.56,51.89,97.56,64.59,68.2,0.287,43.42,48,40.99,0,0,0,65.29,62.89,2.4,Improving,456788.63,0.27,Medium,False,Approved,67
+370,VND-000390,"Ford, Blevins and Thompson",EMEA,Electronics,2024-12-01,6,77.27,72.91,29.68,42.14,96.99,64.57,65.41,0.091,46.84,53,35.89,0,0,0,64.24,65.69,-1.45,Stable,2438776.52,0.98,Medium,False,Approved,62
+371,VND-001053,Keller Ltd,MEA,Industrial Parts,2024-12-01,6,73.86,68.52,36.52,48.51,94.01,64.54,66.61,0.39,27.37,25,44.3,0,0,0,62.85,67.29,-4.44,Deteriorating,451203.56,0.26,Medium,False,Approved,68
+372,VND-000526,"Johnson, Turner and Young",APAC,Packaging,2024-12-01,6,71.6,73.66,32.24,60.18,85.24,64.47,80.82,0.29,50.74,35,100.0,0,0,0,61.43,71.05,-9.62,Deteriorating,321922.24,0.12,High,False,Approved,49
+373,VND-001196,Price Group,APAC,Electronics,2024-12-01,6,75.04,75.69,23.24,50.46,97.27,64.46,74.99,0.182,10.18,15,57.99,3,0,0,65.06,62.44,2.62,Improving,1413322.36,0.9,High,False,Approved,63
+374,VND-001077,"Simon, Petersen and Mcclure",EMEA,Industrial Parts,2024-12-01,6,70.97,72.86,40.37,45.7,91.06,64.45,67.27,0.03,64.89,53,46.43,2,1,0,65.87,62.04,3.83,Improving,1607933.94,0.93,High,False,Approved,69
+375,VND-000111,Wade Inc,Americas,Electronics,2024-12-01,6,75.11,82.77,24.48,42.87,93.31,64.41,73.34,0.032,45.82,44,67.245,1,0,0,62.97,66.76,-3.79,Deteriorating,712039.75,0.63,High,False,Approved,64
+376,VND-000156,Jackson and Sons,Americas,Services,2024-12-01,6,75.52,75.11,27.97,48.19,92.44,64.37,70.34,0.066,22.03,19,41.37,0,0,0,63.79,65.13,-1.34,Stable,236074.48,0.04,High,False,Approved,65
+377,VND-000619,Tucker-Taylor,MEA,Services,2024-12-01,6,77.0,73.55,27.7,42.65,97.37,64.35,70.25,0.454,34.35,36,63.97,1,0,0,64.42,63.74,0.68,Stable,379950.87,0.17,High,False,Approved,66
+378,VND-001060,Green-Hodges,EMEA,Packaging,2024-12-01,6,74.64,75.91,30.02,39.93,98.19,64.3,66.64,0.245,38.86,40,32.82,0,0,0,65.8,61.08,4.72,Improving,624045.2,0.52,Medium,False,Approved,50
+379,VND-000528,Glass-Welch,EMEA,Logistics,2024-12-01,6,80.84,80.68,19.75,36.96,95.85,64.26,75.76,0.008,36.42,38,67.18,0,0,0,64.22,63.68,0.54,Stable,546837.71,0.42,High,False,Approved,56
+380,VND-000023,King Ltd,APAC,Raw Materials,2024-12-01,6,77.36,72.73,22.44,49.95,96.66,64.23,80.35,0.27,37.44,37,87.93,0,0,0,63.41,65.7,-2.28,Deteriorating,1292366.46,0.87,High,False,Approved,75
+381,VND-000630,Travis PLC,EMEA,Industrial Parts,2024-12-01,6,80.63,75.64,23.21,37.93,96.9,64.18,77.34,0.105,23.84,26,58.97,0,0,0,63.26,66.19,-2.93,Deteriorating,800280.79,0.68,High,False,Approved,70
+382,VND-000576,"Russell, Adams and Wiggins",Americas,Services,2024-12-01,6,74.72,76.66,27.29,48.9,90.86,64.17,68.94,0.032,28.15,27,69.30000000000001,1,0,0,65.14,62.2,2.94,Improving,475077.47,0.31,Medium,False,Approved,67
+383,VND-000155,Ayers-Dominguez,APAC,Packaging,2024-12-01,6,74.91,76.68,26.73,41.49,98.3,64.12,67.18,0.214,31.53,35,22.14,0,0,0,64.43,63.08,1.35,Stable,1004849.27,0.77,Medium,False,Approved,51
+384,VND-000759,Miller-Gomez,MEA,Electronics,2024-12-01,6,83.4,70.26,30.21,35.17,91.29,64.08,75.38,0.189,11.63,9,58.8,0,1,0,63.87,65.8,-1.92,Stable,432969.37,0.23,Critical,False,Conditional,65
+385,VND-000324,"Valdez, Daniel and Stark",APAC,Logistics,2024-12-01,6,75.87,70.4,27.45,50.1,94.77,64.06,84.47,0.073,12.05,18,79.56,0,0,0,63.51,65.35,-1.84,Stable,1998133.86,0.97,High,False,Approved,57
+386,VND-001137,"Saunders, Keith and Smith",MEA,Packaging,2024-12-01,6,75.28,71.83,27.07,48.78,95.71,64.04,70.61,0.088,49.47,47,73.16,0,0,0,63.77,64.77,-1.01,Stable,424830.45,0.23,High,False,Approved,52
+387,VND-001143,Oconnor-Ray,Americas,Logistics,2024-12-01,6,72.67,72.75,25.85,53.85,96.15,64.02,76.2,0.318,54.09,54,85.08,0,0,0,64.38,63.32,1.06,Stable,282951.15,0.08,High,False,Approved,58
+388,VND-000527,Monroe-Rodriguez,MEA,Electronics,2024-12-01,6,73.14,77.06,21.5,55.1,93.94,64.01,82.39,0.158,55.28,58,65.94,0,0,0,63.45,65.58,-2.14,Deteriorating,609081.21,0.51,High,False,Approved,66
+389,VND-000695,Anderson-Ferguson,APAC,Electronics,2024-12-01,6,80.56,75.43,22.88,38.58,95.7,63.97,72.64,0.003,50.76,47,41.31,0,0,0,64.66,62.48,2.18,Improving,641126.64,0.54,High,False,Approved,67
+390,VND-000965,Riggs-Pearson,EMEA,Logistics,2024-12-01,6,72.51,71.62,29.23,53.52,93.14,63.92,67.11,0.006,56.09,59,55.42,0,0,0,63.75,64.09,-0.34,Stable,463959.33,0.29,Medium,False,Approved,59
+391,VND-000392,"Ray, Thomas and Zamora",APAC,Electronics,2024-12-01,6,72.46,73.18,27.88,56.23,90.2,63.92,71.68,0.376,23.95,20,63.05,0,0,0,63.13,63.88,-0.75,Stable,765894.16,0.66,High,False,Approved,68
+392,VND-000895,"Scott, Martinez and Pratt",EMEA,Industrial Parts,2024-12-01,6,73.14,76.84,28.08,42.76,97.14,63.91,66.68,0.725,36.71,46,65.51,2,0,0,62.59,66.56,-3.98,Deteriorating,566237.62,0.46,Medium,False,Approved,71
+393,VND-000959,Alexander Inc,APAC,Logistics,2024-12-01,6,72.89,76.64,28.46,48.94,91.17,63.91,59.24,0.188,59.22,47,14.55,2,0,0,63.6,65.21,-1.61,Stable,480651.9,0.32,Medium,False,Approved,60
+394,VND-000907,Gross-Jennings,APAC,Services,2024-12-01,6,73.05,72.09,27.48,51.89,95.13,63.88,66.4,0.121,54.55,59,45.34,0,0,0,64.33,63.08,1.26,Stable,695421.17,0.6,Medium,False,Approved,68
+395,VND-000958,Ramirez PLC,Americas,Services,2024-12-01,6,75.09,70.72,27.39,47.96,96.55,63.83,76.92,0.319,11.07,10,90.05,0,0,0,63.12,65.17,-2.06,Deteriorating,881290.61,0.73,High,False,Approved,69
+396,VND-000166,"Cooley, Gonzalez and Hall",EMEA,Packaging,2024-12-01,6,69.76,75.16,26.9,56.85,92.59,63.75,80.4,0.155,10.7,10,64.99000000000001,0,0,0,63.54,64.25,-0.71,Stable,593102.33,0.49,High,False,Approved,53
+397,VND-000252,Briggs Ltd,EMEA,Raw Materials,2024-12-01,6,74.39,76.13,25.23,45.1,95.98,63.75,72.33,0.01,40.43,44,64.28,1,0,0,64.7,62.24,2.45,Improving,486568.84,0.33,High,False,Approved,76
+398,VND-000078,"Jordan, Thompson and Bailey",EMEA,Packaging,2024-12-01,6,69.47,72.06,29.09,56.38,94.77,63.75,65.25,0.717,41.62,51,35.48,0,0,0,64.07,63.05,1.02,Stable,334135.84,0.13,Medium,False,Approved,54
+399,VND-000951,"Ramsey, Walton and Morgan",MEA,Industrial Parts,2024-12-01,6,71.43,76.72,29.09,44.59,96.42,63.74,65.91,0.05,12.64,12,37.15,0,0,0,63.68,63.69,-0.01,Stable,1258852.01,0.86,Medium,False,Approved,72
+400,VND-000834,"Kennedy, Jones and Horn",EMEA,Logistics,2024-12-01,6,76.3,73.98,27.88,41.33,95.14,63.73,71.15,0.093,13.11,17,69.72,1,0,0,63.84,64.04,-0.19,Stable,435578.73,0.24,High,False,Approved,61
+401,VND-000079,"Phillips, Sutton and Decker",MEA,Packaging,2024-12-01,6,78.46,72.95,26.22,37.89,97.71,63.71,73.39,0.591,37.07,40,60.95,0,0,0,63.73,62.96,0.77,Stable,589137.28,0.48,High,False,Approved,55
+402,VND-000431,King-Hughes,Americas,Logistics,2024-12-01,6,78.01,74.49,26.24,39.08,95.16,63.68,68.96,0.009,34.41,44,46.95,0,0,0,63.54,62.98,0.56,Stable,1022319.49,0.78,Medium,False,Approved,62
+403,VND-000664,Bryant Inc,MEA,Raw Materials,2024-12-01,6,76.59,71.68,23.14,48.36,96.54,63.68,74.36,0.346,13.52,21,62.63,1,0,0,63.29,64.12,-0.83,Stable,679783.83,0.59,High,False,Approved,77
+404,VND-000529,"Bender, Rodriguez and Jenkins",EMEA,Electronics,2024-12-01,6,73.84,73.69,25.83,48.49,95.5,63.65,70.96,0.014,43.63,52,72.99,0,0,0,62.5,65.25,-2.75,Deteriorating,198404.12,0.02,High,False,Approved,69
+405,VND-000754,"Ramirez, Delgado and Ruiz",MEA,Services,2024-12-01,6,73.01,73.37,29.17,46.58,94.79,63.62,63.81,0.042,56.06,54,41.6,0,0,0,63.8,64.3,-0.49,Stable,1664759.47,0.94,Medium,False,Approved,70
+406,VND-000221,Oconnor Group,Americas,Services,2024-12-01,6,75.59,72.17,25.96,46.29,95.82,63.62,79.76,0.136,62.03,59,85.46,1,0,0,63.57,63.98,-0.41,Stable,555733.59,0.43,High,False,Approved,71
+407,VND-000197,Roberts-Miller,APAC,Electronics,2024-12-01,6,74.72,72.82,26.48,48.09,93.96,63.58,73.51,0.003,20.68,22,71.88,0,0,0,63.21,64.7,-1.49,Stable,527447.11,0.39,High,False,Approved,70
+408,VND-000719,Garcia Ltd,APAC,Raw Materials,2024-12-01,6,74.36,76.25,24.33,49.22,91.77,63.57,71.82,0.219,11.3,12,53.11,0,0,0,64.11,63.1,1.0,Stable,1191191.91,0.84,High,False,Approved,78
+409,VND-001197,"Osborn, Harris and Stokes",EMEA,Logistics,2024-12-01,6,73.51,72.52,29.06,48.82,92.47,63.56,68.38,0.23,26.52,22,42.07,0,0,0,63.18,64.62,-1.43,Stable,527596.74,0.39,Medium,False,Approved,63
+410,VND-000421,Rodriguez-Ellis,APAC,Industrial Parts,2024-12-01,6,67.37,77.3,28.54,54.42,93.27,63.53,73.82,0.13,29.37,30,63.91,0,0,0,64.16,61.93,2.23,Improving,209349.03,0.02,High,False,Approved,73
+411,VND-001109,"Wells, Whitaker and Marshall",APAC,Raw Materials,2024-12-01,6,73.99,73.17,28.4,44.38,95.75,63.53,77.59,0.511,29.04,30,74.32,0,0,0,62.65,65.29,-2.64,Deteriorating,1251366.89,0.86,High,False,Approved,79
+412,VND-000107,Boyer-Miller,APAC,Electronics,2024-12-01,6,78.91,75.98,23.98,36.47,95.87,63.52,76.24,0.033,45.09,55,81.33,1,0,0,62.71,64.54,-1.83,Stable,980971.25,0.77,High,False,Approved,71
+413,VND-000377,Miller and Sons,Americas,Logistics,2024-12-01,6,72.91,73.22,26.41,50.98,93.17,63.42,73.5,0.28,42.2,45,61.09,0,0,0,63.07,63.08,-0.01,Stable,861526.55,0.71,High,False,Approved,64
+414,VND-000518,"Williams, Castro and Maxwell",APAC,Services,2024-12-01,6,77.99,73.59,27.97,36.36,94.9,63.4,72.26,0.034,24.19,23,61.2,1,0,0,63.4,63.32,0.07,Stable,1759102.13,0.95,High,False,Approved,72
+415,VND-000560,Petersen-Lowe,APAC,Services,2024-12-01,6,68.66,74.16,34.75,47.27,92.8,63.39,67.36,0.142,27.52,23,61.63,1,1,0,61.77,66.2,-4.43,Deteriorating,645245.96,0.55,High,False,Approved,73
+416,VND-001158,Kelly Inc,EMEA,Industrial Parts,2024-12-01,6,74.3,76.19,25.64,42.96,94.78,63.32,74.81,0.424,35.43,60,70.78,1,0,0,63.46,63.15,0.31,Stable,329533.99,0.13,High,False,Approved,74
+417,VND-000824,"Bruce, Wolf and Moody",MEA,Packaging,2024-12-01,6,75.94,71.64,28.05,43.31,93.74,63.28,68.81,0.411,13.22,11,61.36,0,0,0,63.11,63.82,-0.71,Stable,541464.24,0.41,Medium,False,Approved,56
+418,VND-000249,"Johnson, Kennedy and Moore",EMEA,Logistics,2024-12-01,6,75.19,77.32,25.99,42.73,90.84,63.25,73.81,0.099,39.67,38,64.54,0,0,0,62.55,65.06,-2.52,Deteriorating,856109.04,0.71,High,False,Approved,65
+419,VND-000911,Austin-Baker,EMEA,Services,2024-12-01,6,71.65,73.09,27.65,49.34,94.54,63.23,63.51,0.311,32.02,37,47.35,0,0,0,62.79,64.71,-1.92,Stable,750814.32,0.65,Medium,False,Approved,74
+420,VND-000898,"Floyd, Mcgrath and Thomas",Americas,Electronics,2024-12-01,6,75.62,73.55,25.58,42.67,95.14,63.18,80.71,0.177,10.74,11,100.0,0,0,0,62.97,63.16,-0.19,Stable,458644.05,0.28,High,False,Approved,72
+421,VND-000609,"Willis, Stevenson and Murphy",MEA,Electronics,2024-12-01,6,75.07,73.73,23.62,45.24,95.97,63.17,71.73,0.183,14.86,14,82.33,2,0,0,63.04,63.38,-0.34,Stable,698628.72,0.62,High,False,Approved,73
+422,VND-001147,Alvarez PLC,EMEA,Raw Materials,2024-12-01,6,80.37,69.97,27.63,37.5,92.12,63.08,71.97,0.182,34.61,27,53.23,0,0,0,62.3,64.87,-2.57,Deteriorating,606333.55,0.5,High,False,Approved,80
+423,VND-000464,Brooks Ltd,MEA,Raw Materials,2024-12-01,6,78.19,71.31,27.77,40.09,91.92,63.07,68.65,0.822,40.67,39,27.78,0,0,0,63.28,62.16,1.12,Stable,425449.86,0.23,Medium,False,Approved,81
+424,VND-000635,Kaiser Inc,EMEA,Industrial Parts,2024-12-01,6,72.3,75.73,27.67,42.75,95.06,63.04,70.82,0.121,64.42,58,69.52,0,0,0,62.69,63.89,-1.2,Stable,315561.89,0.11,High,False,Approved,75
+425,VND-000613,Bowman-Myers,APAC,Industrial Parts,2024-12-01,6,72.4,73.36,30.78,42.76,93.2,62.94,65.09,0.133,41.07,37,18.38,0,0,0,62.86,61.89,0.98,Stable,850428.36,0.7,Medium,False,Approved,76
+426,VND-000682,Castaneda LLC,EMEA,Logistics,2024-12-01,6,70.23,74.78,25.31,50.52,94.93,62.91,75.71,0.733,24.76,26,93.11,0,0,0,62.57,62.97,-0.41,Stable,666624.54,0.58,High,False,Approved,66
+427,VND-001113,Williams-Ellis,Americas,Logistics,2024-12-01,6,74.74,75.62,24.88,42.2,93.67,62.9,70.12,0.241,29.96,25,76.07,1,0,0,62.98,63.88,-0.9,Stable,565524.7,0.46,High,False,Approved,67
+428,VND-000211,Garcia-Dixon,MEA,Services,2024-12-01,6,70.03,76.82,27.1,54.21,86.15,62.85,78.14,0.021,34.23,26,100.0,0,0,0,62.63,64.15,-1.52,Stable,2485287.28,0.98,High,False,Approved,75
+429,VND-000088,Murray-Taylor,EMEA,Raw Materials,2024-12-01,6,74.87,72.23,24.61,45.19,93.48,62.63,84.13,0.275,28.85,28,95.01,0,0,0,61.89,64.82,-2.94,Deteriorating,555475.09,0.43,High,False,Approved,82
+430,VND-000006,Weeks and Sons,Americas,Raw Materials,2024-12-01,6,74.16,76.78,26.93,40.77,90.04,62.61,71.54,0.511,56.07,49,63.445,0,0,0,61.84,65.41,-3.57,Deteriorating,663837.34,0.57,High,False,Approved,83
+431,VND-000798,Castro Group,APAC,Industrial Parts,2024-12-01,6,75.3,74.15,28.82,39.83,89.39,62.57,78.29,0.323,69.51,54,65.61,0,0,0,61.06,65.09,-4.04,Deteriorating,542416.89,0.41,High,False,Approved,77
+432,VND-000304,"Martinez, Davis and Mcdonald",Americas,Electronics,2024-12-01,6,67.86,72.48,38.52,38.03,95.23,62.55,74.09,0.303,45.43,47,81.63,0,0,0,59.79,68.24,-8.44,Deteriorating,479194.66,0.32,High,False,Approved,74
+433,VND-001079,Black Inc,EMEA,Industrial Parts,2024-12-01,6,75.46,72.8,22.15,48.89,90.53,62.54,79.82,0.465,17.09,16,94.1,0,0,0,61.79,63.64,-1.85,Stable,952708.61,0.75,High,False,Approved,78
+434,VND-000380,Turner-Golden,EMEA,Services,2024-12-01,6,69.15,80.7,26.23,40.12,95.35,62.45,79.25,0.231,23.35,27,83.72,1,0,0,62.03,63.42,-1.39,Stable,795390.37,0.68,High,False,Approved,76
+435,VND-000758,Martin LLC,Americas,Industrial Parts,2024-12-01,6,77.44,72.72,24.58,42.02,89.44,62.41,82.51,0.721,29.17,25,99.87,0,0,0,61.13,65.04,-3.91,Deteriorating,495130.1,0.35,High,False,Approved,79
+436,VND-001086,Simmons-Delgado,APAC,Logistics,2024-12-01,6,72.18,72.76,25.21,44.14,96.6,62.36,83.68,0.329,24.93,26,100.0,0,0,0,61.95,64.35,-2.41,Deteriorating,273712.6,0.07,High,False,Approved,68
+437,VND-000306,Gonzalez-Rose,MEA,Packaging,2024-12-01,6,72.7,76.36,28.11,39.98,90.25,62.24,65.89,0.313,46.44,41,60.88,1,0,0,62.05,63.27,-1.21,Stable,384675.57,0.18,Medium,False,Approved,57
+438,VND-000611,Jones and Sons,APAC,Industrial Parts,2024-12-01,6,72.58,74.17,29.59,35.44,95.77,62.21,81.86,0.225,22.78,26,91.0,0,1,0,60.47,66.54,-6.07,Deteriorating,492367.59,0.34,Critical,True,Replace,80
+439,VND-000572,Shea Group,Americas,Logistics,2024-12-01,6,66.87,78.19,30.54,39.9,96.08,62.2,66.28,0.113,25.79,30,52.69,0,1,0,62.32,61.92,0.4,Stable,1138731.78,0.82,High,False,Approved,69
+440,VND-000956,Howard and Sons,APAC,Electronics,2024-12-01,6,71.04,71.64,28.6,40.16,98.55,62.17,68.45,0.047,40.08,42,68.105,0,0,0,61.92,62.49,-0.57,Stable,389372.54,0.18,Medium,False,Approved,75
+441,VND-000490,Peterson and Sons,EMEA,Industrial Parts,2024-12-01,6,76.92,69.25,25.69,40.76,93.11,62.14,75.7,0.095,43.41,40,81.51,0,0,0,61.3,63.56,-2.26,Deteriorating,485224.58,0.33,High,False,Approved,81
+442,VND-001024,Case LLC,EMEA,Electronics,2024-12-01,6,73.85,73.91,27.15,40.93,90.81,62.13,71.88,0.505,22.56,28,57.65,0,0,0,62.54,60.85,1.68,Stable,891903.31,0.74,High,False,Approved,76
+443,VND-000168,"Hudson, Meyer and Herrera",APAC,Packaging,2024-12-01,6,76.76,73.55,24.65,35.21,93.53,61.98,77.2,0.08,51.23,42,72.94,0,0,0,61.66,62.31,-0.65,Stable,205597.04,0.02,High,False,Approved,58
+444,VND-000200,"Adams, Sims and Davis",APAC,Services,2024-12-01,6,73.85,76.12,25.49,34.6,95.34,61.97,75.59,0.497,29.46,40,74.83,0,0,0,61.45,62.47,-1.02,Stable,355576.36,0.15,High,False,Approved,77
+445,VND-000499,Castillo LLC,MEA,Packaging,2024-12-01,6,73.72,70.89,26.27,36.93,98.19,61.81,77.37,0.343,19.84,22,93.18,0,0,0,62.79,60.36,2.43,Improving,247749.2,0.05,High,False,Approved,59
+446,VND-000429,Lawson Group,EMEA,Services,2024-12-01,6,73.08,76.74,28.7,38.33,87.02,61.81,60.91,0.033,65.0,51,30.64,1,0,0,61.75,63.07,-1.32,Stable,323190.31,0.12,Medium,False,Approved,78
+447,VND-000535,Maldonado Group,EMEA,Logistics,2024-12-01,6,71.66,72.45,28.17,38.56,95.48,61.73,77.16,0.043,25.93,25,84.11,0,0,0,61.72,63.11,-1.38,Stable,706833.99,0.62,High,False,Approved,70
+448,VND-000226,Bush Ltd,MEA,Services,2024-12-01,6,72.99,77.01,25.9,34.24,94.02,61.72,67.82,0.486,14.88,14,51.68,0,0,0,62.29,61.54,0.75,Stable,747834.37,0.64,Medium,False,Approved,79
+449,VND-001052,"Austin, Thomas and Brooks",APAC,Packaging,2024-12-01,6,72.27,70.32,38.64,32.63,88.77,61.68,21.87,0.284,45.35,41,84.35,0,0,0,63.2,58.42,4.78,Improving,1097948.58,0.81,Medium,False,Approved,60
+450,VND-001035,Gomez Group,EMEA,Industrial Parts,2024-12-01,6,73.75,70.15,30.89,38.54,89.72,61.57,72.64,0.008,28.47,33,60.95,0,0,0,61.2,62.17,-0.96,Stable,367002.16,0.16,High,False,Approved,82
+451,VND-000670,Cook-Richmond,MEA,Logistics,2024-12-01,6,71.11,72.17,34.91,34.29,90.63,61.49,74.94,0.51,54.93,44,63.11,1,0,0,60.51,64.25,-3.74,Deteriorating,268368.73,0.06,High,False,Approved,71
+452,VND-001165,"Armstrong, Smith and Logan",MEA,Services,2024-12-01,6,75.15,72.28,25.88,33.61,95.11,61.49,78.94,0.124,57.62,51,61.41,0,0,0,61.91,61.53,0.39,Stable,448563.7,0.25,High,False,Approved,80
+453,VND-000768,"Brown, Murphy and King",MEA,Raw Materials,2024-12-01,6,65.99,76.15,28.43,44.39,93.2,61.35,76.45,0.066,43.22,43,87.1,1,0,0,62.19,59.46,2.73,Improving,467149.07,0.3,High,False,Approved,84
+454,VND-000052,Martinez-Daniels,MEA,Packaging,2024-12-01,6,70.77,75.75,26.31,32.82,98.0,61.27,70.27,0.313,29.85,31,68.26,0,0,0,60.18,63.94,-3.76,Deteriorating,889313.46,0.73,High,False,Approved,61
+455,VND-000601,Smith Ltd,EMEA,Electronics,2024-12-01,6,67.16,71.44,31.74,42.23,93.75,61.18,58.56,0.329,45.09,57,40.18,0,0,0,61.13,62.04,-0.92,Stable,980044.35,0.76,Medium,False,Approved,77
+456,VND-000513,Cortez-Rice,MEA,Raw Materials,2024-12-01,6,71.2,72.84,27.52,37.63,93.66,61.12,66.73,0.283,50.77,45,66.345,0,0,0,61.16,61.79,-0.63,Stable,816527.22,0.69,Medium,False,Approved,85
+457,VND-000024,Johnson and Sons,Americas,Electronics,2024-12-01,6,71.6,75.64,26.36,33.92,91.34,60.67,72.45,0.28,42.36,42,62.76,0,0,0,60.89,59.62,1.27,Stable,474326.39,0.31,High,False,Approved,78
+458,VND-000119,Baldwin PLC,MEA,Services,2024-12-01,6,73.65,71.55,26.69,36.1,89.93,60.65,75.11,0.01,29.84,23,67.22,0,0,0,60.99,60.39,0.6,Stable,1102248.38,0.81,High,False,Approved,81
+459,VND-000843,Hernandez-Roth,Americas,Services,2024-12-01,6,70.75,73.72,25.51,31.98,97.97,60.56,76.84,0.059,56.97,59,94.71,0,0,0,60.07,62.1,-2.03,Deteriorating,462032.52,0.28,High,False,Approved,82
+460,VND-000143,Robles-Waller,MEA,Electronics,2024-12-01,6,69.21,73.28,28.68,36.61,92.72,60.56,65.98,0.174,52.86,48,48.32,0,0,0,61.17,59.41,1.76,Stable,423798.72,0.22,Medium,False,Approved,79

@@ -1,0 +1,8 @@
+check,passed,exceptions,severity_if_failed
+Required columns present,True,0,Critical
+Unique vendor-month grain,True,0,Critical
+Required fields complete,True,0,High
+Core scores within 0-100,True,0,High
+Lead-time denominators positive,True,0,High
+Procurement spend non-negative,True,0,High
+Product-year cost benchmark coverage,True,0,High
