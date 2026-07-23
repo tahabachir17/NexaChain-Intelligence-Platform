@@ -1,0 +1,29 @@
+{
+  "as_of_month": "2024-12-01",
+  "supplier_count": 460,
+  "dynamic_score_mean": 67.66,
+  "dynamic_score_median": 67.15,
+  "improving_count": 121,
+  "deteriorating_count": 104,
+  "replacement_candidate_count": 5,
+  "replacement_spend_usd": 4336567.75,
+  "replacement_spend_share": 0.0115,
+  "strategic_partner_count": 3,
+  "strategic_partner_spend_usd": 3492947.18,
+  "strategic_partner_spend_share": 0.0093,
+  "high_or_critical_risk_count": 350,
+  "high_or_critical_spend_share": 0.7773,
+  "latest_portfolio_score": 67.52,
+  "portfolio_score_change_6m": -0.4,
+  "validation_checks_passed": 7,
+  "validation_checks_total": 7,
+  "score_weights": {
+    "otd_score": 0.3,
+    "quality_score": 0.2,
+    "risk_performance_score": 0.2,
+    "cost_efficiency_score": 0.15,
+    "lead_time_score": 0.15
+  },
+  "trend_definition": "Improving >= +2 points; Deteriorating <= -2 points; recent 3 months versus prior 3 months.",
+  "dynamic_definition": "Six-month exponentially weighted average with a three-month half-life."
+}
