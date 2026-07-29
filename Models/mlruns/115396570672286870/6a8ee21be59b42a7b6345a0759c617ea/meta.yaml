@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/data%20science/Project%20intership/Models/mlruns/115396570672286870/6a8ee21be59b42a7b6345a0759c617ea/artifacts
+end_time: 1783368794372
+entry_point_name: ''
+experiment_id: '115396570672286870'
+lifecycle_stage: active
+run_id: 6a8ee21be59b42a7b6345a0759c617ea
+run_name: prophet_baseline
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783368794161
+status: 3
+tags: []
+user_id: hp

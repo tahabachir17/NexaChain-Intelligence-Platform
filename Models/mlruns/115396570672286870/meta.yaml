@@ -1,0 +1,9 @@
+artifact_location: file:///D:/data%20science/Project%20intership/Models/mlruns/115396570672286870
+creation_time: 1783368792198
+effective_trace_archival_retention: null
+experiment_id: '115396570672286870'
+last_update_time: 1783368792198
+lifecycle_stage: active
+name: module5_demand_forecasting
+trace_location: null
+workspace: default

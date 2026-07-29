@@ -1,0 +1,403 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Logistics Data Cleaning Report",
+    "description": "A stakeholder summary of the logistics dataset cleaning, validation, and remaining caveats.",
+    "generatedAt": "2026-07-20T00:00:00Z",
+    "cards": [
+      {
+        "id": "clean_rows_card",
+        "description": "Unique shipment records after duplicate resolution.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Clean shipment rows",
+            "field": "clean_rows",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "duplicates_card",
+        "description": "Duplicate shipment rows removed from the raw file.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Duplicate rows removed",
+            "field": "duplicate_rows_removed",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "validation_card",
+        "description": "Business-rule checks passing after cleaning.",
+        "dataset": "headline_metrics",
+        "sourceId": "headline_sql",
+        "metrics": [
+          {
+            "label": "Validation checks passed",
+            "field": "checks_passed",
+            "format": "number"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "repair_counts_chart",
+        "title": "Rows affected by deterministic repair",
+        "subtitle": "Counts are not additive because one shipment can receive more than one repair.",
+        "type": "bar",
+        "dataset": "repair_counts",
+        "sourceId": "repair_sql",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {
+            "field": "repair_label",
+            "type": "nominal",
+            "label": "Repair"
+          },
+          "y": {
+            "field": "rows_affected",
+            "type": "quantitative",
+            "label": "Rows affected"
+          },
+          "tooltip": [
+            {
+              "field": "repair_label",
+              "type": "nominal",
+              "label": "Repair"
+            },
+            {
+              "field": "rows_affected",
+              "type": "quantitative",
+              "label": "Rows affected",
+              "format": "number"
+            },
+            {
+              "field": "basis",
+              "type": "nominal",
+              "label": "Correction basis"
+            }
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "remaining_nulls_table",
+        "title": "Remaining nulls after cleaning",
+        "subtitle": "Only structurally expected missing values remain in the 86,000-row shipment dataset.",
+        "dataset": "remaining_nulls",
+        "sourceId": "null_sql",
+        "defaultSort": {
+          "field": "remaining_nulls",
+          "direction": "desc"
+        },
+        "columns": [
+          {
+            "field": "column",
+            "label": "Column",
+            "type": "text"
+          },
+          {
+            "field": "remaining_nulls",
+            "label": "Null rows",
+            "format": "number"
+          },
+          {
+            "field": "null_rate_pct",
+            "label": "Null rate",
+            "format": "number",
+            "unit": "%"
+          },
+          {
+            "field": "interpretation",
+            "label": "Why retained",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "metadata_pdf",
+        "label": "Logistics dataset metadata",
+        "path": "documents/logistics data.pdf"
+      },
+      {
+        "id": "raw_logistics",
+        "label": "Raw logistics dataset",
+        "path": "data/logistics.csv"
+      },
+      {
+        "id": "cleaned_logistics",
+        "label": "Cleaned logistics dataset",
+        "path": "data/cleaned/logistics_clean.csv"
+      },
+      {
+        "id": "cleaning_summary",
+        "label": "Cleaning summary",
+        "path": "Reports/logistics_data_quality/cleaning_summary.json"
+      },
+      {
+        "id": "repair_summary",
+        "label": "Repair summary",
+        "path": "Reports/logistics_data_quality/repair_summary.csv"
+      },
+      {
+        "id": "validation_results",
+        "label": "Validation results",
+        "path": "Reports/logistics_data_quality/validation_results.csv"
+      },
+      {
+        "id": "headline_sql",
+        "label": "Headline metrics reconciliation query",
+        "path": "Reports/logistics_data_quality/queries/headline_metrics.sql"
+      },
+      {
+        "id": "repair_sql",
+        "label": "Repair counts reconciliation query",
+        "path": "Reports/logistics_data_quality/queries/repair_counts.sql"
+      },
+      {
+        "id": "null_sql",
+        "label": "Remaining nulls reconciliation query",
+        "path": "Reports/logistics_data_quality/queries/remaining_nulls.sql"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "report_title",
+        "type": "markdown",
+        "body": "# Logistics Data Cleaning Report"
+      },
+      {
+        "id": "executive_summary",
+        "type": "markdown",
+        "sourceId": "cleaning_summary",
+        "body": "## Executive Summary\n\n- **The cleaned file is ready for shipment-level analysis.** It contains 86,000 unique shipment rows and preserves all 47 supplied columns.\n- **The highest-risk defects were repaired from redundant evidence, not guessed.** Duplicate records, derived delay fields, missing delivered dates and weights, and concentrated cost corruption were corrected with traceable rules.\n- **All 25 validation checks pass.** Shipment keys, order-key coverage, date logic, delay targets, weather/customs rules, and cost arithmetic now reconcile.\n- **Legitimate operational extremes remain.** The pipeline does not median-fill or clip large weights, package counts, distances, or costs solely because they are statistical outliers."
+      },
+      {
+        "id": "headline_metrics_block",
+        "type": "metric-strip",
+        "cardIds": [
+          "clean_rows_card",
+          "duplicates_card",
+          "validation_card"
+        ]
+      },
+      {
+        "id": "repair_findings",
+        "type": "markdown",
+        "sourceId": "repair_summary",
+        "body": "## The repairs restore the intended shipment grain and derived fields\n\n**Duplicate shipment IDs and incorrect delay magnitudes were the largest direct threats to analysis.** The chart shows how many rows each deterministic rule changed. Duplicate removal prevents double-counted shipments; delay-field reconciliation prevents corrupted model targets; and cost repairs preserve the trusted total by fixing only the component that can be proven wrong. Counts overlap because the same row can require multiple fixes."
+      },
+      {
+        "id": "repair_chart_block",
+        "type": "chart",
+        "chartId": "repair_counts_chart"
+      },
+      {
+        "id": "null_findings",
+        "type": "markdown",
+        "sourceId": "cleaned_logistics",
+        "body": "## Remaining nulls describe shipment state, not unresolved data loss\n\n**The remaining blanks should stay blank.** Active Delayed, In-Transit, and Failed Delivery records have no completed arrival outcome; non-ocean shipments do not use port-loading fields; and shipments without weather impact do not need a severity. Filling these values would invent events or categories and could bias delay models."
+      },
+      {
+        "id": "remaining_nulls_block",
+        "type": "table",
+        "tableId": "remaining_nulls_table"
+      },
+      {
+        "id": "recommended_next_steps",
+        "type": "markdown",
+        "body": "## Recommended next steps\n\n1. Use `shipment_id` as the unique analysis grain and the cleaned file as the default downstream input.\n2. Preserve null outcome fields for active shipments; create explicit eligibility filters for completed-shipment modeling.\n3. Add automated checks for primary-key uniqueness, order-key coverage, delivered arrival completeness, delay arithmetic, allowed transport modes, and component-cost reconciliation.\n4. Obtain carrier and route master tables before using those identifiers for master-data joins or performance reporting."
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## Further questions\n\n- Should `Delayed` represent an active in-transit state, or should it be standardized into a broader in-transit status plus a separate risk flag?\n- Are carrier and route master files available for foreign-key validation?\n- Should the wider 47-column supplied schema replace the older 32-column metadata document as the governed data dictionary?"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "sourceId": "metadata_pdf",
+        "body": "## Caveats and assumptions\n\n- The PDF describes an older selected 32-column schema; the supplied file has 47 columns and several renamed equivalents.\n- Every supplied route identifier uses five digits after `RTE-`, although the PDF shows six. The consistent supplied format was retained.\n- The supplied status labels `Failed Delivery` and `Returned to Sender` were retained because they carry more meaning than the shorter PDF labels.\n- Carrier and route referential integrity cannot be completed without their master tables."
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-20T00:00:00Z",
+    "status": "ready",
+    "datasets": {
+      "headline_metrics": [
+        {
+          "clean_rows": 86000,
+          "duplicate_rows_removed": 2580,
+          "checks_passed": 25
+        }
+      ],
+      "repair_counts": [
+        {
+          "repair_label": "Delay days recalculated",
+          "rows_affected": 5951,
+          "basis": "Actual transit days minus planned transit days"
+        },
+        {
+          "repair_label": "Late reasons set to Unknown",
+          "rows_affected": 2629,
+          "basis": "PDF-allowed fallback for completed late shipments"
+        },
+        {
+          "repair_label": "Duplicate rows removed",
+          "rows_affected": 2580,
+          "basis": "One row retained per shipment ID"
+        },
+        {
+          "repair_label": "8x fuel corruption corrected",
+          "rows_affected": 2580,
+          "basis": "Total-cost residual proved the true surcharge"
+        },
+        {
+          "repair_label": "Delivered dates recovered",
+          "rows_affected": 2335,
+          "basis": "Dispatch date plus actual transit days"
+        },
+        {
+          "repair_label": "Missing weights recovered",
+          "rows_affected": 1670,
+          "basis": "Total logistics cost divided by cost per kg"
+        },
+        {
+          "repair_label": "Transport modes normalized",
+          "rows_affected": 1671,
+          "basis": "Case normalization to the supplied allowed set"
+        },
+        {
+          "repair_label": "Negative freight signs fixed",
+          "rows_affected": 826,
+          "basis": "Absolute value reconciled exactly to trusted total"
+        }
+      ],
+      "remaining_nulls": [
+        {
+          "column": "weather_severity",
+          "remaining_nulls": 78553,
+          "null_rate_pct": 91.34,
+          "interpretation": "Expected when weather impact is 0"
+        },
+        {
+          "column": "delay_reason",
+          "remaining_nulls": 53143,
+          "null_rate_pct": 61.79,
+          "interpretation": "Expected without a completed positive delay"
+        },
+        {
+          "column": "port_of_loading",
+          "remaining_nulls": 47264,
+          "null_rate_pct": 54.96,
+          "interpretation": "Not applicable to non-ocean modes"
+        },
+        {
+          "column": "port_of_discharge",
+          "remaining_nulls": 47264,
+          "null_rate_pct": 54.96,
+          "interpretation": "Not applicable to non-ocean modes"
+        },
+        {
+          "column": "actual_arrival_date",
+          "remaining_nulls": 24209,
+          "null_rate_pct": 28.15,
+          "interpretation": "No completed arrival for active/failed records"
+        },
+        {
+          "column": "transit_days_actual",
+          "remaining_nulls": 24209,
+          "null_rate_pct": 28.15,
+          "interpretation": "No completed arrival for active/failed records"
+        },
+        {
+          "column": "delay_days",
+          "remaining_nulls": 24209,
+          "null_rate_pct": 28.15,
+          "interpretation": "Outcome is not yet observable"
+        },
+        {
+          "column": "delay_flag",
+          "remaining_nulls": 24209,
+          "null_rate_pct": 28.15,
+          "interpretation": "Outcome is not yet observable"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "metadata_pdf",
+      "label": "Logistics dataset metadata",
+      "path": "documents/logistics data.pdf"
+    },
+    {
+      "id": "raw_logistics",
+      "label": "Raw logistics dataset",
+      "path": "data/logistics.csv"
+    },
+    {
+      "id": "cleaned_logistics",
+      "label": "Cleaned logistics dataset",
+      "path": "data/cleaned/logistics_clean.csv"
+    },
+    {
+      "id": "cleaning_summary",
+      "label": "Cleaning summary",
+      "path": "Reports/logistics_data_quality/cleaning_summary.json"
+    },
+    {
+      "id": "repair_summary",
+      "label": "Repair summary",
+      "path": "Reports/logistics_data_quality/repair_summary.csv"
+    },
+    {
+      "id": "validation_results",
+      "label": "Validation results",
+      "path": "Reports/logistics_data_quality/validation_results.csv"
+    },
+    {
+      "id": "headline_sql",
+      "label": "Headline metrics reconciliation query",
+      "path": "Reports/logistics_data_quality/queries/headline_metrics.sql",
+      "query": {
+        "engine": "sqlite",
+        "sql": "SELECT\n    (SELECT COUNT(*) FROM cleaned_logistics) AS clean_rows,\n    (SELECT rows_affected FROM repair_summary WHERE repair = 'duplicate_rows_removed') AS duplicate_rows_removed,\n    (SELECT SUM(CASE WHEN passed IN (1, 'True', 'true') THEN 1 ELSE 0 END) FROM validation_results) AS checks_passed;\n\n",
+        "description": "Reconciles cleaned row count, duplicate removals, and passing validation checks."
+      }
+    },
+    {
+      "id": "repair_sql",
+      "label": "Repair counts reconciliation query",
+      "path": "Reports/logistics_data_quality/queries/repair_counts.sql",
+      "query": {
+        "engine": "sqlite",
+        "sql": "SELECT\n    CASE repair\n        WHEN 'delay_days_recalculated' THEN 'Delay days recalculated'\n        WHEN 'late_shipments_assigned_unknown_delay_reason' THEN 'Late reasons set to Unknown'\n        WHEN 'duplicate_rows_removed' THEN 'Duplicate rows removed'\n        WHEN 'eightfold_fuel_surcharge_corruptions_corrected' THEN '8x fuel corruption corrected'\n        WHEN 'delivered_actual_arrival_dates_recovered' THEN 'Delivered dates recovered'\n        WHEN 'shipment_weights_recovered_from_total_divided_by_cost_per_kg' THEN 'Missing weights recovered'\n        WHEN 'transport_mode_values_normalized' THEN 'Transport modes normalized'\n        WHEN 'negative_freight_signs_corrected' THEN 'Negative freight signs fixed'\n    END AS repair_label,\n    rows_affected,\n    CASE repair\n        WHEN 'delay_days_recalculated' THEN 'Actual transit days minus planned transit days'\n        WHEN 'late_shipments_assigned_unknown_delay_reason' THEN 'PDF-allowed fallback for completed late shipments'\n        WHEN 'duplicate_rows_removed' THEN 'One row retained per shipment ID'\n        WHEN 'eightfold_fuel_surcharge_corruptions_corrected' THEN 'Total-cost residual proved the true surcharge'\n        WHEN 'delivered_actual_arrival_dates_recovered' THEN 'Dispatch date plus actual transit days'\n        WHEN 'shipment_weights_recovered_from_total_divided_by_cost_per_kg' THEN 'Total logistics cost divided by cost per kg'\n        WHEN 'transport_mode_values_normalized' THEN 'Case normalization to the supplied allowed set'\n        WHEN 'negative_freight_signs_corrected' THEN 'Absolute value reconciled exactly to trusted total'\n    END AS basis\nFROM repair_summary\nWHERE repair IN (\n    'delay_days_recalculated',\n    'late_shipments_assigned_unknown_delay_reason',\n    'duplicate_rows_removed',\n    'eightfold_fuel_surcharge_corruptions_corrected',\n    'delivered_actual_arrival_dates_recovered',\n    'shipment_weights_recovered_from_total_divided_by_cost_per_kg',\n    'transport_mode_values_normalized',\n    'negative_freight_signs_corrected'\n)\nORDER BY rows_affected DESC, repair_label;\n\n",
+        "description": "Loads the reviewed deterministic repair counts and their correction basis."
+      }
+    },
+    {
+      "id": "null_sql",
+      "label": "Remaining nulls reconciliation query",
+      "path": "Reports/logistics_data_quality/queries/remaining_nulls.sql",
+      "query": {
+        "engine": "sqlite",
+        "sql": "WITH null_counts AS (\n    SELECT 'weather_severity' AS column_name, SUM(CASE WHEN weather_severity IS NULL THEN 1 ELSE 0 END) AS remaining_nulls FROM cleaned_logistics\n    UNION ALL SELECT 'delay_reason', SUM(CASE WHEN delay_reason IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n    UNION ALL SELECT 'port_of_loading', SUM(CASE WHEN port_of_loading IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n    UNION ALL SELECT 'port_of_discharge', SUM(CASE WHEN port_of_discharge IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n    UNION ALL SELECT 'actual_arrival_date', SUM(CASE WHEN actual_arrival_date IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n    UNION ALL SELECT 'transit_days_actual', SUM(CASE WHEN transit_days_actual IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n    UNION ALL SELECT 'delay_days', SUM(CASE WHEN delay_days IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n    UNION ALL SELECT 'delay_flag', SUM(CASE WHEN delay_flag IS NULL THEN 1 ELSE 0 END) FROM cleaned_logistics\n)\nSELECT\n    column_name AS column,\n    remaining_nulls,\n    ROUND(100.0 * remaining_nulls / (SELECT COUNT(*) FROM cleaned_logistics), 2) AS null_rate_pct,\n    CASE column_name\n        WHEN 'weather_severity' THEN 'Expected when weather impact is 0'\n        WHEN 'delay_reason' THEN 'Expected without a completed positive delay'\n        WHEN 'port_of_loading' THEN 'Not applicable to non-ocean modes'\n        WHEN 'port_of_discharge' THEN 'Not applicable to non-ocean modes'\n        WHEN 'actual_arrival_date' THEN 'No completed arrival for active/failed records'\n        WHEN 'transit_days_actual' THEN 'No completed arrival for active/failed records'\n        WHEN 'delay_days' THEN 'Outcome is not yet observable'\n        WHEN 'delay_flag' THEN 'Outcome is not yet observable'\n    END AS interpretation\nFROM null_counts\nORDER BY remaining_nulls DESC, column_name;\n",
+        "description": "Counts remaining nulls in the cleaned dataset and calculates their rates."
+      }
+    }
+  ]
+}

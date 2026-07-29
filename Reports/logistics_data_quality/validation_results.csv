@@ -1,0 +1,26 @@
+﻿check,passed,observed,expected,severity_if_failed
+row_count_matches_unique_raw_shipments,True,86000,86000,Critical
+shipment_id_is_unique,True,0,0 duplicate keys,Critical
+no_exact_duplicate_rows,True,0,0 duplicate rows,Critical
+shipment_id_format,True,0,0 invalid,High
+order_id_format,True,0,0 invalid,High
+order_foreign_key_coverage,True,0,0 orphan rows,Critical
+carrier_id_format,True,0,0 invalid,High
+route_id_format_supplied_schema,True,0,0 invalid,High
+transport_mode_allowed_values,True,0,0 invalid,High
+required_dates_parse,True,0,0 invalid required dates,High
+estimated_not_before_dispatch,True,0,0 invalid rows,High
+delivered_has_actual_arrival,True,0,0 missing,High
+actual_transit_days_match_dates,True,0,0 mismatches,High
+delay_days_match_actual_minus_planned,True,0,0 mismatches,High
+delay_flag_matches_positive_delay_days,True,0,0 mismatches,High
+completed_late_shipments_have_reason,True,0,0 missing,Medium
+shipment_weight_positive_and_complete,True,0,0 missing or nonpositive,High
+cost_components_nonnegative,True,0,0 rows,High
+fuel_surcharge_not_over_3x_freight,True,0,0 rows,High
+total_cost_equals_component_sum,True,0,0 mismatches over $0.01,High
+cost_per_kg_is_reconciled,True,0,0 mismatches over 0.0001,High
+weather_flag_binary,True,0,0 invalid,Medium
+weather_severity_consistent,True,0,0 impacted rows without severity,Medium
+domestic_customs_days_zero,True,0,0 rows,Medium
+domestic_customs_duty_zero,True,0,0 rows,Medium

@@ -1,0 +1,225 @@
+Supplier Performance and Sourcing Recommendations
+Page 1
+Supplier Performance and Sourcing
+Recommendations
+Dynamic supplier ranking, trend diagnosis, risk classification, and procurement actions as of December 2024.
+Executive summary
+The portfolio is stable overall, but supplier-level action is still required. The latest spend-weighted score is 67.52/100, changing -0.40 points
+over six months. The model identifies 121 improving and 104 deteriorating suppliers.
+Begin replacement due diligence on 5 suppliers representing 1.1% of annual spend. Open partnership discussions with 3 candidates
+representing 0.9% of spend.
+ Suppliers ranked
+ Portfolio score
+ Replacement candidates
+ Strategic candidates
+ 460
+ 67.52
+ 5
+ 3
+ Latest six-month window
+ Spend-weighted, /100
+ 1.1% of spend
+ 0.9% of spend
+Recommended decisions
+1. Approve replacement due diligence for every flagged supplier, subject to continuity and contract checks.
+2. Open performance-linked partnership negotiations with the strategic candidates.
+3. Assign 30/60/90-day recovery plans to the largest deteriorating spend exposures.
+4. Review High/Critical spend exposure monthly and diversify where concentration and operational risk overlap.
+
+Supplier Performance and Sourcing Recommendations
+Page 2
+Portfolio stability masks supplier-level movement
+The portfolio score is almost unchanged over six months, while 225 suppliers crossed the two-point movement threshold. Aggregate
+stability should not be read as an absence of supplier risk.
+
+Supplier Performance and Sourcing Recommendations
+Page 3
+Risk exposure needs stronger commercial controls
+High or Critical suppliers account for 77.7% of trailing-12-month procurement spend. The classification is intentionally conservative and can
+be triggered by high VRIS, active disputes, repeated disruption, or weak combined performance.
+Risk class
+Suppliers
+12m spend
+Spend share
+Critical
+12
+$8.29M
+2.2%
+High
+338
+$284.06M
+75.5%
+Medium
+106
+$80.62M
+21.4%
+Low
+4
+$3.12M
+0.8%
+Suppliers requiring replacement due diligence
+These candidates meet the model rule. Confirm alternate capacity, switching cost, category criticality, and contract exit terms before any
+sourcing decision.
+Rank
+Supplier
+Category
+Score
+3m change
+Risk
+12m spend
+37
+Warren, Gallegos and Berry
+Industrial Parts
+73.21
+-2.13
+Critical
+$1.52M
+269
+Hayes-Mcguire
+Electronics
+66.51
+-3.18
+Critical
+$1.40M
+38
+Williams-Roberts
+Industrial Parts
+73.19
+-5.50
+Critical
+$654.4K
+438
+Jones and Sons
+Industrial Parts
+62.21
+-6.07
+Critical
+$492.4K
+114
+Anderson LLC
+Packaging
+69.98
+-6.11
+Critical
+$262.9K
+
+Supplier Performance and Sourcing Recommendations
+Page 4
+Concentrate strategic partnerships on proven performers
+Partnership offers should exchange greater volume visibility or term length for measurable delivery, quality, resilience, and
+continuous-improvement commitments.
+Rank
+Supplier
+Category
+Score
+3m change
+Risk
+12m spend
+2
+Moore-Sanders
+Raw Materials
+80.98
++6.74
+Low
+$1.03M
+9
+Perry Group
+Electronics
+76.40
++3.89
+Low
+$743.7K
+11
+James-Fox
+Services
+75.84
++5.98
+Medium
+$1.72M
+Highest-spend deteriorating suppliers
+Rank
+Supplier
+Category
+Score
+3m change
+Risk
+12m spend
+142
+Deleon-Butler
+Packaging
+69.37
+-6.58
+High
+$7.81M
+33
+Burnett-Stevens
+Raw Materials
+73.78
+-12.23
+High
+$2.37M
+155
+Knight, Jackson and Barrett
+Electronics
+69.06
+-5.11
+High
+$2.15M
+200
+Patterson, Morris and White
+Services
+67.68
+-3.12
+High
+$1.93M
+360
+Price-Rodriguez
+Packaging
+64.68
+-5.05
+High
+$1.63M
+229
+Morgan Group
+Electronics
+67.20
+-2.86
+High
+$1.54M
+37
+Warren, Gallegos and Berry
+Industrial Parts
+73.21
+-2.13
+Critical
+$1.52M
+349
+Ortega and Sons
+Electronics
+64.91
+-5.60
+High
+$1.52M
+313
+Willis Ltd
+Electronics
+65.50
+-4.21
+Medium
+$1.51M
+202
+Sharp, Sullivan and Patrick
+Services
+67.67
+-3.03
+Medium
+$1.48M
+Methodology and caveats
+The score uses 30% on-time delivery, 20% quality acceptance, 20% inverted VRIS, 15% cost efficiency, and 15% lead-time performance.
+Cost efficiency is 70% product-year unit-COGS competitiveness and 30% invoice accuracy. The dynamic result is a six-month
+exponentially weighted average with a three-month half-life. Procurement spend is used for exposure and partnership prioritization, not as
+a performance reward.
+Product cost is benchmarked against median COGS per unit for the same product and year. This improves like-for-like comparability but is
+not a substitute for negotiated-price or should-cost data. Risk rules are screening rules, not legal or contractual determinations. All blocking
+source-data checks passed.
+Sources: data/cleaned/vendors_clean.csv; data/cleaned/orders_clean.csv; Reports/module2_supplier_performance/supplier_ranking.csv.

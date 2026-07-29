@@ -1,0 +1,271 @@
+{
+  "source_metadata": {
+    "raw_csv": "D:/data science/Project intership/data/logistics.csv",
+    "orders_reference": "D:/data science/Project intership/data/orders.csv",
+    "metadata_pdf": "C:/Users/hp/OneDrive/Documents/logistics data.pdf",
+    "cleaned_csv": "D:/data science/Project intership/data/cleaned/logistics_clean.csv"
+  },
+  "schema_mapping": {
+    "shipment_date": "shipment_dispatch_date",
+    "promised_delivery_date": "estimated_arrival_date",
+    "actual_delivery_date": "actual_arrival_date",
+    "carrier_type": "transport_mode",
+    "last_port_scan": "last_checkpoint",
+    "unavailable_pdf_fields": [
+      "origin_country",
+      "destination_country",
+      "carrier_rating_score",
+      "shipment_notes",
+      "warehouse_id"
+    ],
+    "supplied_schema_note": "The CSV has 47 columns; the PDF describes an older selected 32-column schema."
+  },
+  "raw_profile": {
+    "rows": 88580,
+    "columns": 47,
+    "unique_shipments": 86000,
+    "exact_duplicate_rows": 2326,
+    "duplicate_shipment_id_rows_to_remove": 2580,
+    "duplicate_shipment_id_groups": 2580,
+    "order_fk_orphan_rows": 0,
+    "dispatch_date_min": "2021-01-01",
+    "dispatch_date_max": "2024-12-31",
+    "missing_values": {
+      "port_of_loading": 48687,
+      "port_of_discharge": 48687,
+      "shipment_weight_kg": 1772,
+      "actual_arrival_date": 27366,
+      "transit_days_actual": 24950,
+      "delay_flag": 24950,
+      "delay_days": 24950,
+      "delay_reason": 57447,
+      "weather_severity": 80911
+    }
+  },
+  "repair_counts": {
+    "duplicate_rows_removed": 2580,
+    "transport_mode_values_normalized": 1671,
+    "shipment_weights_recovered_from_total_divided_by_cost_per_kg": 1670,
+    "delivered_actual_arrival_dates_recovered": 2335,
+    "transit_days_actual_recalculated": 0,
+    "delay_days_recalculated": 5951,
+    "delay_flags_recalculated": 0,
+    "late_shipments_assigned_unknown_delay_reason": 2629,
+    "negative_freight_signs_corrected": 826,
+    "eightfold_fuel_surcharge_corruptions_corrected": 2580,
+    "total_logistics_cost_values_recalculated": 0,
+    "cost_per_kg_values_recalculated": 0
+  },
+  "clean_profile": {
+    "rows": 86000,
+    "columns": 47,
+    "unique_shipments": 86000,
+    "dispatch_date_min": "2021-01-01T00:00:00",
+    "dispatch_date_max": "2024-12-31T00:00:00",
+    "validation_checks_passed": 25,
+    "validation_checks_total": 25
+  },
+  "remaining_nulls": {
+    "port_of_loading": 47264,
+    "port_of_discharge": 47264,
+    "actual_arrival_date": 24209,
+    "transit_days_actual": 24209,
+    "delay_flag": 24209,
+    "delay_days": 24209,
+    "delay_reason": 53143,
+    "weather_severity": 78553
+  },
+  "remaining_null_interpretation": {
+    "actual_arrival_date_transit_days_actual_delay_flag_delay_days": "Expected for active Delayed, In-Transit, and Failed Delivery records without a completed arrival.",
+    "port_of_loading_port_of_discharge": "Expected for non-ocean modes where the source uses N/A.",
+    "weather_severity": "Expected when weather_impact_flag is 0.",
+    "delay_reason": "Expected where no completed positive delay is recorded; active Delayed records may retain a known operational reason."
+  },
+  "outlier_treatment": {
+    "policy": "Retain plausible long-tail operational values; correct only deterministic corruption.",
+    "reason": "Shipment weights, distances, package counts, and costs vary structurally by transport mode and shipment type, so global IQR clipping would remove valid records."
+  },
+  "validation": [
+    {
+      "check": "row_count_matches_unique_raw_shipments",
+      "passed": true,
+      "observed": 86000,
+      "expected": "86000",
+      "severity_if_failed": "Critical"
+    },
+    {
+      "check": "shipment_id_is_unique",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 duplicate keys",
+      "severity_if_failed": "Critical"
+    },
+    {
+      "check": "no_exact_duplicate_rows",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 duplicate rows",
+      "severity_if_failed": "Critical"
+    },
+    {
+      "check": "shipment_id_format",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "order_id_format",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "order_foreign_key_coverage",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 orphan rows",
+      "severity_if_failed": "Critical"
+    },
+    {
+      "check": "carrier_id_format",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "route_id_format_supplied_schema",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "transport_mode_allowed_values",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "required_dates_parse",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid required dates",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "estimated_not_before_dispatch",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid rows",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "delivered_has_actual_arrival",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 missing",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "actual_transit_days_match_dates",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 mismatches",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "delay_days_match_actual_minus_planned",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 mismatches",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "delay_flag_matches_positive_delay_days",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 mismatches",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "completed_late_shipments_have_reason",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 missing",
+      "severity_if_failed": "Medium"
+    },
+    {
+      "check": "shipment_weight_positive_and_complete",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 missing or nonpositive",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "cost_components_nonnegative",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 rows",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "fuel_surcharge_not_over_3x_freight",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 rows",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "total_cost_equals_component_sum",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 mismatches over $0.01",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "cost_per_kg_is_reconciled",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 mismatches over 0.0001",
+      "severity_if_failed": "High"
+    },
+    {
+      "check": "weather_flag_binary",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 invalid",
+      "severity_if_failed": "Medium"
+    },
+    {
+      "check": "weather_severity_consistent",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 impacted rows without severity",
+      "severity_if_failed": "Medium"
+    },
+    {
+      "check": "domestic_customs_days_zero",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 rows",
+      "severity_if_failed": "Medium"
+    },
+    {
+      "check": "domestic_customs_duty_zero",
+      "passed": true,
+      "observed": 0,
+      "expected": "0 rows",
+      "severity_if_failed": "Medium"
+    }
+  ],
+  "caveats": [
+    "Carrier and route master files were not supplied, so only identifier format was validated for those keys.",
+    "The PDF expects six digits after RTE-, while every supplied route_id consistently uses five digits; the supplied schema was preserved and documented.",
+    "The source contains statuses Failed Delivery and Returned to Sender rather than the PDF's shorter Failed and Returned labels; meaningful source labels were retained.",
+    "No values were imputed from medians or clipped solely because they were statistical outliers."
+  ]
+}
